@@ -1,7 +1,7 @@
 import React from "react";
 
-function Alert() {
+function Alerts() {
   return <div className="App">screen alert </div>;
 }
 
-export default Alert;
+export default Alerts;
