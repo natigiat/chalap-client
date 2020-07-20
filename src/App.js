@@ -3,7 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <div className="App">screen1</div>;
+  {
+    window.document.title = "Bootcamp";
+  }
+  return <div className="App">Bootcamp</div>;
 }
 
 export default App;
