@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./screen4.css";
 import Map from "./map";
 import StudentList from "./studentList";
+import Flowchart_Stations from "./Flowchart_Stations";
 
 const Screen4 = (props) => {
   const students = [
@@ -20,7 +21,7 @@ const Screen4 = (props) => {
     },
   ];
 
-  const defaultLocation = [{ lat: -40, lng: 170, zoom: 11 }];
+  const defaultLocation = { lat: -40, lng: 170, zoom: 11 };
 
   const coordinates = [
     { lat: -34, lng: 151 },
@@ -61,6 +62,7 @@ const Screen4 = (props) => {
     <div className="Screen4">
       Screen4
       <StudentList students={students} />
+      <Flowchart_Stations stations={stations} />
     </div>
   );
 };
