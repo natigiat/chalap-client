@@ -22,7 +22,7 @@ function Parent() {
     {
       name: "נעמה",
       exit: "שער בנימין",
-      school: "ישיבת מעלות",
+      school: "כוכב השחר",
     },
   ]);
 
@@ -38,8 +38,10 @@ function Parent() {
   return (
     <div className="parent">
       <h2>בוקר טוב</h2>
-      <h6>אין עיכובים צפויים</h6>
-      <Alerts message={alrt.message} description={alrt.description} />
+      <div>
+        <h6>אין עיכובים צפויים</h6>
+        <Alerts message={alrt.message} description={alrt.description} />
+      </div>
       <div>
         <h6>מידע נוסף</h6>
 
