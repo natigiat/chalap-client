@@ -4,7 +4,7 @@ import "./Children.css";
 
 function Children(props) {
   return (
-    <div className="child" onClick={props.catchild}>
+    <div className="child" onClick={props.catchChild}>
       <div className="name">{props.name}</div>
       <div>
         <span className="exit"> {props.exit}</span>
