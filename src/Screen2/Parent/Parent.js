@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
 
@@ -26,10 +26,34 @@ function Parent() {
     },
   ]);
 
+  const [alrt, setalert] = useState({
+    message: null,
+    description: null,
+  });
+  useEffect(() => alrttip("error"), []);
+  const alrttip = (alrttip1) => {
+    switch (alrttip1) {
+      case "error":
+        setalert({ message: "תקלה", description: "תקלה" });
+        break;
+      case "success":
+        setalert({ message: "הצלחה", description: "הצלחה" });
+        break;
+      case "info":
+        setalert({ message: "עדכון", description: "עדכון" });
+        break;
+      case "warning":
+        setalert({ message: "אזהרה ", description: "אזהרה" });
+        break;
+      default:
+        setalert({ message: null, description: null });
+    }
+  };
+
   return (
     <div>
       <div>
-        <Alerts />
+        <Alerts message={alrt.message} description={alrt.description} />
 
         {Api.map((child) => (
           <Children
