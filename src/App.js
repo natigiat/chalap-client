@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <div className="App">Bootcamp</div>;
+  return <div className="App">screen1</div>;
 }
 
 export default App;
