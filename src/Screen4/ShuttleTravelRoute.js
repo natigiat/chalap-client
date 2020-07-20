@@ -1,5 +1,6 @@
 import React from "react";
 import "./ShuttleTravelRoute.css";
+import Reporting from "./Reporting";
 import { Divider, Timeline } from "antd";
 import { ClockCircleOutlined, LeftOutlined } from "@ant-design/icons";
 
