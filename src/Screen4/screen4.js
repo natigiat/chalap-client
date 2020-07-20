@@ -20,6 +20,8 @@ const Screen4 = (props) => {
     },
   ];
 
+  const defaultLocation = [{ lat: -40, lng: 170, zoom: 11 }];
+
   const coordinates = [
     { lat: -34, lng: 151 },
     { lat: -50, lng: 200 },
