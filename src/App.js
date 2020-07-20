@@ -1,9 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Schedule from "./Schedule/components/Schedule"
 
 function App() {
-  return <div className="App">Bootcamp</div>;
+  return (
+    <div>
+      <Schedule />
+    </div>
+  );
 }
 
 export default App;
