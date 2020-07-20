@@ -1,13 +1,13 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 
-const Password = () => {
+const NumPhon = () => {
   const layout = {
-    labelCol: { span: 0 },
-    wrapperCol: { span: 25 },
+    labelCol: { span: 8 },
+    wrapperCol: { span: 16 },
   };
   const tailLayout = {
-    wrapperCol: { offset: 0, span: 0 },
+    wrapperCol: { offset: 8, span: 16 },
   };
 
   const onFinish = (values) => {
@@ -18,7 +18,6 @@ const Password = () => {
   };
 
   return (
-    
     <Form
       {...layout}
       name="basic"
@@ -26,42 +25,31 @@ const Password = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-<<<<<<< HEAD
-      {/* <Form.Item
-=======
-      Password
+      NumPhon
       <Form.Item
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
         label="Username"
         name="username"
         rules={[{ required: true, message: "Please input your username!" }]}
       >
         <Input />
-<<<<<<< HEAD
-      </Form.Item> */}
-
-        <h4>הכנס סיסמה</h4>
-=======
       </Form.Item>
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
       <Form.Item
-        label=""
-        name=""
-        rules={[{ required: true, message: "הכנס סיסמה" }]}
+        label="Password"
+        name="password"
+        rules={[{ required: true, message: "Please input your password!" }]}
       >
         <Input.Password />
       </Form.Item>
       <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox>זכור אותי</Checkbox>
+        <Checkbox>Remember me</Checkbox>
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
-          הירשם
+          Submit
         </Button>
       </Form.Item>
     </Form>
-    
   );
 };
 
-export default Password;
+export default NumPhon;
