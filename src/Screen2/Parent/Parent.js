@@ -1,42 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
-
+import "./Parent.css";
 function Parent() {
   const [Api, setapi] = useState([
     {
-      name: "boaz",
-      phone: 52374245,
-      school: "moria",
+      name: "הילה",
+      exit: "תחנת דלק מכמש",
+      school: "בית ספר עפרה",
     },
     {
-      name: "elior",
-      phone: 523,
-      school: "horev",
+      name: "משה",
+      exit: "עלי",
+      school: "אולפנת צביה",
     },
     {
-      name: "yosef",
-      phone: 52375,
-      school: "moria",
+      name: "ישי",
+      exit: "בית אל",
+      school: "שער בנימין",
     },
     {
-      name: "shadmit",
-      phone: 54245,
-      school: "shilo",
+      name: "נעמה",
+      exit: "שער בנימין",
+      school: "ישיבת מעלות",
     },
   ]);
 
+  const [alrt, setalert] = useState({
+    message: null,
+    description: null,
+  });
+
+  useEffect(() => alrttip("error"), []);
+  const alrttip = () => {
+    setalert({ message: x, description: "תקלה", icon: "", type: "" });
+  };
+
   return (
-    <div>
+    <div className="parent">
+      <h2>בוקר טוב</h2>
+      <h6>אין עיכובים צפויים</h6>
+      <Alerts message={alrt.message} description={alrt.description} />
       <div>
-        <Alerts />
+        <h6>מידע נוסף</h6>
 
         {Api.map((child) => (
-          <Children
-            name={child.name}
-            phone={child.phone}
-            school={child.school}
-          />
+          <Children name={child.name} exit={child.exit} school={child.school} />
         ))}
       </div>
     </div>
