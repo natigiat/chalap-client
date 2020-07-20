@@ -1,20 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Password from "./Screen1/Password/Password";
-
+import Screen1 from "./Screen1/Screen1";
 
 function App() {
   {
     window.document.title = "Bootcamp";
   }
-  return(
-
+  return (
     <div className="App">
-
-    <Password/>
-    </div> 
-  ) 
+      <Screen1 />
+    </div>
+  );
 }
 
 export default App;
