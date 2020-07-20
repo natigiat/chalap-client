@@ -1,12 +1,11 @@
 import React from "react";
-import Button from "./"
+import TextArea from "./TextArea";
 
 function Screen() {
   const type = ["Losts", "Unusual Events", "Drive problems"];
   const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
 
-  
-  return(
-
-  )
+  return <TextArea />;
 }
+
+export default Screen;
