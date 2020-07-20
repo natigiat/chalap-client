@@ -1,1 +1,25 @@
 @import "~antd/dist/antd.css";
+
+.test{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.password{
+    
+    box-shadow: 1px 1px 3px black;
+    padding: 2rem;
+    border-radius: 7px;
+}
+.passwordItems{
+    display: flex;
+    /* background-color: lawngreen; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}

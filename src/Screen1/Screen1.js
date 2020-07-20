@@ -1,16 +1,27 @@
-import React from "react";
-import Password from "./Password/Password";
-import "./Screen1.css";
 
-function Screen1() {
+
+
+
+
+ import React from "react";
+import "./Screen1.css";
+import Password from "./Password/Password";
+
+
+function App() {
   {
     window.document.title = "Bootcamp";
   }
-  return (
-    <div className="screen1">
-      <Password />
-    </div>
-  );
+  return(
+
+    <div className = 'test'>
+        <div className = 'password'>
+        
+        <Password />
+        </div>
+    
+    </div> 
+  ) 
 }
 
-export default Screen1;
+export default App;
