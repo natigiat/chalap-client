@@ -62,6 +62,11 @@ const Screen4 = (props) => {
     <div className="Screen4">
       Screen4
       <StudentList students={students} />
+      <Map
+        defaultLocation={defaultLocation}
+        coordinates={coordinates}
+        busLocation={busLocation}
+      />
       <Flowchart_Stations stations={stations} />
     </div>
   );
