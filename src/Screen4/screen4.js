@@ -72,4 +72,4 @@ const Screen4 = (props) => {
   );
 };
 
-export default App;
+export default Screen4;
