@@ -1,0 +1,99 @@
+@import "~antd/dist/antd.css";
+
+.ShuttleTravelRoute {
+  position: relative;
+  width: 359px;
+  height: 128px;
+  left: 0px;
+  top: 0px;
+
+  padding: 15px;
+  background: #c4c4c4;
+  opacity: 0.8;
+  border-radius: 7px;
+}
+.path {
+  display: inline-block;
+  left: auto;
+}
+.starting_point {
+  position: absolute;
+  width: 126px;
+  height: 26px;
+  left: 137px;
+  top: 0px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #000000;
+}
+.end_point {
+  position: absolute;
+  width: 62px;
+  height: 26px;
+  left: 0px;
+  top: 0px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #000000;
+}
+.arrow {
+  position: absolute;
+  width: 55px;
+  height: 0px;
+  left: 126px;
+  top: 15px;
+}
+.hour {
+  display: inline-block;
+}
+
+.hour {
+  position: static;
+  width: 65px;
+  height: 26px;
+  left: 154px;
+  top: 0px;
+
+  margin: 5px;
+  padding: 0px 10px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.reporting {
+  position: absolute;
+  width: 75px;
+  height: 22px;
+  left: 269px;
+  top: 92px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-decoration-line: underline;
+
+  color: #000000;
+}
