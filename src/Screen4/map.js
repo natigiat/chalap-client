@@ -2,9 +2,29 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import "./map.css";
 
-const AnyReactComponent = ({ text, img }) => (
-  <div>
-    <img className="Marker" src={img} alt=""></img>
+// const AnyReactComponent = ({ text, img }) => (
+//   <div>
+//     <img className="Marker" src={img} alt=""></img>
+//     {text}
+//   </div>
+// );
+
+const AnyReactComponent = ({ text }) => (
+  <div
+    style={{
+      // color: "white",
+      // background: "grey",
+      // padding: "15px 10px",
+      // display: "inline-flex",
+      // textAlign: "center",
+      // alignItems: "center",
+      // justifyContent: "center",
+      // borderRadius: "100%",
+      // transform: "translate(-50%, -50%)",
+      backgroundImage: `url(/marker.png)`,
+      // backgroundImage: "/marker.png",
+    }}
+  >
     {text}
   </div>
 );
@@ -20,7 +40,7 @@ const Map = (props) => {
   console.log(props.coordinates[0].lat);
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "500px", width: "900px" }}>
+    <div style={{ height: "400px", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBRcSVADr0_EbDMWNQP94bV-M2AJQSXUmU" }}
         defaultCenter={defaultProps.center}
