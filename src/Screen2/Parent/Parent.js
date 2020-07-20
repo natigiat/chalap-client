@@ -29,19 +29,30 @@ function Parent() {
   const [alrt, setalert] = useState({
     message: null,
     description: null,
+    icon: null,
+    type: null,
+    alrt: false,
   });
 
   useEffect(() => alrttip("error"), []);
   const alrttip = () => {
-    setalert({ message: "תקלה", description: "תקלה", icon: "", type: "" });
+    setalert({
+      message: "תקלה",
+      description: "תקלה",
+      icon: "",
+      type: "",
+      alrt: false,
+    });
   };
   return (
     <div className="parent">
       <h2>בוקר טוב</h2>
-      <div>
-        <h6>אין עיכובים צפויים</h6>
+      {alrt.alrt ? (
         <Alerts message={alrt.message} description={alrt.description} />
-      </div>
+      ) : (
+        <h6>אין עיכובים צפויים</h6>
+      )}
+
       <div>
         <h6>מידע נוסף</h6>
 
