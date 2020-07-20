@@ -1,12 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+
+import Reporting from "./Screen4/Reporting";
 import ShuttleTravelRoute from "./Screen4/ShuttleTravelRoute";
 
 function App() {
   return (
     <div className="App">
       <ShuttleTravelRoute />
+      <Reporting />
     </div>
   );
 }
