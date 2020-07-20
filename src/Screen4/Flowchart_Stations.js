@@ -7,20 +7,14 @@ const Flowchart_Stations = () => {
   return (
     <div className="Flowchart_Stations">
       <Timeline mode="right">
-        <Timeline.Item>
-          <Divider orientation="left" plain>
-            תחנת עפרה
-          </Divider>
-        </Timeline.Item>
-        <Timeline.Item>step2 2015-09-01</Timeline.Item>
-
-        <Timeline.Item
-          dot={<ClockCircleOutlined style={{ fontSize: "16px" }} />}
-          color="red"
-        >
-          תחנת עליה של יוסף-חיים.
-        </Timeline.Item>
-        <Timeline.Item>step4 2015-09-01</Timeline.Item>
+        <Divider orientation="left" plain></Divider>
+        <Timeline.Item color="green">צומת שילה</Timeline.Item>
+        <Divider orientation="left" plain></Divider>
+        <Timeline.Item> תחנה קודמת </Timeline.Item>
+        <Divider orientation="left" plain></Divider>
+        <Timeline.Item>תחנת עליה של יוסף-חיים.</Timeline.Item>
+        <Divider orientation="left" plain></Divider>
+        <Timeline.Item>תחנה הבאה</Timeline.Item>
       </Timeline>
     </div>
   );
