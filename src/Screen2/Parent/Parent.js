@@ -33,7 +33,7 @@ function Parent() {
 
   useEffect(() => alrttip("error"), []);
   const alrttip = () => {
-    setalert({ message: x, description: "תקלה", icon: "", type: "" });
+    setalert({ message: "תקלה", description: "תקלה", icon: "", type: "" });
   };
 
   return (
