@@ -1,6 +1,7 @@
 import React from "react";
 import Password from "./Password/Password";
 import "./Screen1.css";
+import NumPhon from "./component/NumPhone/NumPhoe";
 
 function Screen1() {
   {
@@ -8,7 +9,8 @@ function Screen1() {
   }
   return (
     <div className="screen1">
-      <Password />
+      <NumPhon className="numPhone" />
+      <Password className="Password" />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 
-const Password = () => {
+const NumPhon = () => {
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -25,7 +25,7 @@ const Password = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      Password
+      NumPhon
       <Form.Item
         label="Username"
         name="username"
@@ -52,4 +52,4 @@ const Password = () => {
   );
 };
 
-export default Password;
+export default NumPhon;
