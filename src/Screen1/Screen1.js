@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LogInValidation from "./component/LogInValidation/LogInValidation";
 import "./Screen1.css";
 import LogIn from "./component/LogIn/LogIn";
+import StudentSettingMenu from "./component/StudentSettingMenu/StudentSettingMenu";
 
 function Screen1() {
   const [errorDemoToPassword, setErrorDemoToPassword] = useState(false);
@@ -20,6 +21,12 @@ function Screen1() {
     <div className="screen1">
       <LogIn check={Demoserver} message={errorDemoToNumPhon} />
       <LogInValidation check={Demoserver} message={errorDemoToPassword} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      {/* <StudentSettingMenu /> */}
     </div>
   );
 }
