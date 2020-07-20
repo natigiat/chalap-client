@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Dropdown, Button } from "antd";
+import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 import "antd/dist/antd.css";
@@ -23,9 +23,14 @@ const StudentList = (props) => {
   );
   return (
     <Dropdown overlay={menuItems}>
-      <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+      <a
+        href="//"
+        className="ant-dropdown-link"
+        onClick={(e) => e.preventDefault()}
+      >
         Hover me <DownOutlined />
       </a>
+      , mountNode,
     </Dropdown>
   );
 };
