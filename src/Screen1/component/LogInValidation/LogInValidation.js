@@ -1,7 +1,8 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
+import { OmitProps } from "antd/lib/transfer/ListBody";
 
-const Password = () => {
+const LogInValidation = (props) => {
   const layout = {
     labelCol: { span: 0 },
     wrapperCol: { span: 25 },
@@ -12,7 +13,14 @@ const Password = () => {
 
   const onFinish = (values) => {
     console.log("Success:", values);
+    console.log(values[""]);
+    props.check(values[''],'LogInValidation');
+    console.log(props.message);
+    
   };
+  // const sendMessage = () =>{
+  //     props.message(values['']);
+  // }
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -39,13 +47,14 @@ const Password = () => {
         name=""
         rules={[{ required: true, message: "הכנס סיסמה" }]}
       >
-        <Input.Password />
+        <Input.Password  />
+        {props.message && <h5>הסיסמא חייבת להכיל לפחות 5 תויים</h5>}
       </Form.Item>
       <Form.Item {...tailLayout} name="remember" valuePropName="checked">
         <Checkbox>זכור אותי</Checkbox>
       </Form.Item>
       <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit"  >
           הירשם
         </Button>
       </Form.Item>
@@ -53,4 +62,4 @@ const Password = () => {
   );
 };
 
-export default Password;
+export default LogInValidation;
