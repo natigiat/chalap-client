@@ -5,16 +5,10 @@ import "./Children.css";
 function Children(props) {
   return (
     <div className="children">
-      <div>
-        <div>{props.name}</div>
-        <div>{props.phone}</div>
-        <div>{props.school}</div>
-      </div>
-
-      <div>
-        <Button type="primary">הרשאות</Button>
-        <Button type="primary">תחנה קרובה</Button>
-        <Button type="primary">מערכת שעות</Button>
+      <div className="child">
+        <div className="name">{props.name}</div>
+        <div className="school">{props.school}</div>
+        <div className="phone"> {props.phone}</div>
       </div>
     </div>
   );
