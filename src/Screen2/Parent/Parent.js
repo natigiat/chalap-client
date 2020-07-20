@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Alert from "../Alert/Alert";
+import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
 
 function Parent() {
@@ -29,7 +29,7 @@ function Parent() {
   return (
     <div>
       <div>
-        <Alert />
+        <Alerts />
 
         {Api.map((child) => (
           <Children

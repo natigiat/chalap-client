@@ -1,7 +1,7 @@
 import React from "react";
 
-function Children() {
-  return <div className="App">Children</div>;
+function Children(props) {
+  return <div></div>;
 }
 
 export default Children;
