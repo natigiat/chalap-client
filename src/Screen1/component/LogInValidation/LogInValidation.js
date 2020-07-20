@@ -2,7 +2,11 @@ import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 import { OmitProps } from "antd/lib/transfer/ListBody";
 
+<<<<<<< HEAD:src/Screen1/component/LogInValidation/LogInValidation.js
 const LogInValidation = (props) => {
+=======
+const LogInValidation = () => {
+>>>>>>> e7793b2e1d78212a479623dd96e47a5d5e2bfa16:src/Screen1/component/Password/Password.js
   const layout = {
     labelCol: { span: 0 },
     wrapperCol: { span: 25 },
