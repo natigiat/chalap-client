@@ -5,24 +5,24 @@ import Children from "..//Children/Children";
 function Parent() {
   const [Api, setapi] = useState([
     {
-      name: boaz,
-      phone: 052374245,
-      school: moria,
+      name: "boaz",
+      phone: 52374245,
+      school: "moria",
     },
     {
-      name: elior,
-      phone: 0523,
-      school: horev,
+      name: "elior",
+      phone: 523,
+      school: "horev",
     },
     {
-      name: yosef,
-      phone: 052375,
-      school: moria,
+      name: "yosef",
+      phone: 52375,
+      school: "moria",
     },
     {
-      name: shadmit,
-      phone: 054245,
-      school: shilo,
+      name: "shadmit",
+      phone: 54245,
+      school: "shilo",
     },
   ]);
 
