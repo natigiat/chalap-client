@@ -29,7 +29,6 @@ function Parent() {
       school: "כוכב השחר",
     },
   ]);
-
   const [alrt, setalert] = useState({
     message: null,
     description: null,
@@ -66,6 +65,9 @@ function Parent() {
             name={child.name}
             exit={child.exit}
             school={child.school}
+            catchChild={() => {
+              console.log(child.key);
+            }}
           />
         ))}
       </div>
