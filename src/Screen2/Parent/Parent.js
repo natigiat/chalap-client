@@ -35,7 +35,6 @@ function Parent() {
   const alrttip = () => {
     setalert({ message: "תקלה", description: "תקלה", icon: "", type: "" });
   };
-
   return (
     <div className="parent">
       <h2>בוקר טוב</h2>
