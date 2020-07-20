@@ -18,18 +18,8 @@
   color: #000000;
 }
 
-.phone {
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
-
-  color: #000000;
-}
-
+.exit,
 .school {
-  /* הרפע ןח */
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
