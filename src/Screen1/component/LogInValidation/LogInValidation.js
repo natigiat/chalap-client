@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 
-const Password = () => {
+const LogInValidation = () => {
   const layout = {
     labelCol: { span: 0 },
     wrapperCol: { span: 25 },
@@ -53,4 +53,4 @@ const Password = () => {
   );
 };
 
-export default Password;
+export default LogInValidation;

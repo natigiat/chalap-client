@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 
-const NumPhon = () => {
+const LogIn = () => {
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -52,4 +52,4 @@ const NumPhon = () => {
   );
 };
 
-export default NumPhon;
+export default LogIn;
