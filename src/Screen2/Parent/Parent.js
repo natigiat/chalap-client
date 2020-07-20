@@ -30,24 +30,10 @@ function Parent() {
     message: null,
     description: null,
   });
+
   useEffect(() => alrttip("error"), []);
-  const alrttip = (alrttip1) => {
-    switch (alrttip1) {
-      case "error":
-        setalert({ message: "תקלה", description: "תקלה" });
-        break;
-      case "success":
-        setalert({ message: "הצלחה", description: "הצלחה" });
-        break;
-      case "info":
-        setalert({ message: "עדכון", description: "עדכון" });
-        break;
-      case "warning":
-        setalert({ message: "אזהרה ", description: "אזהרה" });
-        break;
-      default:
-        setalert({ message: null, description: null });
-    }
+  const alrttip = () => {
+    setalert({ message: x, description: "תקלה", icon: "", type: "" });
   };
 
   return (
