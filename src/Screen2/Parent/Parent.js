@@ -5,44 +5,39 @@ import "./Parent.css";
 function Parent() {
   const [Api, setapi] = useState([
     {
-      name: "boaz",
-      phone: 52374245,
-      school: "moria",
+      name: "הילה",
+      exit: "תחנת דלק מכמש",
+      school: "בית ספר עפרה",
     },
     {
-      name: "elior",
-      phone: 523,
-      school: "horev",
+      name: "משה",
+      exit: "עלי",
+      school: "אולפנת צביה",
     },
     {
-      name: "yosef",
-      phone: 52375,
-      school: "moria",
+      name: "ישי",
+      exit: "בית אל",
+      school: "שער בנימין",
     },
     {
-      name: "shadmit",
-      phone: 54245,
-      school: "shilo",
+      name: "נעמה",
+      exit: "שער בנימין",
+      school: "ישיבת מעלות",
     },
   ]);
 
   return (
     <div className="parent">
-      היי משה כהן{" "}
+      <h2>בוקר טוב</h2>
+      <h6>אין עיכובים צפויים</h6>
       <div>
-        <Alerts />
+        {/* <Alerts /> */}
+        <h6>מידע נוסף</h6>
 
         {Api.map((child) => (
-          <Children
-            name={child.name}
-            phone={child.phone}
-            school={child.school}
-          />
+          <Children name={child.name} exit={child.exit} school={child.school} />
         ))}
       </div>
-      <button>aaaaa</button>
-      <button>bbbbb</button>
-      <button>ccccc</button>
     </div>
   );
 }
