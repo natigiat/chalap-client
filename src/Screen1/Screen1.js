@@ -1,40 +1,27 @@
-
-
-
-
-
- import React from "react";
+import React, { useEffect, useState } from "react";
+import Password from "./component/Password/Password";
 import "./Screen1.css";
-<<<<<<< HEAD
-import Password from "./Password/Password";
-=======
 import NumPhon from "./component/NumPhone/NumPhoe";
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
 
+function Screen1() {
+  const [errorDemoToPassword, setErrorDemoToPassword] = useState(false);
+  const [errorDemoToNumPhon, setErrorDemoToNumPhon] = useState(false);
+  window.document.title = "Bootcamp";
 
-function App() {
-  {
-    window.document.title = "Bootcamp";
-  }
-<<<<<<< HEAD
-  return(
-
-    <div className = 'test'>
-        <div className = 'password'>
-        
-        <Password />
-        </div>
-    
-    </div> 
-  ) 
-=======
+  const Demoserver = (value, from) => {
+    if (value.length < 5 && from === Password) {
+      setErrorDemoToPassword(true);
+    }
+    if (value.length < 5 && from === NumPhon) {
+      setErrorDemoToNumPhon(true);
+    }
+  };
   return (
     <div className="screen1">
-      <NumPhon className="numPhone" />
-      <Password className="Password" />
+      <NumPhon check={Demoserver} message={errorDemoToNumPhon} />
+      <Password check={Demoserver} message={errorDemoToPassword} />
     </div>
   );
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
 }
 
-export default App;
+export default Screen1;

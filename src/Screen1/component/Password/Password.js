@@ -18,7 +18,6 @@ const Password = () => {
   };
 
   return (
-    
     <Form
       {...layout}
       name="basic"
@@ -26,24 +25,15 @@ const Password = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-<<<<<<< HEAD
       {/* <Form.Item
-=======
-      Password
-      <Form.Item
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
         label="Username"
         name="username"
         rules={[{ required: true, message: "Please input your username!" }]}
       >
         <Input />
-<<<<<<< HEAD
       </Form.Item> */}
 
-        <h4>הכנס סיסמה</h4>
-=======
-      </Form.Item>
->>>>>>> 8969c30fba511717c89f5ff19a2f0322c6afa7d7
+      <h4>הכנס סיסמה</h4>
       <Form.Item
         label=""
         name=""
@@ -60,7 +50,6 @@ const Password = () => {
         </Button>
       </Form.Item>
     </Form>
-    
   );
 };
 
