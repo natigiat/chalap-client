@@ -5,24 +5,28 @@ import "./Parent.css";
 function Parent() {
   const [Api, setapi] = useState([
     {
+      key: 1,
       name: "הילה",
       exit: "תחנת דלק מכמש",
       school: "בית ספר עפרה",
     },
     {
+      key: 2,
       name: "משה",
       exit: "עלי",
       school: "אולפנת צביה",
     },
     {
+      key: 3,
       name: "ישי",
       exit: "בית אל",
       school: "שער בנימין",
     },
     {
+      key: 4,
       name: "נעמה",
       exit: "שער בנימין",
-      school: "ישיבת מעלות",
+      school: "כוכב השחר",
     },
   ]);
 
@@ -57,7 +61,12 @@ function Parent() {
         <h6>מידע נוסף</h6>
 
         {Api.map((child) => (
-          <Children name={child.name} exit={child.exit} school={child.school} />
+          <Children
+            key={child.key}
+            name={child.name}
+            exit={child.exit}
+            school={child.school}
+          />
         ))}
       </div>
     </div>
