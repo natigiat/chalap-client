@@ -1,0 +1,66 @@
+@import "~antd/dist/antd.css";
+.Child {
+  position: absolute;
+  width: 377px;
+  height: 77px;
+  left: 100px;
+  top: 167px;
+
+  background: #f1f1f1;
+}
+.name {
+  position: absolute;
+  width: 77px;
+  height: 38px;
+  left: calc(50% - 77px / 2 + 94px);
+  top: calc(50% - 38px / 2 - 0.5px);
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 38px;
+
+  color: #808080;
+}
+.time {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  left: calc(50% - 67px / 2 - 81px);
+  top: calc(50% - 38px / 2 - 0.5px);
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 38px;
+  display: flex;
+  align-items: flex-end;
+
+  color: #808080;
+}
+.img1 {
+  position: absolute;
+  left: 10.19%;
+
+  top: 33.55%;
+}
+.img2 {
+  position: absolute;
+  left: 9.11%;
+  top: 34.67%;
+}
+.img3 {
+  position: absolute;
+  top: 31%;
+  right: 8%;
+}
+.img4 {
+  position: absolute;
+  top: 35%;
+  right: 9.8%;
+}
+.button {
+  border: none;
+}
