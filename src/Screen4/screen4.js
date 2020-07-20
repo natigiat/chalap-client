@@ -2,14 +2,9 @@ import React from "react";
 // import logo from "./logo.svg";
 import "./screen4.css";
 import Map from "./map";
-<<<<<<< HEAD
-// import StudentList from "./studentList";
-import Flowchart_Stations from "./Flowchart_Stations";
-=======
-import StudentList from "./studentList";
-import FlowchartStations from "./FlowchartStations";
+import StudentList from "./Studentlist";
+import ShuttleTravelRoute from "./ShuttleTravelRoute";
 import { Button } from "antd";
->>>>>>> 5929f7428cb42b6b3623d2e9a34f83e119f1675b
 
 const Screen4 = (props) => {
   const students = [
@@ -45,29 +40,6 @@ const Screen4 = (props) => {
 
   const routeTimes = ["08:30", "09:30", "10:30"];
 
-  //   const stations = [
-  //     {
-  //       name: "school",
-  //       visited: "true",
-  //       timeExpected: "0",
-  //     },
-  //     {
-  //       name: "station1",
-  //       visited: "true",
-  //       timeExpected: "0",
-  //     },
-  //     {
-  //       name: "station2",
-  //       visited: "false",
-  //       timeExpected: "00:05",
-  //     },
-  //     {
-  //       name: "home",
-  //       visited: "false",
-  //       timeExpected: "00:10",
-  //     },
-  //   ];
-
   return (
     <div className="Screen4">
       Screen4
@@ -79,7 +51,7 @@ const Screen4 = (props) => {
         coordinates={coordinates}
         busLocation={busLocation}
       />
-      <FlowchartStations stations={stations} />
+      <ShuttleTravelRoute path={path} routeTimes={routeTimes} />
     </div>
   );
 };

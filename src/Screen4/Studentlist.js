@@ -10,8 +10,9 @@ const StudentList = (props) => {
 
   const menuItems = (
     <Menu>
-      {props.students.map((student) => (
+      {props.students.map((student, i) => (
         <Menu.Item
+          key={i}
           target="_blank"
           rel="noopener noreferrer"
           href="http://www.alipay.com/"
@@ -30,7 +31,6 @@ const StudentList = (props) => {
       >
         Hover me <DownOutlined />
       </a>
-      , mountNode,
     </Dropdown>
   );
 };
