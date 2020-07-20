@@ -1,14 +1,13 @@
 import React from "react";
+// import logo from "./logo.svg";
 import "./App.css";
-
-import Reporting from "./Screen4/Reporting";
-import ShuttleTravelRoute from "./Screen4/ShuttleTravelRoute";
+import Screen4 from "./Screen4/screen4";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 
 function App() {
   return (
     <div className="App">
-      <ShuttleTravelRoute />
-      <Reporting />
+      <Screen4 />
     </div>
   );
 }
