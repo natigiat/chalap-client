@@ -10,10 +10,17 @@ function Screen1() {
   window.document.title = "Bootcamp";
 
   const Demoserver = (value, from) => {
+<<<<<<< HEAD
+    if (value.length < 5 && from === 'LogInValidation') {
+      setErrorDemoToPassword(true);
+    }
+    if (value.length < 5 && from === 'LogIn') {
+=======
     if (value.length < 5 && from === "LogInValidation") {
       setErrorDemoToPassword(true);
     }
     if (value.length < 5 && from === "LogIn") {
+>>>>>>> e7793b2e1d78212a479623dd96e47a5d5e2bfa16
       setErrorDemoToNumPhon(true);
     }
   };

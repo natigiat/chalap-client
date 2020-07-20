@@ -25,7 +25,7 @@ const LogIn = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      NumPhon
+      log in
       <Form.Item
         label="Username"
         name="username"
