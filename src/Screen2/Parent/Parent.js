@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Alert from "../Alert/Alert";
 import Children from "..//Children/Children";
-
+import "./Parent.css";
 function Parent() {
   const [Api, setapi] = useState([
     {
@@ -27,7 +27,8 @@ function Parent() {
   ]);
 
   return (
-    <div>
+    <div className="parent">
+      היי משה כהן{" "}
       <div>
         <Alert />
 
@@ -39,6 +40,9 @@ function Parent() {
           />
         ))}
       </div>
+      <button>aaaaa</button>
+      <button>bbbbb</button>
+      <button>ccccc</button>
     </div>
   );
 }
