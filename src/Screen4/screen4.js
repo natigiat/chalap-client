@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./screen4.css";
 import Map from "./map";
-import StudentList from "./studentList";
+// import StudentList from "./studentList";
 import Flowchart_Stations from "./Flowchart_Stations";
 
 const Screen4 = (props) => {
@@ -21,11 +21,11 @@ const Screen4 = (props) => {
     },
   ];
 
-  const defaultLocation = { lat: -40, lng: 170, zoom: 11 };
+  const defaultLocation = { lat: 31.864347, lng: 35.260679, zoom: 11 };
 
   const coordinates = [
-    { lat: -34, lng: 151 },
-    { lat: -50, lng: 200 },
+    { lat: 31.864347, lng: 35.260679 },
+    { lat: 31.932534, lng: 35.022965 },
   ];
 
   const busLocation = [
@@ -61,7 +61,7 @@ const Screen4 = (props) => {
   return (
     <div className="Screen4">
       Screen4
-      <StudentList students={students} />
+      {/* <StudentList students={students} /> */}
       <Map
         defaultLocation={defaultLocation}
         coordinates={coordinates}
