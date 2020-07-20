@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import "./screen4.css";
 import Map from "./map";
 import StudentList from "./studentList";
-import Flowchart_Stations from "./Flowchart_Stations";
+import FlowchartStations from "./FlowchartStations";
+import { Button } from "antd";
 
 const Screen4 = (props) => {
   const students = [
@@ -35,39 +36,45 @@ const Screen4 = (props) => {
     },
   ];
 
-  const stations = [
-    {
-      name: "school",
-      visited: "true",
-      timeExpected: "0",
-    },
-    {
-      name: "station1",
-      visited: "true",
-      timeExpected: "0",
-    },
-    {
-      name: "station2",
-      visited: "false",
-      timeExpected: "00:05",
-    },
-    {
-      name: "home",
-      visited: "false",
-      timeExpected: "00:10",
-    },
-  ];
+  const path = ["ירושלים", "מעלה מכמש"];
+
+  const routeTimes = ["08:30", "09:30", "10:30"];
+
+  //   const stations = [
+  //     {
+  //       name: "school",
+  //       visited: "true",
+  //       timeExpected: "0",
+  //     },
+  //     {
+  //       name: "station1",
+  //       visited: "true",
+  //       timeExpected: "0",
+  //     },
+  //     {
+  //       name: "station2",
+  //       visited: "false",
+  //       timeExpected: "00:05",
+  //     },
+  //     {
+  //       name: "home",
+  //       visited: "false",
+  //       timeExpected: "00:10",
+  //     },
+  //   ];
 
   return (
     <div className="Screen4">
       Screen4
       <StudentList students={students} />
+      <Button type="link">הלוך</Button>
+      <Button type="link">חזור</Button>
       <Map
         defaultLocation={defaultLocation}
         coordinates={coordinates}
         busLocation={busLocation}
       />
-      <Flowchart_Stations stations={stations} />
+      <FlowchartStations stations={stations} />
     </div>
   );
 };
