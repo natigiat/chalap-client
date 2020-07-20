@@ -33,9 +33,9 @@ function Parent() {
 
   useEffect(() => alrttip("error"), []);
   const alrttip = () => {
-    setalert({ message: x, description: "תקלה", icon: "", type: "" });
+    setalert({ message: "x", description: "תקלה", icon: "", type: "" });
   };
-
+g
   return (
     <div className="parent">
       <h2>בוקר טוב</h2>

@@ -7,8 +7,11 @@ function Children(props) {
     <div className="children">
       <div className="child">
         <div className="name">{props.name}</div>
-        <div className="school">{props.school}</div>
-        <div className="phone"> {props.phone}</div>
+        <div>
+          <span className="exit"> {props.exit}</span>
+          <span></span>
+          <span className="school">{props.school}</span>
+        </div>
       </div>
     </div>
   );
