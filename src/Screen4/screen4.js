@@ -1,10 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./screen4.css";
 import Map from "./map";
+<<<<<<< HEAD
+// import StudentList from "./studentList";
+import Flowchart_Stations from "./Flowchart_Stations";
+=======
 import StudentList from "./studentList";
 import FlowchartStations from "./FlowchartStations";
 import { Button } from "antd";
+>>>>>>> 5929f7428cb42b6b3623d2e9a34f83e119f1675b
 
 const Screen4 = (props) => {
   const students = [
@@ -22,11 +27,11 @@ const Screen4 = (props) => {
     },
   ];
 
-  const defaultLocation = { lat: -40, lng: 170, zoom: 11 };
+  const defaultLocation = { lat: 31.864347, lng: 35.260679, zoom: 11 };
 
   const coordinates = [
-    { lat: -34, lng: 151 },
-    { lat: -50, lng: 200 },
+    { lat: 31.864347, lng: 35.260679 },
+    { lat: 31.932534, lng: 35.022965 },
   ];
 
   const busLocation = [
