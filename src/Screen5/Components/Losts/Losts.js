@@ -14,10 +14,10 @@ import {
 import "./Losts.css";
 import { OmitProps } from "antd/lib/transfer/ListBody";
 
-function Losts() {
+function Losts(props) {
   const onFinish = (values) => {
     console.log(values);
-    props.onSubmit("Lost", values);
+    props.onSabmit(values);
   };
 
   const { TextArea } = Input;
