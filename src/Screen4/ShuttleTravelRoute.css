@@ -14,14 +14,13 @@
 }
 .path {
   display: inline-block;
-  left: auto;
 }
 .starting_point {
-  position: absolute;
+  position: static;
   width: 126px;
   height: 26px;
-  left: 137px;
   top: 0px;
+  margin: 5px;
 
   font-family: Heebo;
   font-style: normal;
@@ -32,7 +31,7 @@
   color: #000000;
 }
 .end_point {
-  position: absolute;
+  position: static;
   width: 62px;
   height: 26px;
   left: 0px;
@@ -47,7 +46,7 @@
   color: #000000;
 }
 .arrow {
-  position: absolute;
+  position: static;
   width: 55px;
   height: 0px;
   left: 126px;
@@ -75,23 +74,18 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
 
   color: #000000;
 }
 
-.reporting {
-  position: absolute;
-  width: 75px;
-  height: 22px;
-  left: 269px;
-  top: 92px;
-
+.reporting_link {
+  margin: 5px;
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 22px;
-  /* identical to box height */
 
   text-decoration-line: underline;
 
