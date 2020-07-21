@@ -1,51 +1,19 @@
-/* .logIn {
+.PhoneContainer{
+    display: flex;
+    justify-content: space-evenly;
+    border: black 1px solid;
+    border-radius: 12px;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 4px black!important;
+    padding: 2rem!important;
+    width: 50%;
+}
+.sendPass{
+    color: gray!important;
+    background-color: transparent !important;
+    border: 1px solid gray !important;
+    padding: 0 2rem!important;
+    right: 48px;
     position: relative;
-    box-shadow: 1px 1px 3px black;
-    padding: 2rem;
-    border-radius: 7px;
-    width: 309px;
-    height: 500px;
-  }
-  input#basic_username {
-    position: absolute;
-    border-color: black;
-    top: 105px;
-    left: 4px;
-    text-align: right;
-  }
-  .ant-btn-primary {
-    position: absolute;
-    top: 153px;
-    left: -6px;
-    background: none;
-    color: black;
-    border-color: gray;
-  }
-  .messegeSend {
-    position: absolute;
-    top: 157px;
-    left: 34px;
-    font-size: 16px;
-  }
-  .ant-form-item-has-error .ant-form-item-explain,
-  .ant-form-item-has-error .ant-form-item-split {
-    color: #ff4d4f;
-    position: absolute;
-    top: 136px;
-    left: 40px;
-  }
-  .error {
-     position: absolute;
-    top: 40px;
-    left: 48px;
-    color: red;
-  }
-  .ant-form-item-has-error .ant-form-item-explain, .ant-form-item-has-error .ant-form-item-split {
-    color: #ff4d4f;
-    position: absolute;
-    top: 136px;
-    left: -224px;
-}  */
-.firstiput{
-    background-color: green;
 }

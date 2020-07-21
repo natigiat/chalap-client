@@ -22,8 +22,8 @@ const LogIn = (props) => {
   };
 
   return (
-    <div className="logIn">
-      <Form
+    
+      <Form className = 'PhoneContainer'
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
@@ -39,20 +39,20 @@ const LogIn = (props) => {
           <Input placeholder="הזן מספר טלפון" />
         </Form.Item>
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" className = 'sendPass'>
             שלח סיסמה
           </Button>
         </Form.Item>
         <Form.Item>
-          {props.message === "incorrect" && (
+          {/* {props.message === "incorrect" && (
             <div className="error">המספר אינו קיים במערכת</div>
           )}
           {props.message === "correct" && (
             <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
-          )}
+          )} */}
         </Form.Item>
       </Form>
-    </div>
+    
   );
 };
 

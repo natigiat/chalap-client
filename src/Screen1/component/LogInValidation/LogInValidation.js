@@ -5,8 +5,8 @@ import '../LogInValidation/LogInValidation.css';
 
 const LogInValidation = (props) => {
   const layout = {
-    labelCol: { span: 0 },
-    wrapperCol: { span: 5 },
+    labelCol: { span: 4 },
+    wrapperCol: { span: 25 },
   };
   const tailLayout = {
     wrapperCol: { offset: 10, span: 3 },
@@ -17,7 +17,7 @@ const LogInValidation = (props) => {
     console.log(values["password"]);
     props.check(values["password"]);
     props.checkFn(values["password"]);
-    console.log(props.passwordStatus);
+    console.log(props.passwordCheck);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -25,7 +25,7 @@ const LogInValidation = (props) => {
 
   return (
     <div className="logInValidation">
-      <Form
+      <Form className = 'passwordContainer'
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
@@ -33,19 +33,20 @@ const LogInValidation = (props) => {
         onFinishFailed={onFinishFailed}
       >
         <h3>הזן את הקוד שנשלח לנייד</h3>
-        {props.passwordStatus === true ? '' : <h5>סיסמה שגוייה</h5>}
+        {props.passwordCheck === false ? '' : <h5>סיסמה שגוייה</h5>}
 
-        <Form.Item className= "firstiput"
+        <Form.Item 
+         
           label=""
           name="password"
           rules={[{ required: true, message: "הכנס סיסמה" }]}
         >
-          <Input.Password />
+          <Input.Password  />
         </Form.Item>
         
         <Form.Item {...tailLayout}>
           
-          <Button className = 'sendPassword' type="primary" htmlType="submit" >
+          <Button className='sendPassword' type="primary" htmlType="submit" >
             שלח
           </Button>
         

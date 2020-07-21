@@ -14,13 +14,14 @@ function Screen1() {
   window.document.title = "Bootcamp";
 
   const passwordCheckFn = (password) =>{
-    if(password.length < 4 || Password.length > 4)
-    {
+    if(password.length < 4||password.length > 4  ){
       setPasswordCheck(true)
     }
-    else{
+    
+    if(password.length === 4){
       setPasswordCheck(false);
     }
+   
     
 
   }
@@ -52,16 +53,16 @@ function Screen1() {
   return (
     <div className="page">
       
-    <button onClick={()=>console.log(phoneNum)}>post Password</button>
+    
       <div>
         { <LogIn check={apiRequestphoneNum} message={DemoToNumPhon} /> }
       </div>
       <br></br>
       <div>
-        <LogInValidation check={apiRequestPassword} passwordStatus={PasswordCheck} checkFn = {passwordCheckFn}  />
+        <LogInValidation check={apiRequestPassword} passwordCheck={PasswordCheck} checkFn = {passwordCheckFn}  />
       </div>
       <StudentSettingMenu />
-      <StudentSettingUpdate />
+      <StudentSettingUpdate check={apiRequestphoneNum} message={DemoToNumPhon}/>
     </div>
   );
 }
