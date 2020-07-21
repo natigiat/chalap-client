@@ -1,0 +1,23 @@
+@import "~antd/dist/antd.css";
+
+.ant-tabs-tab {
+  color: black;
+}
+/* 
+.routeDir {
+  width: 50%;
+  color: black;
+  font-size: x-large;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.routeTab {
+  width: 50%;
+} */

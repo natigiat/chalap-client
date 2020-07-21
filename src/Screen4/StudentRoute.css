@@ -1,14 +1,13 @@
 @import "~antd/dist/antd.css";
-.StudentRoute {
-  width: 80%;
-  height: 40%;
 
+.StudentRoute {
+  width: 100%;
+  height: 50%;
   margin: 6px;
   padding: 15px;
   background-color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 7px;
-  text-align: right;
 }
 
 .studentHeader {

@@ -1,7 +1,48 @@
 @import "~antd/dist/antd.css";
 img {
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
-  height: 80px;
+}
+/* .modal {
+  width: 300px;
+  height: 400px;
+} */
+h2 {
+  direction: rtl;
+}
+.button {
+  width: 50%;
+  height: 60px;
+  float: right;
+}
+.button1 {
+  background-color: chocolate;
+  float: right;
+}
+.button2 {
+  background-color: pink;
+  float: right;
+}
+.button3 {
+  background-color: greenyellow;
+  float: right;
+}
+.button4 {
+  background-color: purple;
+  float: right;
+}
+.button5 {
+  background-color: yellow;
+  float: right;
+}
+.button6 {
+  background-color: blue;
+  float: right;
+}
+.popup {
+  right: 0px;
+  width: 300px;
 }
 
 .frame {

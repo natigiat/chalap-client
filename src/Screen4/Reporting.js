@@ -1,62 +1,76 @@
-import React from "react";
 import "./Reporting.css";
-// import { Divider, Timeline } from "antd";
-// import {} from "@ant-design/icons";
+import React, { useState } from "react";
+import { Modal, Button } from "antd";
 
-import Popup from "reactjs-popup";
+const Reporting = () => {
+  const [visible, setVisible] = useState(false);
 
-const Reporting = () => (
-  <Popup trigger={<button> Trigger</button>} position="right center">
-    <div>
-      <div>
-        {" "}
-        <h2>דיווח על</h2>{" "}
-      </div>
-      <div>
-        <div>
-          <img src="logo192.png" alt="" />
-          אבדה
-        </div>
-        <div>
-          <img src="logo192.png" alt="" />
-          מציאה
-        </div>
-        <div>
-          <img src="logo192.png" alt="" />
-          אלימות
-        </div>
-        <div>
-          <img src="logo192.png" alt="" />
-          תלונה
-        </div>
-        <div>
-          <img src="logo192.png" alt="" />
-          מילה טובה
-        </div>
-        <div>
-          <img src="logo192.png" alt="" />
-          פנייה למוקד
-        </div>
-      </div>
-    </div>
-  </Popup>
-);
+  const showModal = () => {
+    console.log("shoeModal");
+    setVisible(true);
+  };
 
-// const Reporting = (props) => {
-//   return (
-//     <div className="frame">
-//       <div className="reporting">
-//         <div className="header">
-//           <div className="report">דיווח על</div>
-//           <div className="x">x</div>
-//         </div>
-//         <div className="cycle">
-//           <div></div>
-//           <div>Text</div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+  const handleOk = (e) => {
+    console.log(e);
+    setVisible(false);
+  };
+
+  const handleCancel = (e) => {
+    console.log(e);
+    setVisible(false);
+  };
+
+  return (
+    <>
+      <Button type="primary" onClick={showModal}>
+        Open Modal
+      </Button>
+      <Modal
+        title="דיווח על"
+        className="modal"
+        visible={visible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <div>
+          <div>
+            <div className="button">
+              <img src="logo192.png" alt="" className="button1" />
+              <br></br>
+              אבדה
+            </div>
+            <div className="button">
+              <img src="logo192.png" alt="" className="button2" />
+              <br></br>
+              מציאה
+            </div>
+
+            <div className="button">
+              <img src="logo192.png" alt="" className="button3" />
+              <br></br>
+              אלימות
+            </div>
+            <div className="button">
+              <img src="logo192.png" alt="" className="button4" />
+              <br></br>
+              תלונה
+            </div>
+
+            <div className="button">
+              <img src="logo192.png" alt="" className="button5" />
+              <br></br>
+              מילה טובה
+            </div>
+            <div>
+              <img src="logo192.png" alt="" className="button6" />
+              <br></br>
+              פנייה למוקד
+            </div>
+          </div>
+        </div>
+      </Modal>
+    </>
+  );
+};
 
 export default Reporting;
