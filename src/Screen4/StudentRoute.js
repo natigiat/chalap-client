@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./StudentRoute.css";
+import Reporting from "./Reporting";
 import {} from "antd";
 import {
   HomeOutlined,
@@ -8,7 +9,7 @@ import {
 } from "@ant-design/icons";
 
 const StudentRoute = (props) => {
-  const reportingPopup = () => {};
+  const openReportingModal = () => {};
   const [visible, setVisible] = useState(false);
 
   return (
@@ -39,9 +40,10 @@ const StudentRoute = (props) => {
         <div className="hour">9:30</div>
         <div className="hour">10:30</div>
       </div>
-      {/* <div className="reporting_link" onClick={reportingPopup}>
+      <div className="reporting_link" onClick={openReportingModal}>
         עיכוב? בעיה
-      </div> */}
+      </div>
+      <Reporting />
     </div>
   );
 };
