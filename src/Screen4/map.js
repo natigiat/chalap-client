@@ -12,16 +12,18 @@ import "./map.css";
 const AnyReactComponent = ({ text }) => (
   <div
     style={{
-      // color: "white",
-      // background: "grey",
-      // padding: "15px 10px",
-      // display: "inline-flex",
-      // textAlign: "center",
-      // alignItems: "center",
-      // justifyContent: "center",
-      // borderRadius: "100%",
-      // transform: "translate(-50%, -50%)",
-      backgroundImage: `url(/marker.png)`,
+      color: "white",
+      background: "grey",
+      padding: "15px 10px",
+      display: "inline-flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "100%",
+      transform: "translate(-50%, -50%)",
+      // backgroundImage: `url(/marker.png)`,
+      // width: "10px",
+      // height: "10px",
       // backgroundImage: "/marker.png",
     }}
   >
@@ -32,11 +34,12 @@ const AnyReactComponent = ({ text }) => (
 const Map = (props) => {
   const defaultProps = {
     center: {
-      lat: props.defaultLocation.lat,
-      lng: props.defaultLocation.lng,
+      lat: props.coordinates[0].lat,
+      lng: props.coordinates[0].lng,
     },
-    zoom: props.defaultLocation.zoom,
+    zoom: 11,
   };
+  console.log(defaultProps.center);
   console.log(props.coordinates[0].lat);
   return (
     // Important! Always set the container height explicitly
@@ -46,24 +49,32 @@ const Map = (props) => {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent
+        {props.coordinates.map((cord) => (
+          <AnyReactComponent
+            lat={cord.lat}
+            lng={cord.lng}
+            text={cord.desc}
+            img="/marker.png"
+          />
+        ))}
+        {/* <AnyReactComponent
           lat={props.coordinates[0].lat}
           lng={props.coordinates[0].lng}
           text="Home"
           img="/marker.png"
-        />
-        <AnyReactComponent
+        /> */}
+        {/* <AnyReactComponent
           lat={props.coordinates[1].lat}
           lng={props.coordinates[1].lng}
           text="School"
           img="/marker.png"
         />
         <AnyReactComponent
-          lat={props.busLocation[0].lat}
-          lng={props.busLocation[0].lng}
+          lat={props.coordinates[2].lat}
+          lng={props.coordinates[2].lng}
           text="BusLocation"
           img="/marker.png"
-        />
+        /> */}
       </GoogleMapReact>
     </div>
   );
