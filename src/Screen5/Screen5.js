@@ -7,6 +7,7 @@ import Losts from "./Components/Losts/Losts";
 import "./Screen5.css";
 
 function Screen5() {
+  console.log("hi boaz");
   const [StudentName, setStudentName] = useState([]);
   useEffect(() => {
     axios

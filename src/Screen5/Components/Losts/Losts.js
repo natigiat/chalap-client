@@ -24,15 +24,20 @@ function Losts(props) {
   function onChangeDate(date, dateString) {
     console.log(dateString);
   }
+  const [date, setDate] = useState();
+  function onChange(date, dateString) {
+    console.log(dateString);
+    setDate(dateString);
+  }
 
   const onFinish = (values) => {
-    console.log("all the details:", values);
-    console.log("lost details:", values["lost details"]);
-    // console.log("loster name:", values["loster name: "][0]);
-    console.log("date:", values["date"]);
-    console.log("direction:", values["bus way"]);
-
-    props.onSabmit(values);
+    const dataReport = {
+      Messege: values["messege"],
+      StudentId: "fff",
+      Date: date,
+      RouteId: choose,
+    };
+    console.log(dataReport);
   };
 
   // button chuse
@@ -75,10 +80,6 @@ function Losts(props) {
       </Form.Item>
 
       <div className="date">
-        <Form.Item name="date as" label="מתי אבד">
-          <DatePicker onChangeDate={onChangeDate} />
-        </Form.Item>
-
         <Form.Item name="date as" label="מתי אבד">
           <DatePicker onChangeDate={onChangeDate} />
         </Form.Item>
