@@ -1,0 +1,125 @@
+@import "~antd/dist/antd.css";
+.StudentRoute {
+  width: 80%;
+  height: 40%;
+
+  margin: 6px;
+  padding: 15px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 7px;
+  text-align: right;
+}
+
+.studentHeader {
+  height: 50px;
+}
+.studentImage {
+  /* display: inline; */
+  /* width: 20%; */
+  float: right;
+}
+.studentDetails {
+  /* display: inline; */
+  margin-right: 10px;
+  float: right;
+  width: 80%;
+  text-align: right;
+}
+.studentImage img {
+  display: flex;
+  height: 50px;
+  width: 50px;
+}
+
+.studentName {
+  font-size: large;
+  font-weight: 500;
+}
+.notice {
+  /* text-align: right;
+
+  right: 60px;
+  top: 20px;
+  width: 110px; */
+}
+
+.path {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.startPoint {
+  display: inline;
+  margin: 4px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.LeftIcon {
+  margin: 0 5px;
+}
+
+.endPoint {
+  display: inline;
+  margin: 4px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #000000;
+}
+.arrow {
+  display: inline;
+
+  left: 126px;
+  top: 15px;
+}
+.hours {
+  /* display: inline-block; */
+}
+
+.hour {
+  display: inline;
+  margin: 5px 3px;
+  padding: 2px 10px;
+
+  background: rgb(209, 209, 209);
+  border-radius: 2px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.hour:hover {
+  outline-color: lightblue;
+}
+.hour:focus {
+  outline-color: lightskyblue;
+}
+
+.reporting_link {
+  margin: 5px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+
+  text-decoration-line: underline;
+
+  color: #000000;
+}
