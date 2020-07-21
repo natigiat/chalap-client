@@ -1,9 +1,9 @@
 import React from "react";
-import GoodWord from "./GoodWord/GoodWord";
-import Complain from "./Complain/Complain";
-import Vioelence from "./Violence/Violence";
-import Losts from "./Losts/Losts";
-import "../Screen5.css";
+import GoodWord from "./Components/GoodWord/GoodWord";
+import Complain from "./Components/Complain/Complain";
+import Vioelence from "./Components/Violence/Violence";
+import Losts from "./Components/Losts/Losts";
+import "./Screen5.css";
 
 function Screen5() {
   const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
