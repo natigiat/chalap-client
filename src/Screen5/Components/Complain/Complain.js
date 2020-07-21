@@ -6,8 +6,10 @@ function Complain(props) {
   const names = ["avi", "ruhama", "ttt"];
   const { TextArea } = Input;
   const { Option } = Select;
+
   const [date, setDate] = useState();
-  function onChange(date, dateString) {
+
+  function onChangeDate(date, dateString) {
     console.log(dateString);
     setDate(dateString);
   }
@@ -15,14 +17,15 @@ function Complain(props) {
   const onFinish = (values) => {
     const dataReport = {
       Messege: values["messege"],
-      StudentId: "fff",
+      StudentId: name,
       Date: date,
       RouteId: choose,
     };
     console.log(dataReport);
   };
-
+  const [name, setname] = useState();
   function handleChange(value, name) {
+    setname(name.children);
     console.log("hi", name.children);
   }
   // button chuse
@@ -74,7 +77,7 @@ function Complain(props) {
       </Form.Item>
       <div className="date">
         <Form.Item name="date" label="מתי ">
-          <DatePicker />
+          <DatePicker onChange={onChangeDate} />
         </Form.Item>
 
         <Form.Item label="באיזה הסעה" name="bus way: ">
