@@ -1,4 +1,4 @@
-@import "~antd/dist/antd.css";
+/* @import "~antd/dist/antd.css";
 .ant-input {
   position: relative;
   left: 24%;
@@ -57,22 +57,8 @@
   padding: 2rem;
   border-radius: 7px;
 }
-.logIn {
+/* .logIn {
   box-shadow: 1px 1px 3px black;
   padding: 2rem;
   border-radius: 7px;
-}
-.passwordItems {
-  display: flex;
-  /* background-color: lawngreen; */
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  align-items: center;
-}
-.algincenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+} */

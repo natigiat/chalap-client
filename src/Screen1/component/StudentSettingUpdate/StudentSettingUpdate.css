@@ -2,7 +2,7 @@
   position: relative;
   border: 1px solid black;
   width: 188px;
-  height: 336px;
+  height: 379px;
   margin: auto;
   border-radius: 20px;
 }
@@ -43,30 +43,32 @@ button.ant-btn.btnFence.ant-btn-primary {
 }
 .text1 {
   position: absolute;
-  width: 73px;
+  /* width: 73px; */
   height: 122px;
   left: calc(50% - 75px / 2);
-  top: 22px;
+  top: 38px;
   font-size: 24px;
   line-height: 91.8%;
   text-align: center;
+  color: black;
 }
-.text2 {
+text2 {
   position: absolute;
-  width: 73px;
+  /* width: 73px; */
   height: 122px;
-  left: calc(50% - 75px / 2);
-  top: 42px;
+  left: calc(50% - 153px / 2);
+  top: 104px;
   font-size: 15px;
   line-height: 91.8%;
   text-align: center;
+  color: black;
 }
 .text3 {
   position: absolute;
   width: 158px;
   height: 12px;
   left: calc(50% - 162px / 2 - 0.5px);
-  top: 479px;
+  top: 344px;
   font-size: 13px;
   line-height: 91.8%;
   text-align: center;

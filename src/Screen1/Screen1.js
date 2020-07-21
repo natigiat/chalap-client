@@ -24,12 +24,13 @@ function Screen1() {
   };
   return (
     <div className="page">
+      <br></br>
       <div>
         <LogIn check={Demoserver} message={DemoToNumPhon} />
       </div>
       <br></br>
       <div>
-        <LogInValidation check={Demoserver} message={DemoToPassword} />
+        {/* <LogInValidation check={Demoserver} message={DemoToPassword} /> */}
       </div>
       {/* <StudentSettingMenu /> */}
       {/* <StudentSettingUpdate /> */}
