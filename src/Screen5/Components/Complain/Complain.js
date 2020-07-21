@@ -11,6 +11,10 @@ function Complain(props) {
   const { TextArea } = Input;
   const { Option } = Select;
 
+  function onChangeDate(date, dateString) {
+    console.log(dateString);
+  }
+
   function handleChange(value, name) {
     console.log("hi", name.children);
   }
@@ -34,64 +38,53 @@ function Complain(props) {
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title"> תלונה</h1>
-
-      <Form.Item
-        name="complaint details"
-        label="פרטי המקרה"
-        plceholder="מה קרה"
-        // rules={[{ required: true }]}
-      >
-        <TextArea rows={6} />
-      </Form.Item>
-
-      <Form.Item
-        name="who"
-        label="מי נכח"
-        // rules={[{ required: true }]}
-      >
-        <Select
-          className="select"
-          defaultValue="בחר ילד"
-          style={{ width: 250 }}
-          onChange={handleChange}
-          placeholder="בחר ילד"
+      <div className="divstyle">
+        פרטי המקרה
+        <Form.Item name="complaint details" label="">
+          <TextArea rows={6} placeholder="מה קרה" />
+        </Form.Item>
+      </div>
+      <div className="divstyle1">
+        מי נכח
+        <Form.Item
+          name="who"
+          label=""
+          // rules={[{ required: true }]}
         >
-          {names.map((value, index) => (
-            <Option key={index}>{value}</Option>
-          ))}
-        </Select>
-      </Form.Item>
+          <Select
+            className="select"
+            defaultValue="בחר ילד"
+            style={{ width: 250 }}
+            onChange={handleChange}
+            placeholder="בחר ילד"
+          >
+            {names.map((value, index) => (
+              <Option key={index}>{value}</Option>
+            ))}
+          </Select>
+        </Form.Item>
+      </div>
+      <br />
+
       <div className="date">
-        <Form.Item name="date" label="מתי ">
-          <DatePicker />
+        <Form.Item name="date" label="">
+          <DatePicker onChangeDate={onChangeDate} /> :תאריך
         </Form.Item>
 
-        <Form.Item label="באיזה הסעה" name="bus way: ">
-          <br />
+        <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
             onChangeRide={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
+          {":הסעה"}
         </Form.Item>
       </div>
-
-      <Form.Item label="באיזה הסעה" name="bus way: ">
-        <br />
-        <Radio.Group
-          options={options}
-          onChangeRide={onChangeRide}
-          optionType="button"
-          buttonStyle="solid"
-        />
-      </Form.Item>
-
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
-
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
-          Submit
+          שליחה
         </Button>
       </Form.Item>
     </Form>

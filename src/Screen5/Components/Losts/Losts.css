@@ -21,13 +21,29 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 15px;
 }
+.divstyle {
+  background-color: rgb(211, 211, 211);
+  width: 310px;
+  height: 190px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.divstyle1 {
+  background-color: rgb(211, 211, 211);
+  width: 310px;
+  height: 85px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
 .select {
   border: rgb(206, 206, 206);
   border-style: solid;
   border-width: 2px;
   border-radius: 6px;
   text-align: center;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 .textarea2 {
   text-align: right;
@@ -44,7 +60,7 @@
 }
 .button {
   background-color: rgb(180, 180, 180);
-  margin: 20px 25px;
+  margin: 20px 25px 0px;
   width: 250px;
 }
 .btn label.ant-radio-button-wrapper {

@@ -17,6 +17,10 @@ function GoodWord(props) {
     { label: "חזור", value: "חזור" },
   ];
 
+  function onChangeDate(date, dateString) {
+    console.log(dateString);
+  }
+
   function handleChange(value, name) {
     console.log("hi", name.children);
   }
@@ -51,29 +55,24 @@ function GoodWord(props) {
         </Select>
       </Form.Item>
       <div className="date">
-        <Form.Item>
-          <DatePicker />
+        <Form.Item name="date" label="">
+          <DatePicker onChangeDate={onChangeDate} /> :תאריך
         </Form.Item>
 
-        <Form.Item>
-          <DatePicker />
-        </Form.Item>
-
-        <Form.Item label="באיזה הסעה">
-          <br />
+        <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
             onChangeRide={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
+          {":הסעה"}
         </Form.Item>
       </div>
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
-      <br />
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
-          Submit
+          שליחה
         </Button>
       </Form.Item>
     </Form>

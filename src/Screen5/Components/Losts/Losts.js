@@ -56,47 +56,49 @@ function Losts(props) {
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אבידות</h1>
-      <Form.Item name="lost details" label="פרטי האבידה">
-        <TextArea rows={6} />
-      </Form.Item>
-
-      <Form.Item>
-        <Select
-          className="select"
-          defaultValue="בחר ילד"
-          style={{ width: 250 }}
-          onChange={handleChange}
-          placeholder="בחר ילד"
-        >
-          {names.map((value, index) => (
-            <Option key={index}>{value}</Option>
-          ))}
-        </Select>
-      </Form.Item>
+      <div className="divstyle">
+        פרטי האבידה
+        <Form.Item name="lost details" label="">
+          <TextArea rows={6} placeholder="מה אבד לך?" />
+        </Form.Item>
+      </div>
+      <div className="divstyle1">
+        למי אבד
+        <Form.Item>
+          <Select
+            className="select"
+            defaultValue="בחר ילד"
+            style={{ width: 250 }}
+            onChange={handleChange}
+            placeholder="בחר ילד"
+          >
+            {names.map((value, index) => (
+              <Option key={index}>{value}</Option>
+            ))}
+          </Select>
+        </Form.Item>
+      </div>
+      <br />
 
       <div className="date">
-        <Form.Item name="date as" label="מתי אבד">
-          <DatePicker onChangeDate={onChangeDate} />
+        <Form.Item name="date" label="">
+          <DatePicker onChangeDate={onChangeDate} /> :תאריך
         </Form.Item>
 
-        <Form.Item name="date as" label="מתי אבד">
-          <DatePicker onChangeDate={onChangeDate} />
-        </Form.Item>
-
-        <Form.Item label="באיזה הסעה" name="bus way: ">
-          <br />
+        <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
             onChangeRide={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
+          {":הסעה"}
         </Form.Item>
       </div>
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
-          Submit
+          שליחה
         </Button>
       </Form.Item>
     </Form>
