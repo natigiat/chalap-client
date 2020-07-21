@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import StudentRoute from "./StudentRoute";
+import StudentRoute from "./StudentRoute/StudentRoute";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
