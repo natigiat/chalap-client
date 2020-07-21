@@ -1,5 +1,5 @@
 @import "~antd/dist/antd.css";
-.ant-input {
+/* .ant-input {
   position: relative;
   left: 24%;
   -webkit-box-sizing: border-box;
@@ -24,8 +24,8 @@
   border-radius: 2px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-.ant-input-affix-wrapper {
+} */
+/* .ant-input-affix-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -43,9 +43,9 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   left: 24%;
-}
+} */
 
-.page {
+/* .page {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
 .passwordItems {
   display: flex;
   /* background-color: lawngreen; */
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
@@ -75,4 +75,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */ 
+
+/* .ant-input-affix-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 21px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+  display: inline-flex;
+  left: 10%;
+} */

@@ -53,10 +53,10 @@ button.ant-btn.btnFence.ant-btn-primary {
 }
 .text2 {
   position: absolute;
-  width: 73px;
+  width: 129px;
   height: 122px;
-  left: calc(50% - 75px / 2);
-  top: 42px;
+  left: calc(50% - 130px / 2);
+  top: 165px;
   font-size: 15px;
   line-height: 91.8%;
   text-align: center;

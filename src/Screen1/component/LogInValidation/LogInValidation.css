@@ -1,0 +1,57 @@
+/* .ant-input-affix-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    margin-left: 232px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    display: -ms-inline-flexbox;
+    
+}
+  .ant-btn-primary {
+    color: gray;
+    width: 100px;
+    background: none;
+    border-color: gray;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+.send {
+    padding-right: 31rem;
+}
+
+.ant-form-item-explain, .ant-form-item-extra {
+    clear: both;
+    width: 100%;
+    min-height: 64px;
+    padding-top: 400px;
+    margin-left: 400px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 1.5715;
+    -webkit-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.ant-form-item-has-error .ant-form-item-explain, .ant-form-item-has-error .ant-form-item-split {
+    width: -6px;
+    color: #ff4d4f;
+    margin-left: 226px;
+    padding: 1rem;
+} */
+.sendPassword-important{
+        background-color: red;
+
+}
+.auth-btn{
+    background-color: green;
+}
