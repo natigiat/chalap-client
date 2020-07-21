@@ -104,6 +104,13 @@
   color: #000000;
 }
 
+.hour:hover {
+  outline-color: lightblue;
+}
+.hour:focus {
+  outline-color: lightskyblue;
+}
+
 .reporting_link {
   margin: 5px;
   font-family: Heebo;
