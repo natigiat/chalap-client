@@ -32,9 +32,9 @@ function Violence() {
   };
   console.log(choose);
 
-  function handleChange(value) {
-    console.log(`selected ${value}`);
-  }
+  // function handleChange(value) {
+  //   console.log(`selected ${value}`);
+  // }
 
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
@@ -54,7 +54,7 @@ function Violence() {
           className="select"
           defaultValue="lucy"
           style={{ width: 250 }}
-          onChange={handleChange}
+          // onChange={onChange}
         >
           <Option value="jack">Jack</Option>
           <Option value="lucy">Lucy</Option>
@@ -67,7 +67,10 @@ function Violence() {
 
       <div className="date">
         <Form.Item name="date" label="">
-          <DatePicker onChange={handleChange} /> :תאריך
+          <DatePicker
+          // onChange={handleChange}
+          />{" "}
+          :תאריך
         </Form.Item>
 
         <Form.Item name="bus" label="" className="btn">
@@ -81,7 +84,12 @@ function Violence() {
         </Form.Item>
       </div>
       <Form.Item>
-        <Button className="button" type="primary" htmlType="submit">
+        <Button
+          className="button"
+          rules={[{ required: true }]}
+          type="primary"
+          htmlType="submit"
+        >
           שליחה
         </Button>
       </Form.Item>
