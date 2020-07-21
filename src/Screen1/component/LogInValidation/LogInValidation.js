@@ -5,7 +5,7 @@ import { OmitProps } from "antd/lib/transfer/ListBody";
 const LogInValidation = (props) => {
   const layout = {
     labelCol: { span: 0 },
-    wrapperCol: { span: 3},
+    wrapperCol: { span: 10},
   };
   const tailLayout = {
     wrapperCol: { offset: 10, span: 3 },
@@ -14,7 +14,7 @@ const LogInValidation = (props) => {
   const onFinish = (values) => {
     console.log("Success:", values);
     console.log(values["password"]);
-    props.check(values["password",'LogInValidation']);
+    props.check(values["password"],'LogInValidation');
     console.log(props.message);
   };
   const onFinishFailed = (errorInfo) => {
@@ -30,6 +30,7 @@ const LogInValidation = (props) => {
       onFinishFailed={onFinishFailed}
     >
     
+    {props.message ?<h5>password is too short</h5> : ''}
     
       <Form.Item
         label=""
