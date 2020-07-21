@@ -1,0 +1,21 @@
+@import "~antd/dist/antd.css";
+
+.ant-tabs-tab {
+  color: black;
+}
+
+.routeDir {
+  width: 50%;
+}
+.ant-btn {
+  color: black;
+}
+button.ant-btn.refresh {
+  z-index: 10;
+  top: 43px;
+  right: 809px;
+  bottom: 58px;
+  /* float: right; */
+  /* right: 199px; */
+  left: -22px;
+}

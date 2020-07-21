@@ -9,6 +9,7 @@ import LogIn from "./Screen1/component/LogIn/LogIn";
 import LogInValidation from "./Screen1/component/LogInValidation/LogInValidation";
 import StudentSettingMenu from "./Screen1/component/StudentSettingMenu/StudentSettingMenu";
 import StudentSettingUpdate from "./Screen1/component/StudentSettingUpdate/StudentSettingUpdate";
+import Screen4 from "./Screen4/screen4";
 
 const history = createBrowserHistory();
 
@@ -46,6 +47,8 @@ function App() {
               </>
             )}
           />
+
+          <Route path={`/map`} component={Screen4} exact />
         </Switch>
       </div>
     </Router>
