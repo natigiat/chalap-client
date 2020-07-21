@@ -25,14 +25,12 @@ const Screen4 = (props) => {
   const defaultLocation = { lat: 31.864347, lng: 35.260679, zoom: 11 };
 
   const coordinates = [
-    { lat: 31.864347, lng: 35.260679 },
-    { lat: 31.932534, lng: 35.022965 },
-  ];
-
-  const busLocation = [
+    { lat: 31.864347, lng: 35.260679, desc: "home" },
+    { lat: 31.932534, lng: 35.022965, desc: "school" },
     {
       lat: -40,
       lng: 160,
+      desc: "bus location",
     },
   ];
 
