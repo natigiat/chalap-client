@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import Screen4 from "./Screen4/Screen4";
+import Screen4 from "./Screen4/Screen4-";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 
 function App() {
