@@ -20,6 +20,7 @@ function Losts(props) {
   function onChange(date, dateString) {
     console.log(dateString);
   }
+  console.log(props.type);
 
   const onFinish = (values) => {
     console.log("all the details:", values);
