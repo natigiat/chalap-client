@@ -1,0 +1,65 @@
+@import "~antd/dist/antd.css";
+
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0px;
+}
+.text {
+  display: inline-block;
+}
+.child {
+  background: #f1f1f1;
+  border: 1px solid #808080;
+  padding-bottom: 28px;
+}
+.name {
+  position: absolute;
+  right: 68px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  color: #808080;
+}
+.time {
+  position: absolute;
+
+  left: 61px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+
+  color: #808080;
+}
+.img1 {
+  position: absolute;
+  left: 33px;
+}
+.img2 {
+  position: absolute;
+  left: 29px;
+}
+.img3 {
+  position: absolute;
+  right: 22px;
+}
+.img4 {
+  position: relative;
+  right: 26px;
+  top: -6px;
+}
+.none {
+  display: none;
+}
+.input2 {
+  position: absolute;
+  margin-top: 4px;
+  margin-right: 264px;
+}
+.button2 {
+  position: absolute;
+
+  margin-right: 229px;
+  margin-top: 4px;
+}
