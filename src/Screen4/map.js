@@ -1,85 +1,72 @@
 import React from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import GoogleMapReact from "google-map-react";
+import "./map.css";
 
-const MapContainer = (props) => {
-  console.log(props);
+// const AnyReactComponent = ({ text, img }) => (
+//   <div>
+//     <img className="Marker" src={img} alt=""></img>
+//     {text}
+//   </div>
+// );
+
+const AnyReactComponent = ({ text }) => (
+  <div
+    style={{
+      // color: "white",
+      // background: "grey",
+      // padding: "15px 10px",
+      // display: "inline-flex",
+      // textAlign: "center",
+      // alignItems: "center",
+      // justifyContent: "center",
+      // borderRadius: "100%",
+      // transform: "translate(-50%, -50%)",
+      backgroundImage: `url(/marker.png)`,
+      // backgroundImage: "/marker.png",
+    }}
+  >
+    {text}
+  </div>
+);
+
+const Map = (props) => {
+  const defaultProps = {
+    center: {
+      lat: props.defaultLocation.lat,
+      lng: props.defaultLocation.lng,
+    },
+    zoom: props.defaultLocation.zoom,
+  };
   console.log(props.coordinates[0].lat);
-  console.log(props.coordinates[2].lat);
   return (
-    <Map
-      google={props.google}
-      style={{ width: "100%", height: "100%", position: "relative" }}
-      initialCenter={{
-        lat: props.coordinates[0].lat,
-        lng: props.coordinates[0].lng,
-      }}
-      className={"map"}
-      zoom={11}
-    >
-      <Marker
-        title={"בית"}
-        name={"Home"}
-        position={{
-          lat: props.coordinates[0].lat,
-          lng: props.coordinates[0].lng,
-        }}
-        icon={{
-          url: "/Images/home-run.png",
-          anchor: new props.google.maps.Point(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-          scaledSize: new props.google.maps.Size(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-        }}
-      />
-
-      <Marker
-        title={"ביה'ס"}
-        name={"School"}
-        position={{
-          lat: props.coordinates[1].lat,
-          lng: props.coordinates[1].lng,
-        }}
-        icon={{
-          url: "/Images/school.png",
-          anchor: new props.google.maps.Point(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-          scaledSize: new props.google.maps.Size(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-        }}
-      />
-
-      <Marker
-        name={"Your position"}
-        position={{
-          lat: props.coordinates[2].lat,
-          lng: props.coordinates[2].lng,
-        }}
-        icon={{
-          url: "/Images/transport.png",
-          anchor: new props.google.maps.Point(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-          scaledSize: new props.google.maps.Size(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
-          ),
-        }}
-      />
-    </Map>
+    // Important! Always set the container height explicitly
+    <div style={{ height: "400px", width: "100%" }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyBRcSVADr0_EbDMWNQP94bV-M2AJQSXUmU" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <AnyReactComponent
+          lat={props.coordinates[0].lat}
+          lng={props.coordinates[0].lng}
+          text="Home"
+          img="/marker.png"
+        />
+        <AnyReactComponent
+          lat={props.coordinates[1].lat}
+          lng={props.coordinates[1].lng}
+          text="School"
+          img="/marker.png"
+        />
+        <AnyReactComponent
+          lat={props.busLocation[0].lat}
+          lng={props.busLocation[0].lng}
+          text="BusLocation"
+          img="/marker.png"
+        />
+      </GoogleMapReact>
+    </div>
   );
 };
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyBRcSVADr0_EbDMWNQP94bV-M2AJQSXUmU",
-})(MapContainer);
-
-// export default Map;
+export default Map;

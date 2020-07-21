@@ -3,9 +3,8 @@ import React from "react";
 import "./screen4.css";
 import GoogleApiWrapper from "./map";
 import StudentList from "./Studentlist";
-// import ShuttleTravelRoute from "./ShuttleTravelRoute";
+import ShuttleTravelRoute from "./ShuttleTravelRoute";
 import { Button } from "antd";
-import Reporting from "./Reporting";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -30,26 +29,6 @@ const Screen4 = (props) => {
       id: 3,
       name: "yosef",
     },
-  ];
-
-  const studentRouteInfo = [
-    {
-      startPoint: "בני אדם",
-      endPoint: "מעלה מכמש",
-    },
-    {
-      startPoint: "מעלה מכמש",
-      endPoint: "כוכב יעקב",
-    },
-    {
-      startPoint: "אש קודש",
-      endPoint: "שילה",
-    },
-  ];
-  const studentRouteTimes = [
-    ["08:30", "09:00", "10:00"],
-    ["08:30", "09:30", "10:30"],
-    ["08:10", "08:40"],
   ];
 
   const coordinates = [
