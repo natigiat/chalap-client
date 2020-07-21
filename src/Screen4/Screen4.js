@@ -69,14 +69,16 @@ const Screen4 = (props) => {
   // const { TabPane } = Tabs;
   // console.log(ridesMock);
   // console.log("----------------");
+
   // let studentRidesInfo = [];
-  // for (let ridesInd = 0; ridesInd < rides.length; ridesInd++) {
-  //   studentRidesInfo.push(rides[ridesInd]);
+  // console.log(ridesMock.rides);
+  // for (let ridesInd = 0; ridesInd < ridesMock.rides.length; ridesInd++) {
+  //   studentRidesInfo.push([{rides[ridesInd].statTime}]);
+  //   console.log(ridesMock.rides[ridesInd]);
   // }
 
   return (
     <div className="Screen4">
-      {/* <div><StudentList students={students} onChange={setStudentData}/></div> */}
       <Button className="routeDir" type="link">
         הלוך
       </Button>
@@ -88,13 +90,17 @@ const Screen4 = (props) => {
         <TabPane className="routeTab" tab="הלוך" key="1"></TabPane>
         <TabPane className="routeTab" tab="חזור" key="2" disabled></TabPane>
       </Tabs> */}
-      <GoogleApiWrapper coordinates={coordinates} />
-      {/* <ShuttleTravelRoute path={path} routeTimes={routeTimes} /> */}
-      <Carousel
-        students={students}
-        studentRouteInfo={studentRouteInfo}
-        studentRouteTimes={studentRouteTimes}
-      />
+      <div className="mapWrapper">
+        <GoogleApiWrapper coordinates={coordinates} />
+      </div>
+
+      <div className="swiperWrapper">
+        <Carousel
+          students={students}
+          studentRouteInfo={studentRouteInfo}
+          studentRouteTimes={studentRouteTimes}
+        />
+      </div>
     </div>
   );
 };
