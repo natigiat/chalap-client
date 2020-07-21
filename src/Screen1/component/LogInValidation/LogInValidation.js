@@ -22,6 +22,7 @@ const LogInValidation = (props) => {
   };
 
   return (
+      
     <Form
       {...layout}
       name="basic"
@@ -29,24 +30,26 @@ const LogInValidation = (props) => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-    
+      {/* <div className = 'algincenter'> */}
+    <h4>enter password</h4>
     {props.message ?<h5>password is too short</h5> : ''}
     
       <Form.Item
-        label=""
+        
         name="password"
         rules={[{ required: true, message: "Please input your password!" }]}
       >
         <Input.Password />
       </Form.Item>
       <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox>Remember me</Checkbox>
+        
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
+      {/* </div> */}
     </Form>
   );
 };
