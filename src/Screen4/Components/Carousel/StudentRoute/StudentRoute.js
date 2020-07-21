@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./StudentRoute.css";
-import Reporting from "./Reporting";
+import Reporting from "./Reporting/Reporting";
 import {} from "antd";
 import {
   HomeOutlined,

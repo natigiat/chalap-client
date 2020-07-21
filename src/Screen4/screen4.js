@@ -1,13 +1,13 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "./screen4.css";
-import GoogleApiWrapper from "./map";
-import StudentList from "./Studentlist";
+import "./Screen4.css";
+import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
+//import StudentList from "./Studentlist";
 import { Button } from "antd";
 import { Tabs } from "antd";
-import Carousel from "./Carousel";
+import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
-import RefreshButton from "./buttonRefresh";
+import RefreshButton from "./Components/RefreshButton/RefreshButton";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -66,9 +66,14 @@ const Screen4 = (props) => {
 
   //const [products, setProducts] = useState([]);
 
-  const { TabPane } = Tabs;
-  console.log(ridesMock);
-  console.log("----------------");
+  // const { TabPane } = Tabs;
+  // console.log(ridesMock);
+  // console.log("----------------");
+  // let studentRidesInfo = [];
+  // for (let ridesInd = 0; ridesInd < rides.length; ridesInd++) {
+  //   studentRidesInfo.push(rides[ridesInd]);
+  // }
+
   return (
     <div className="Screen4">
       {/* <div><StudentList students={students} onChange={setStudentData}/></div> */}
