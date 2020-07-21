@@ -22,9 +22,10 @@ const Reporting = () => {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
-        Open Modal
-      </Button>
+      <div className="reporting_link" onClick={showModal}>
+        עיכוב? בעיה
+      </div>
+
       <Modal
         title="דיווח על"
         className="modal"

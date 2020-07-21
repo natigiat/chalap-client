@@ -4,10 +4,25 @@ img {
   width: 60px;
   border-radius: 50%;
 }
+.reporting_link {
+  margin: 5px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #000000;
+  cursor: pointer;
+}
 /* .modal {
   width: 300px;
   height: 400px;
 } */
+.ant-modal-body {
+  height: 350px;
+  margin: 20px;
+}
 h2 {
   direction: rtl;
 }

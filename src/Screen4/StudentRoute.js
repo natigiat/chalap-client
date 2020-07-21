@@ -40,9 +40,7 @@ const StudentRoute = (props) => {
         <div className="hour">9:30</div>
         <div className="hour">10:30</div>
       </div>
-      <div className="reporting_link" onClick={openReportingModal}>
-        עיכוב? בעיה
-      </div>
+
       <Reporting />
     </div>
   );
