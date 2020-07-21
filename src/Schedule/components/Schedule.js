@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import childrensMock from "./childrens.mock";
+
 import Child from "./Child";
 import "./Schedule.css";
 import "./Child.css";
@@ -21,17 +21,11 @@ const Children = [
 ];
 
 export default function Schedule() {
-  const [className, setClassName] = useState();
-  const setTime = (e) => {
-    e.target.parentNode.parentNode.querySelector(".time").className = "ttt";
-    e.target.parentNode.parentNode
-      .querySelector(".input")
-      .classList.remove("input");
-    e.target.parentNode.parentNode
-      .querySelector(".button")
-      .classList.remove("button");
-    setClassName();
-    console.log(e.target);
+  const [ChildrenState, setChildrenState] = useState(Children);
+  const onClickNewTime = (newTime, index) => {
+    Children[index].time = newTime;
+
+    setChildrenState([...Children]);
   };
   return (
     <div>
@@ -39,11 +33,11 @@ export default function Schedule() {
       <Collapse className="collapseMenu">
         {weekDays.map((day, i) => (
           <Panel header={Days[i]} key={i}>
-            {Children.map((a, i) => (
+            {ChildrenState.map((a, i) => (
               <Child
-                onClick={setTime}
-                key={"Child" + i}
-                className={"child" + i}
+                key={i}
+                index={i}
+                onClickNewTime={onClickNewTime}
                 name={a.name}
                 time={a.time}
               />
