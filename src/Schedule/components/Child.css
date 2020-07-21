@@ -1,66 +1,71 @@
 @import "~antd/dist/antd.css";
-.Child {
-  position: absolute;
-  width: 377px;
-  height: 77px;
-  left: 100px;
-  top: 167px;
 
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0px;
+}
+.text {
+  display: inline-block;
+}
+.child {
   background: #f1f1f1;
+  border: 1px solid #808080;
+  padding-bottom: 28px;
 }
 .name {
   position: absolute;
-  width: 77px;
-  height: 38px;
-  left: calc(50% - 77px / 2 + 94px);
-  top: calc(50% - 38px / 2 - 0.5px);
-
+  right: 68px;
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
-  line-height: 38px;
-
   color: #808080;
 }
 .time {
   position: absolute;
-  width: 67px;
-  height: 38px;
-  left: calc(50% - 67px / 2 - 81px);
-  top: calc(50% - 38px / 2 - 0.5px);
+
+  left: 61px;
 
   font-family: Heebo;
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-  line-height: 38px;
-  display: flex;
-  align-items: flex-end;
 
   color: #808080;
 }
 .img1 {
   position: absolute;
-  left: 10.19%;
-
-  top: 33.55%;
+  left: 33px;
 }
 .img2 {
   position: absolute;
-  left: 9.11%;
-  top: 34.67%;
+  left: 29px;
 }
 .img3 {
   position: absolute;
-  top: 31%;
-  right: 8%;
+  right: 22px;
 }
 .img4 {
-  position: absolute;
-  top: 35%;
-  right: 9.8%;
+  position: relative;
+  right: 26px;
+  top: -6px;
+}
+.ttt {
+  display: none;
+}
+.input {
+  display: none;
 }
 .button {
-  border: none;
+  display: none;
+}
+.input2 {
+  position: absolute;
+  margin-top: 4px;
+  margin-right: 264px;
+}
+.button2 {
+  position: absolute;
+
+  margin-right: 229px;
+  margin-top: 4px;
 }

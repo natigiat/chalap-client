@@ -1,57 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import childrensMock from "./childrens.mock";
-import Child from "./Child"
+import Child from "./Child";
 import "./Schedule.css";
+import "./Child.css";
 import { Collapse } from "antd";
 const { Panel } = Collapse;
-
-const weekDays=[
-  "Sunday","Monday", "Tuesday", "Wensday", "Thursday", "Friday"
-]
-
-// const data =[
-// {
-//   Day={
-    
-//   }
-
-// }
-// ]
-//    "
-
-// ]
+const Days = ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי"];
+const weekDays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wensday",
+  "Thursday",
+  "Friday",
+];
+const Children = [
+  { name: "david", time: "13:45" },
+  { name: "moshe", time: "14:30" },
+  { name: "shuki", time: "15:00" },
+];
 
 export default function Schedule() {
-  const text = "hello";
+  const [className, setClassName] = useState();
+  const setTime = (e) => {
+    e.target.parentNode.parentNode.querySelector(".time").className = "ttt";
+    e.target.parentNode.parentNode
+      .querySelector(".input")
+      .classList.remove("input");
+    e.target.parentNode.parentNode
+      .querySelector(".button")
+      .classList.remove("button");
+    setClassName();
+    console.log(e.target);
+  };
   return (
     <div>
       <h1 className="header">עריכת שעות סיום</h1>
       <Collapse className="collapseMenu">
-        
-        <Panel header="ראשון" key="1">
-          {childrensMock.map((child, childIndex) => (
-            <Child 
-            key={childIndex}
-            name={child.name}
-            time={child.time}
-             />
-          ))}
-        </Panel>
-        <Panel header="שני" key="2">
-          <p>{"text"}</p>
-        </Panel>
-        <Panel header="שלישי" key="3">
-          <p>{text}</p>
-        </Panel>
-        <Panel header="רביעי" key="4">
-          <p>{text}</p>
-        </Panel>
-        <Panel header="חמישי" key="5">
-          <p>{text}</p>
-        </Panel>
-        <Panel header="שישי" key="6">
-          <p>{text}</p>
-        </Panel>
+        {weekDays.map((day, i) => (
+          <Panel header={Days[i]} key={i}>
+            {Children.map((a, i) => (
+              <Child
+                onClick={setTime}
+                key={"Child" + i}
+                className={"child" + i}
+                name={a.name}
+                time={a.time}
+              />
+            ))}
+          </Panel>
+        ))}
       </Collapse>
     </div>
   );
