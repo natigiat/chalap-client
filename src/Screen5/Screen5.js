@@ -1,23 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import GoodWord from "./Components/GoodWord/GoodWord";
 import Complain from "./Components/Complain/Complain";
 import Vioelence from "./Components/Violence/Violence";
 import Losts from "./Components/Losts/Losts";
-import "./Screen5.css";
+import axios from "axios";
 
 function Screen5() {
-  const [StudentName, setStudentName] = useState([]);
-  useEffect(() => {
-    axios
-      .get(
-        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
-      )
-      .then(function (response) {
-        console.log(response.data);
-        setStudentName(response.data);
-      });
-  }, []);
   const onSubmit1 = (value) => {
     console.log(value);
     axios
@@ -47,22 +35,13 @@ function Screen5() {
         console.log(err);
       });
   };
-  // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
-
+  let f = 0;
   return (
-    <div className="form">
-      <GoodWord
-        children={[StudentName]}
-        type="good_word"
-        onSubmit={onSubmit1}
-      />
-      <Complain children={[StudentName]} type="report" onSubmit={onSubmit1} />
-      <Vioelence
-        children={[StudentName]}
-        type="vioelence"
-        onSubmit={onSubmit1}
-      />
-      <Losts children={[StudentName]} type="lost" onSabmit={onSubmit1} />
+    <div>
+      <GoodWord children={[]} type="good_word" onSubmit={onSubmit1} />
+      <Complain children={[]} type="report" onSubmit={onSubmit1} />
+      <Vioelence children={[]} type="vioelence" onSubmit={onSubmit1} />
+      <Losts children={[]} type="lost" onSabmit={onSubmit1} />
     </div>
   );
 }

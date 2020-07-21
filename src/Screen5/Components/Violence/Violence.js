@@ -13,10 +13,13 @@ import {
   Switch,
 } from "antd";
 
-function Violence() {
+function Violence(props) {
   const onFinish = (values) => {
     console.log(values);
   };
+  const names = ["avi", "babi", "gagi"];
+
+  console.log(props.type);
   const options = [
     { label: "הלוך", value: "הלוך " },
     { label: "חזור", value: "חזור" },
@@ -38,7 +41,7 @@ function Violence() {
 
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
-      <div className="title">אלימות </div>
+      <h1 className="title">אלימות </h1>
 
       <Form.Item
         className="textarea1"
@@ -48,17 +51,16 @@ function Violence() {
       >
         <TextArea rows={6} placeholder="תיאור המקרה ..." />
       </Form.Item>
-
-      <Form.Item name="child" label="" rules={[{ required: true }]}>
+      <Form.Item>
         <Select
           className="select"
           defaultValue="lucy"
           style={{ width: 250 }}
           // onChange={onChange}
         >
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="Yiminghe">yiminghe</Option>
+          {names.map((value) => (
+            <Option>{value}</Option>
+          ))}
         </Select>
       </Form.Item>
       <Form.Item name="mans" label="" rules={[{ required: true }]}>
