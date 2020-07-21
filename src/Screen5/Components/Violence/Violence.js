@@ -35,15 +35,9 @@ function Violence(props) {
   };
   console.log(choose);
 
-<<<<<<< HEAD
-  // function handleChange(value) {
-  //   console.log(`selected ${value}`);
-  // }
-=======
   function handleChange(value, name) {
     console.log("hi", name.children);
   }
->>>>>>> cad1db376feeb3ce8a9aaa4c4532af92cb544503
 
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
