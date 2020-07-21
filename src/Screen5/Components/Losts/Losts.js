@@ -21,23 +21,26 @@ function Losts(props) {
 
   console.log(props.type);
 
-  function onChangeDate(date, dateString) {
-    console.log(dateString);
-  }
+  //   function onChangeDate(date, dateString) {
+  //     console.log(dateString);
+
   const [date, setDate] = useState();
-  function onChange(date, dateString) {
-    console.log(dateString);
+  console.log(date);
+  function onChangedate(date, dateString) {
     setDate(dateString);
+    console.log(date);
   }
 
   const onFinish = (values) => {
     const dataReport = {
       Messege: values["messege"],
-      StudentId: "fff",
+      StudentId: "",
       Date: date,
       RouteId: choose,
     };
     console.log(dataReport);
+
+    //props.onSubmit(dataReport);
   };
 
   // button chuse
@@ -81,7 +84,7 @@ function Losts(props) {
 
       <div className="date">
         <Form.Item name="date as" label="מתי אבד">
-          <DatePicker onChangeDate={onChangeDate} />
+          <DatePicker onChange={onChangedate} />
         </Form.Item>
 
         <Form.Item label="באיזה הסעה" name="bus way: ">
