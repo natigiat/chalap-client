@@ -19,3 +19,15 @@ button.ant-btn.refresh {
   /* right: 199px; */
   left: -22px;
 }
+
+.mapWrapper {
+  /* position: relative; */
+  width: 100%;
+  height: 80%;
+}
+
+.swiperWrapper {
+  position: relative;
+  width: 100%;
+  top: 634px;
+}
