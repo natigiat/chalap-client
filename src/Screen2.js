@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Alerts from "../Alert/Alert";
-import Children from "..//Children/Children";
+import Alerts from "./Screen2/Alert/Alert";
+import Children from "./Screen2/Children/Children";
 import axios from "axios";
-import "./Parent.css";
+import "./Screen2.css";
 
 function Parent() {
    const [children, setChildren] = useState([]);

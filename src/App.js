@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Parent from "./Screen2/Parent/Parent";
+import Parent from "./Screen2";
 function App() {
   return (
     <div>
