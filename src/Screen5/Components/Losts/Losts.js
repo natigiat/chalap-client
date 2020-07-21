@@ -16,6 +16,7 @@ import "./Losts.css";
 function Losts() {
     const onFinish = (values) => {
         console.log(values);
+        // props.onSubmit('Lost', values)
     };
 
     const { TextArea } = Input;
