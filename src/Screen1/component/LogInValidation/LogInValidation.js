@@ -4,14 +4,20 @@ import { Input, Form, Checkbox, Button } from "antd";
 const LogInValidation = () => {
   const layout = {
     labelCol: { span: 0 },
-    wrapperCol: { span: 25 },
+    wrapperCol: { span: 3},
   };
   const tailLayout = {
-    wrapperCol: { offset: 0, span: 0 },
+    wrapperCol: { offset: 10, span: 3 },
   };
 
   const onFinish = (values) => {
     console.log("Success:", values);
+<<<<<<< HEAD
+=======
+    console.log(values["password"]);
+    props.check(values["password",'LogInValidation']);
+    console.log(props.message);
+>>>>>>> a745b8b65a040324a0494f65dc799940af0974de
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -25,28 +31,21 @@ const LogInValidation = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      {/* <Form.Item
-        label="Username"
-        name="username"
-        rules={[{ required: true, message: "Please input your username!" }]}
-      >
-        <Input />
-      </Form.Item> */}
-
-      <h4>הכנס סיסמה</h4>
+    
+    
       <Form.Item
         label=""
-        name=""
-        rules={[{ required: true, message: "הכנס סיסמה" }]}
+        name="password"
+        rules={[{ required: true, message: "Please input your password!" }]}
       >
         <Input.Password />
       </Form.Item>
       <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox>זכור אותי</Checkbox>
+        <Checkbox>Remember me</Checkbox>
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
-          הירשם
+          Submit
         </Button>
       </Form.Item>
     </Form>
