@@ -9,24 +9,27 @@ function GoodWord(props) {
   };
 
   const names = ["avi", "babi", "gagi"];
+
   const { TextArea } = Input;
   const { Option } = Select;
   const options = [
     { label: "הלוך", value: "הלוך " },
     { label: "חזור", value: "חזור" },
   ];
-  function handleChange(value) {
-    console.log(value);
+
+  function handleChange(value, name) {
+    console.log("hi", name.children);
   }
 
   const [choose, setChoose] = useState();
-  const onChange4 = (e) => {
+  const onChangeRide = (e) => {
     setChoose(e.target.value);
   };
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
       <h1>מילה טובה</h1>
+
       <Form.Item
         name="note"
         label="תודה על מילה טובה"
@@ -42,8 +45,8 @@ function GoodWord(props) {
           onChange={handleChange}
           placeholder="בחר ילד"
         >
-          {names.map((value) => (
-            <Option>{value}</Option>
+          {names.map((value, index) => (
+            <Option key={index}>{value}</Option>
           ))}
         </Select>
       </Form.Item>
@@ -51,11 +54,12 @@ function GoodWord(props) {
       <Form.Item>
         <DatePicker />
       </Form.Item>
+
       <Form.Item label="באיזה הסעה">
         <br />
         <Radio.Group
           options={options}
-          onChange={onChange4}
+          onChangeRide={onChangeRide}
           optionType="button"
           buttonStyle="solid"
         />

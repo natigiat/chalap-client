@@ -35,8 +35,8 @@ function Violence(props) {
   };
   console.log(choose);
 
-  function handleChange(value) {
-    console.log(`selected ${value}`);
+  function handleChange(value, name) {
+    console.log("hi", name.children);
   }
 
   return (
@@ -58,8 +58,8 @@ function Violence(props) {
           onChange={handleChange}
           placeholder="בחר ילד"
         >
-          {names.map((value) => (
-            <Option>{value}</Option>
+          {names.map((value, index) => (
+            <Option key={index}>{value}</Option>
           ))}
         </Select>
       </Form.Item>
