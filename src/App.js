@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Schedule from "./Schedule/components/Schedule";
+import Call from "./Screen_3/components/SetChilde/SetChilde";
 
 function App() {
   return (
     <div>
-      <Schedule />
+      <Call />
     </div>
   );
 }
