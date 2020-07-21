@@ -70,7 +70,7 @@ const Screen4 = (props) => {
         חזור
       </Button>
       {/* <Map coordinates={coordinates} /> */}
-      <ShuttleTravelRoute path={path} routeTimes={routeTimes} />
+      {/* <ShuttleTravelRoute path={path} routeTimes={routeTimes} /> */}
     </div>
   );
 };
