@@ -18,11 +18,36 @@ function Screen5() {
         setStudentName(response.data);
       });
   }, []);
-
-  // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
   const onSubmit1 = (value) => {
     console.log(value);
+    axios
+      .post(
+        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/reports/",
+        {
+          id: 2,
+          type: "lost",
+
+          RouteId: 1,
+          UserId: 1,
+          StudentId: 1,
+          message: "boaz",
+          involvedStudents: "שמות המעורבים",
+          anonymousMessage: true,
+
+          address: "כתובת",
+          image: "https://imageurl.com",
+          subject: "ג",
+          date: "2020-07-08 00:00:00",
+        }
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+  // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
 
   return (
     <div className="form">

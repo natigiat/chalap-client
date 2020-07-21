@@ -11,13 +11,24 @@ import {
   TreeSelect,
   Switch,
 } from "antd";
+import moment from "moment";
+
 import "./Losts.css";
-import { OmitProps } from "antd/lib/transfer/ListBody";
+const { RangePicker } = DatePicker;
 
 function Losts(props) {
+  function onChange(date, dateString) {
+    console.log(dateString);
+  }
+
   const onFinish = (values) => {
-    console.log(values);
-    // props.onSubmit('Lost', values)
+    console.log("all the details:", values);
+    console.log("lost details:", values["lost details"]);
+    console.log("loster name:", values["loster name: "][0]);
+    console.log("date:", values["date"]);
+    console.log("direction:", values["bus way"]);
+
+    // props.onSubmit(values)
   };
 
   const { TextArea } = Input;
@@ -33,6 +44,7 @@ function Losts(props) {
   const onChange4 = (e) => {
     setChoose(e.target.value);
   };
+  console.log(choose);
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
@@ -60,8 +72,8 @@ function Losts(props) {
         />
       </Form.Item>
 
-      <Form.Item name="date of lost: " label="מתי אבד">
-        <DatePicker />
+      <Form.Item name="date as" label="מתי אבד">
+        <DatePicker onChange={onChange} />
       </Form.Item>
       <Form.Item label="באיזה הסעה" name="bus way: ">
         <br />
