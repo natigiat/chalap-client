@@ -55,13 +55,16 @@ function Screen5() {
         children={[StudentName]}
         type="good_word"
         onSubmit={onSubmit1}
-      />
+      />{" "}
+      <br />
       <Complain children={[StudentName]} type="report" onSubmit={onSubmit1} />
+      <br />
       <Vioelence
         children={[StudentName]}
         type="vioelence"
         onSubmit={onSubmit1}
       />
+      <br />
       <Losts children={[StudentName]} type="lost" onSabmit={onSubmit1} />
     </div>
   );

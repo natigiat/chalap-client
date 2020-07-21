@@ -54,7 +54,7 @@ function Violence(props) {
       <Form.Item>
         <Select
           className="select"
-          defaultValue="lucy"
+          defaultValue="בחר ילד"
           style={{ width: 250 }}
           // onChange={onChange}
         >

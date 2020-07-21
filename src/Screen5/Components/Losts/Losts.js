@@ -53,16 +53,17 @@ function Losts(props) {
   }
 
   return (
-    <Form name="control-hooks" onFinish={onFinish}>
-      <h1>אבידות</h1>
+    <Form className="body" name="control-hooks" onFinish={onFinish}>
+      <h1 className="title">אבידות</h1>
       <Form.Item name="lost details" label="פרטי האבידה">
-        <TextArea rows={10} />
+        <TextArea rows={6} />
       </Form.Item>
 
       <Form.Item>
         <Select
+          className="select"
           defaultValue="בחר ילד"
-          style={{ width: 120 }}
+          style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר ילד"
         >
@@ -71,23 +72,24 @@ function Losts(props) {
           ))}
         </Select>
       </Form.Item>
+      <div className="date">
+        <Form.Item name="date as" label="מתי אבד">
+          <DatePicker onChangeDate={onChangeDate} />
+        </Form.Item>
 
-      <Form.Item name="date as" label="מתי אבד">
-        <DatePicker onChangeDate={onChangeDate} />
-      </Form.Item>
-
-      <Form.Item label="באיזה הסעה" name="bus way: ">
-        <br />
-        <Radio.Group
-          options={options}
-          onChangeRide={onChangeRide}
-          optionType="button"
-          buttonStyle="solid"
-        />
-      </Form.Item>
+        <Form.Item label="באיזה הסעה" name="bus way: ">
+          <br />
+          <Radio.Group
+            options={options}
+            onChangeRide={onChangeRide}
+            optionType="button"
+            buttonStyle="solid"
+          />
+        </Form.Item>
+      </div>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button className="button" type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
