@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ShuttleTravelRoute.css";
 import Reporting from "./Reporting";
-import { Divider, Timeline } from "antd";
+import {} from "antd";
 import { ClockCircleOutlined, LeftOutlined } from "@ant-design/icons";
 
 const ShuttleTravelRoute = (props) => {
+  const reportingPopup = () => {};
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="ShuttleTravelRoute">
       <div className="path">
@@ -18,7 +21,12 @@ const ShuttleTravelRoute = (props) => {
         <div className="hour">9:30</div>
         <div className="hour">10:30</div>
       </div>
-      <div className="reporting">עיכוב? בעיה</div>
+      <div className="reporting_link" onClick={reportingPopup}>
+        עיכוב? בעיה
+      </div>
+      <div>
+        <Reporting />
+      </div>
     </div>
   );
 };
