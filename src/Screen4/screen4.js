@@ -22,8 +22,6 @@ const Screen4 = (props) => {
     },
   ];
 
-  const defaultLocation = { lat: 31.864347, lng: 35.260679, zoom: 11 };
-
   const coordinates = [
     { lat: 31.864347, lng: 35.260679, desc: "home" },
     { lat: 31.932534, lng: 35.022965, desc: "school" },
@@ -44,11 +42,7 @@ const Screen4 = (props) => {
       <StudentList students={students} />
       <Button type="link">הלוך</Button>
       <Button type="link">חזור</Button>
-      <Map
-        defaultLocation={defaultLocation}
-        coordinates={coordinates}
-        busLocation={busLocation}
-      />
+      <Map coordinates={coordinates} />
       <ShuttleTravelRoute path={path} routeTimes={routeTimes} />
     </div>
   );
