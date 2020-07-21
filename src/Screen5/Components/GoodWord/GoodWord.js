@@ -24,6 +24,7 @@ function GoodWord(props) {
   const [choose, setChoose] = useState();
   const onChangeRide = (e) => {
     setChoose(e.target.value);
+    console.log(e.target.value);
   };
   function onChangebox(e) {
     console.log(`checked = ${e.target.checked}`);
@@ -63,7 +64,7 @@ function GoodWord(props) {
           <br />
           <Radio.Group
             options={options}
-            onChangeRide={onChangeRide}
+            onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />

@@ -34,13 +34,14 @@ function Losts(props) {
   const onFinish = (values) => {
     const dataReport = {
       Messege: values["messege"],
-      StudentId: "",
+      StudentId: childname,
       Date: date,
       RouteId: choose,
+      anunims: anunims,
     };
     console.log(dataReport);
 
-    //props.onSubmit(dataReport);
+    props.onSubmit(dataReport);
   };
 
   // button chuse
@@ -49,22 +50,27 @@ function Losts(props) {
     { label: "חזור", value: "חזור" },
   ];
 
-  const onChangeRide = (e) => {
+  function onChangeRide(e) {
     setChoose(e.target.value);
-  };
+  }
   console.log(choose);
 
+  const [childname, setChildname] = useState();
   function handleChange(value, name) {
+    setChildname(name.children);
     console.log("hi", name.children);
   }
+  const [anunims, setAnunims] = useState(false);
   function onChangebox(e) {
+    setAnunims(e.target.checked);
     console.log(`checked = ${e.target.checked}`);
   }
 
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אבידות</h1>
-      <Form.Item name="lost details" label="פרטי האבידה">
+
+      <Form.Item name="messege" label="פרטי האבידה">
         <TextArea rows={6} />
       </Form.Item>
 
@@ -91,7 +97,7 @@ function Losts(props) {
           <br />
           <Radio.Group
             options={options}
-            onChangeRide={onChangeRide}
+            onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
