@@ -4,22 +4,16 @@ import { OmitProps } from "antd/lib/transfer/ListBody";
 
 const LogInValidation = (props) => {
   const layout = {
-    labelCol: { span: 0 },
-    wrapperCol: { span: 25 },
+    labelCol: { span: 8 },
+    wrapperCol: { span: 16 },
   };
   const tailLayout = {
-    wrapperCol: { offset: 0, span: 0 },
+    wrapperCol: { offset: 8, span: 16 },
   };
 
   const onFinish = (values) => {
     console.log("Success:", values);
-    console.log(values[""]);
-    props.check(values[""], "LogInValidation");
-    console.log(props.message);
   };
-  // const sendMessage = () =>{
-  //     props.message(values['']);
-  // }
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -32,29 +26,27 @@ const LogInValidation = (props) => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      {/* <Form.Item
+      log in
+      <Form.Item
         label="Username"
         name="username"
         rules={[{ required: true, message: "Please input your username!" }]}
       >
         <Input />
-      </Form.Item> */}
-
-      <h4>הכנס סיסמה</h4>
+      </Form.Item>
       <Form.Item
-        label=""
-        name=""
-        rules={[{ required: true, message: "הכנס סיסמה" }]}
+        label="Password"
+        name="password"
+        rules={[{ required: true, message: "Please input your password!" }]}
       >
         <Input.Password />
-        {props.message && <h5>הסיסמא חייבת להכיל לפחות 5 תויים</h5>}
       </Form.Item>
       <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox>זכור אותי</Checkbox>
+        <Checkbox>Remember me</Checkbox>
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
-          הירשם
+          Submit
         </Button>
       </Form.Item>
     </Form>

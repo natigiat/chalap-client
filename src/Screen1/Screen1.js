@@ -12,9 +12,13 @@ function Screen1() {
   const Demoserver = (value, from) => {
     if (value.length < 5 && from === "LogInValidation") {
       setErrorDemoToPassword(true);
+    } else if (value.length >= 5 && from === "LogInValidation") {
+      setErrorDemoToPassword(false);
     }
     if (value.length < 5 && from === "LogIn") {
       setErrorDemoToNumPhon(true);
+    } else if (value.length >= 5 && from === "LogIn") {
+      setErrorDemoToNumPhon(false);
     }
   };
   return (
