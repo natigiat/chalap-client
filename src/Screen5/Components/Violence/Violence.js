@@ -17,6 +17,7 @@ function Violence(props) {
   const onFinish = (values) => {
     console.log(values);
   };
+  const names = ["avi", "babi", "gagi"];
 
   console.log(props.type);
   const options = [
@@ -40,7 +41,7 @@ function Violence(props) {
 
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
-      <div className="title">אלימות </div>
+      <h1 className="title">אלימות </h1>
 
       <Form.Item
         className="textarea1"
@@ -50,17 +51,16 @@ function Violence(props) {
       >
         <TextArea rows={6} placeholder="תיאור המקרה ..." />
       </Form.Item>
-
-      <Form.Item name="child" label="" rules={[{ required: true }]}>
+      <Form.Item>
         <Select
-          className="select"
-          defaultValue="lucy"
-          style={{ width: 250 }}
+          defaultValue="בחר ילד"
+          style={{ width: 120 }}
           onChange={handleChange}
+          placeholder="בחר ילד"
         >
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="Yiminghe">yiminghe</Option>
+          {names.map((value) => (
+            <Option>{value}</Option>
+          ))}
         </Select>
       </Form.Item>
       <Form.Item name="mans" label="" rules={[{ required: true }]}>

@@ -5,10 +5,10 @@ import "./GoodWord";
 function GoodWord(props) {
   const onFinish = (values) => {
     console.log(values);
-    props.onsubmit();
+    props.onSubmit();
   };
 
-  const names = [props.children];
+  const names = ["avi", "babi", "gagi"];
   const { TextArea } = Input;
   const { Option } = Select;
   const options = [
@@ -16,16 +16,14 @@ function GoodWord(props) {
     { label: "חזור", value: "חזור" },
   ];
   function handleChange(value) {
-    console.log(`selected ${value}`);
+    console.log(value);
   }
 
   const [choose, setChoose] = useState();
   const onChange4 = (e) => {
     setChoose(e.target.value);
   };
-  const MakeItem = function (X) {
-    return <Option>{X}</Option>;
-  };
+
   return (
     <Form name="control-hooks" onFinish={onFinish}>
       <h1>מילה טובה</h1>

@@ -11,16 +11,21 @@ import {
   TreeSelect,
   Switch,
 } from "antd";
-import moment from "moment";
 
 import "./Losts.css";
-const { RangePicker } = DatePicker;
 
 function Losts(props) {
-  function onChange(date, dateString) {
+  const names = ["avi", "babi", "gagi"];
+  const { RangePicker } = DatePicker;
+  const { TextArea } = Input;
+  const { Option } = Select;
+  const [choose, setChoose] = useState();
+
+  console.log(props.type);
+
+  function onChangeDate(date, dateString) {
     console.log(dateString);
   }
-  console.log(props.type);
 
   const onFinish = (values) => {
     console.log("all the details:", values);
@@ -32,17 +37,13 @@ function Losts(props) {
     // props.onSubmit(values)
   };
 
-  const { TextArea } = Input;
-
   // button chuse
   const options = [
     { label: "הלוך", value: "הלוך " },
     { label: "חזור", value: "חזור" },
   ];
 
-  const [choose, setChoose] = useState();
-
-  const onChange4 = (e) => {
+  const onChangeRide = (e) => {
     setChoose(e.target.value);
   };
   console.log(choose);
@@ -50,41 +51,37 @@ function Losts(props) {
   return (
     <Form name="control-hooks" onFinish={onFinish}>
       <h1>אבידות</h1>
-      <Form.Item
-        name="lost details"
-        label="פרטי האבידה"
-        // rules={[{ required: true }]}
-      >
+      <Form.Item name="lost details" label="פרטי האבידה">
         <TextArea rows={10} />
       </Form.Item>
 
-      <Form.Item
-        name="loster name: "
-        label="למי אבד"
-        // rules={[{ required: true }]}
-      >
-        <Cascader
-          options={[
-            {
-              value: "zhejiang",
-              label: "Zhejiang",
-            },
-          ]}
-        />
+      <Form.Item>
+        <Select
+          defaultValue="בחר ילד"
+          style={{ width: 120 }}
+          //   onChange={handleChange}
+          placeholder="בחר ילד"
+        >
+          {names.map((value) => (
+            <Option>{value}</Option>
+          ))}
+        </Select>
       </Form.Item>
 
       <Form.Item name="date as" label="מתי אבד">
-        <DatePicker onChange={onChange} />
+        <DatePicker onChangeDate={onChangeDate} />
       </Form.Item>
+
       <Form.Item label="באיזה הסעה" name="bus way: ">
         <br />
         <Radio.Group
           options={options}
-          onChange={onChange4}
+          onChangeRide={onChangeRide}
           optionType="button"
           buttonStyle="solid"
         />
       </Form.Item>
+
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
