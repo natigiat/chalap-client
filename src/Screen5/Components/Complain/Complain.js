@@ -32,8 +32,8 @@ function Complain(props) {
   }
 
   return (
-    <Form name="control-hooks" onFinish={onFinish}>
-      <h1> תלונה</h1>
+    <Form className="body" name="control-hooks" onFinish={onFinish}>
+      <h1 className="title"> תלונה</h1>
 
       <Form.Item
         name="complaint details"
@@ -41,7 +41,7 @@ function Complain(props) {
         plceholder="מה קרה"
         // rules={[{ required: true }]}
       >
-        <TextArea rows={10} />
+        <TextArea rows={6} />
       </Form.Item>
 
       <Form.Item
@@ -50,8 +50,9 @@ function Complain(props) {
         // rules={[{ required: true }]}
       >
         <Select
+          className="select"
           defaultValue="בחר ילד"
-          style={{ width: 120 }}
+          style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר ילד"
         >
@@ -60,10 +61,21 @@ function Complain(props) {
           ))}
         </Select>
       </Form.Item>
+      <div className="date">
+        <Form.Item name="date" label="מתי ">
+          <DatePicker />
+        </Form.Item>
 
-      <Form.Item name="date" label="מתי ">
-        <DatePicker />
-      </Form.Item>
+        <Form.Item label="באיזה הסעה" name="bus way: ">
+          <br />
+          <Radio.Group
+            options={options}
+            onChangeRide={onChangeRide}
+            optionType="button"
+            buttonStyle="solid"
+          />
+        </Form.Item>
+      </div>
 
       <Form.Item label="באיזה הסעה" name="bus way: ">
         <br />
@@ -78,7 +90,7 @@ function Complain(props) {
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button className="button" type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>

@@ -6,7 +6,6 @@ import Screen5 from "./Screen5/Screen5";
 function App() {
   return (
     <div className="App">
-      Bootcamp
       <Screen5 />
     </div>
   );

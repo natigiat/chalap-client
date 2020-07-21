@@ -5,7 +5,7 @@ import "./GoodWord";
 function GoodWord(props) {
   const onFinish = (values) => {
     console.log(values);
-    props.onSubmit();
+    props.onsubmit(values);
   };
 
   const names = ["avi", "babi", "gagi"];
@@ -30,21 +30,18 @@ function GoodWord(props) {
   }
 
   return (
-    <Form name="control-hooks" onFinish={onFinish}>
-      <h1>מילה טובה</h1>
+    <Form className="body" name="control-hooks" onFinish={onFinish}>
+      <h1 className="title">מילה טובה</h1>
 
-      <Form.Item
-        name="note"
-        label="תודה על מילה טובה"
-        rules={[{ required: true }]}
-      >
-        <TextArea rows={10} />
+      <Form.Item name="note" label="" rules={[{ required: true }]}>
+        <TextArea rows={6} placeholder="תודה על מילה טובה" />
       </Form.Item>
 
       <Form.Item>
         <Select
+          className="select"
           defaultValue="בחר ילד"
-          style={{ width: 120 }}
+          style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר ילד"
         >
@@ -53,24 +50,29 @@ function GoodWord(props) {
           ))}
         </Select>
       </Form.Item>
+      <div className="date">
+        <Form.Item>
+          <DatePicker />
+        </Form.Item>
 
-      <Form.Item>
-        <DatePicker />
-      </Form.Item>
+        <Form.Item>
+          <DatePicker />
+        </Form.Item>
 
-      <Form.Item label="באיזה הסעה">
-        <br />
-        <Radio.Group
-          options={options}
-          onChangeRide={onChangeRide}
-          optionType="button"
-          buttonStyle="solid"
-        />
-      </Form.Item>
+        <Form.Item label="באיזה הסעה">
+          <br />
+          <Radio.Group
+            options={options}
+            onChangeRide={onChangeRide}
+            optionType="button"
+            buttonStyle="solid"
+          />
+        </Form.Item>
+      </div>
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
-      <br></br>
+      <br />
       <Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button className="button" type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
