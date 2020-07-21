@@ -11,7 +11,7 @@ import {
 const StudentRoute = (props) => {
   const openReportingModal = () => {};
   const [visible, setVisible] = useState(false);
-
+  const routeTimesArray = props.routeTimes;
   return (
     <div className="StudentRoute">
       <div className="studentHeader">
@@ -20,25 +20,25 @@ const StudentRoute = (props) => {
         </div>
 
         <div className="studentDetails">
-          <div className="studentName">יוסף חיים</div>
+          <div className="studentName">{props.studentName}</div>
           <div className="notice">אין עיכובים צפויים</div>
         </div>
       </div>
 
       <div className="path">
         <HomeOutlined className="icon" />
-        <span className="startPoint">תחנת דלק מכמש </span>
+        <span className="startPoint">{props.startPoint}</span>
         <span className="arrow">
-          <LeftOutlined className="Leftcon" />
+          <LeftOutlined className="LefIcon" />
         </span>
         <EnvironmentOutlined className="icon" />
-        <span className="endPoint">חן עפרה </span>
+        <span className="endPoint">{props.endPoint}</span>
       </div>
 
       <div className="hours">
-        <div className="hour">8:30</div>
-        <div className="hour">9:30</div>
-        <div className="hour">10:30</div>
+        {props.routeTimes.map((routeTime) => (
+          <div className="hour">{routeTime}</div>
+        ))}
       </div>
 
       <Reporting />
