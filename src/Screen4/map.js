@@ -26,12 +26,12 @@ const MapContainer = (props) => {
         icon={{
           url: "/Images/home-run.png",
           anchor: new props.google.maps.Point(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
+            props.coordinates[0].lat,
+            props.coordinates[0].lng
           ),
           scaledSize: new props.google.maps.Size(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
+            props.coordinates[0].lat,
+            props.coordinates[0].lng
           ),
         }}
       />
@@ -46,12 +46,12 @@ const MapContainer = (props) => {
         icon={{
           url: "/Images/school.png",
           anchor: new props.google.maps.Point(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
+            props.coordinates[1].lat,
+            props.coordinates[1].lng
           ),
           scaledSize: new props.google.maps.Size(
-            props.coordinates[2].lat,
-            props.coordinates[2].lng
+            props.coordinates[1].lat,
+            props.coordinates[1].lng
           ),
         }}
       />
