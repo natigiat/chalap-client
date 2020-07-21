@@ -35,7 +35,7 @@ function Screen5() {
         console.log(err);
       });
   };
-
+  let f = 0;
   return (
     <div>
       <GoodWord children={[]} type="good_word" onSubmit={onSubmit1} />
