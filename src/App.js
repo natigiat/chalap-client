@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Screen from "./Screen5/Components/Screen";
+import Screen5 from "./Screen5/Screen5";
 
 function App() {
   return (
     <div className="App">
       Bootcamp
-      <Screen />
+      <Screen5 />
     </div>
   );
 }
