@@ -1,8 +1,8 @@
 import React from "react";
-import GoodWord from "./GoodWord/GoodWord";
-import Complain from "./Complain/Complain";
-import Vioelence from "./Violence/Violence";
-import Losts from "./Losts/Losts";
+import GoodWord from "./components/GoodWord/GoodWord";
+import Complain from "./components/Complain/Complain";
+import Vioelence from "./components/Violence/Violence";
+import Losts from "./components/Losts/Losts";
 
 function Screen5() {
   // const type = ["Losts", "Unusual Events", "Drive problems"];
