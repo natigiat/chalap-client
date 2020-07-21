@@ -109,16 +109,3 @@
 .hour:focus {
   outline-color: lightskyblue;
 }
-
-.reporting_link {
-  margin: 5px;
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
-
-  text-decoration-line: underline;
-
-  color: #000000;
-}

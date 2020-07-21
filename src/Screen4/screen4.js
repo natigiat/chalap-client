@@ -7,6 +7,7 @@ import { Button } from "antd";
 import { Tabs } from "antd";
 import Carousel from "./Carousel";
 import ridesMock from "./rides.mock";
+import RefreshButton from "./buttonRefresh";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -77,6 +78,7 @@ const Screen4 = (props) => {
       <Button className="routeDir" type="link" disabled>
         חזור
       </Button>
+      <RefreshButton />
       {/* <Tabs defaultActiveKey="1">
         <TabPane className="routeTab" tab="הלוך" key="1"></TabPane>
         <TabPane className="routeTab" tab="חזור" key="2" disabled></TabPane>
