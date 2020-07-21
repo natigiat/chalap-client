@@ -10,7 +10,7 @@ function Complain() {
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
-      <h1>מילה טובה</h1>
+      <h1> תלונה</h1>
       <Form.Item
         name="note"
         label="תודה על מילה טובה"
