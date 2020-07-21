@@ -13,10 +13,12 @@ import {
   Switch,
 } from "antd";
 
-function Violence() {
+function Violence(props) {
   const onFinish = (values) => {
     console.log(values);
   };
+
+  console.log(props.type);
   const options = [
     { label: "הלוך", value: "הלוך " },
     { label: "חזור", value: "חזור" },
