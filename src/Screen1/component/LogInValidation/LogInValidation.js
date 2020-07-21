@@ -1,6 +1,5 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
-import { OmitProps } from "antd/lib/transfer/ListBody";
 
 const LogInValidation = (props) => {
   const layout = {
@@ -13,9 +12,6 @@ const LogInValidation = (props) => {
 
   const onFinish = (values) => {
     console.log("Success:", values);
-    console.log(values["password"]);
-    props.check(values["password"],'LogInValidation');
-    console.log(props.message);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
