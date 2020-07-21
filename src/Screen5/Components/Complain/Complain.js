@@ -3,19 +3,29 @@ import { Form, Input, Button, Radio, Select, DatePicker, Checkbox } from "antd";
 import "./Complain";
 
 function Complain(props) {
-  const onFinish = (values) => {
-    console.log(values);
-  };
-
   const names = ["avi", "ruhama", "ttt"];
   const { TextArea } = Input;
   const { Option } = Select;
 
+  const [date, setDate] = useState();
+
   function onChangeDate(date, dateString) {
     console.log(dateString);
+    setDate(dateString);
   }
 
+  const onFinish = (values) => {
+    const dataReport = {
+      Messege: values["messege"],
+      StudentId: name,
+      Date: date,
+      RouteId: choose,
+    };
+    console.log(dataReport);
+  };
+  const [name, setname] = useState();
   function handleChange(value, name) {
+    setname(name.children);
     console.log("hi", name.children);
   }
   // button chuse

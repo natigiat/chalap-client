@@ -21,18 +21,27 @@ function Losts(props) {
 
   console.log(props.type);
 
-  function onChangeDate(date, dateString) {
-    console.log(dateString);
+  //   function onChangeDate(date, dateString) {
+  //     console.log(dateString);
+
+  const [date, setDate] = useState();
+  console.log(date);
+  function onChangedate(date, dateString) {
+    setDate(dateString);
+    console.log(date);
   }
 
   const onFinish = (values) => {
-    console.log("all the details:", values);
-    console.log("lost details:", values["lost details"]);
-    // console.log("loster name:", values["loster name: "][0]);
-    console.log("date:", values["date"]);
-    console.log("direction:", values["bus way"]);
+    const dataReport = {
+      Messege: values["messege"],
+      StudentId: childname,
+      Date: date,
+      RouteId: choose,
+      anunims: anunims,
+    };
+    console.log(dataReport);
 
-    props.onSabmit(values);
+    props.onSubmit(dataReport);
   };
 
   // button chuse
@@ -41,15 +50,19 @@ function Losts(props) {
     { label: "חזור", value: "חזור" },
   ];
 
-  const onChangeRide = (e) => {
+  function onChangeRide(e) {
     setChoose(e.target.value);
-  };
+  }
   console.log(choose);
 
+  const [childname, setChildname] = useState();
   function handleChange(value, name) {
+    setChildname(name.children);
     console.log("hi", name.children);
   }
+  const [anunims, setAnunims] = useState(false);
   function onChangebox(e) {
+    setAnunims(e.target.checked);
     console.log(`checked = ${e.target.checked}`);
   }
 
@@ -82,13 +95,13 @@ function Losts(props) {
 
       <div className="date">
         <Form.Item name="date" label="">
-          <DatePicker onChangeDate={onChangeDate} /> :תאריך
+          <DatePicker onChangeDate={onChangedate} /> :תאריך
         </Form.Item>
 
         <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
-            onChangeRide={onChangeRide}
+            onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
