@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Select, DatePicker, Radio } from "antd";
+import { Form, Input, Button, Select, DatePicker, Radio, Checkbox } from "antd";
 import "./GoodWord";
 
 function GoodWord(props) {
@@ -25,6 +25,9 @@ function GoodWord(props) {
   const onChangeRide = (e) => {
     setChoose(e.target.value);
   };
+  function onChangebox(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
@@ -64,7 +67,8 @@ function GoodWord(props) {
           buttonStyle="solid"
         />
       </Form.Item>
-
+      <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
+      <br></br>
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit

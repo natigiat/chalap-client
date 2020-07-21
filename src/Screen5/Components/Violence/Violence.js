@@ -1,17 +1,6 @@
 import "./Violence.css";
 import React, { useState } from "react";
-import {
-  Form,
-  Input,
-  Button,
-  Radio,
-  Select,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
-} from "antd";
+import { Form, Input, Button, Radio, Select, DatePicker, Checkbox } from "antd";
 
 function Violence(props) {
   const onFinish = (values) => {
@@ -38,7 +27,9 @@ function Violence(props) {
   function handleChange(value, name) {
     console.log("hi", name.children);
   }
-
+  function onChangebox(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אלימות </h1>
@@ -82,6 +73,7 @@ function Violence(props) {
           {":הסעה"}
         </Form.Item>
       </div>
+      <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
           שליחה

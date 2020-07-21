@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Radio, Select, DatePicker } from "antd";
+import { Form, Input, Button, Radio, Select, DatePicker, Checkbox } from "antd";
 import "./Complain";
 
 function Complain(props) {
@@ -26,6 +26,10 @@ function Complain(props) {
   };
 
   console.log(choose);
+
+  function onChangebox(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
@@ -70,6 +74,9 @@ function Complain(props) {
           buttonStyle="solid"
         />
       </Form.Item>
+
+      <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
+
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit

@@ -7,9 +7,7 @@ import {
   Select,
   Cascader,
   DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
+  Checkbox,
 } from "antd";
 
 import "./Losts.css";
@@ -51,6 +49,9 @@ function Losts(props) {
   function handleChange(value, name) {
     console.log("hi", name.children);
   }
+  function onChangebox(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
 
   return (
     <Form name="control-hooks" onFinish={onFinish}>
@@ -85,7 +86,7 @@ function Losts(props) {
           buttonStyle="solid"
         />
       </Form.Item>
-
+      <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
