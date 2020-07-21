@@ -1,6 +1,7 @@
 import React from "react";
 import { Alert } from "antd";
 import "./alrts.css";
+
 function Alerts(props) {
   return (
     <div className="alrt1">

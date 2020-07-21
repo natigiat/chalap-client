@@ -1,51 +1,93 @@
 import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
+import axios from "axios";
 import "./Parent.css";
+
 function Parent() {
-  const [Api, setapi] = useState([
-    {
-      key: 1,
-      name: "הילה",
-      exit: "תחנת דלק מכמש",
-      school: "בית ספר עפרה",
-    },
-    {
-      key: 2,
-      name: "משה",
-      exit: "עלי",
-      school: "אולפנת צביה",
-    },
-    {
-      key: 3,
-      name: "ישי",
-      exit: "בית אל",
-      school: "שער בנימין",
-    },
-    {
-      key: 4,
-      name: "נעמה",
-      exit: "שער בנימין",
-      school: "כוכב השחר",
-    },
-  ]);
+   const [children, setChildren] = useState([]);
+   useEffect(() => {
+     axios.get("http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/student/family/{id}"
+
+     )
+     .then(function (response){
+       console.log(response.data);
+       setChildren(response.data)
+     })
+   }
+   )
+    
+ const fakeArry = [
+   {
+ 
+     "id": 2,
+     "firstName": "עברי",
+     "favoriteStation": {
+       "id": 1,
+       "name": "בני אדם"
+     },
+     "school": {
+       "StationId": null,
+       "station": null
+     }
+   },
+   {
+     "id": 3,
+     "firstName": "אורה",
+     "favoriteStation": {
+       "id": 1,
+       "name": "בני אדם"
+     },
+     "school": {
+       "StationId": 1,
+       "station": 1
+     }
+   },
+   {
+     "id": 4,
+     "firstName": "גבריאל",
+     "favoriteStation": {
+       "id": 1,
+       "name": "בני אדם"
+     },
+     "school": {
+       "StationId": null,
+       "station": null
+     }
+   },
+   {
+     "id": 6,
+     "firstName": "משה",
+     "favoriteStation": {
+       "id": 1,
+       "name": "בני אדם"
+     },
+     "school": {
+       "StationId": null,
+       "station": null
+     }
+   }
+ ];
+
+  
 
   const [alrt, setalert] = useState({
     message: null,
     description: null,
     icon: null,
     type: null,
-    alrt: false,
+    alrt:true,
   });
 
-  useEffect(() => alrttip("error"), []);
+  useEffect(() => alrttip(), []);
+
   const alrttip = () => {
     setalert({
       message: "תקלה",
       description: "תקלה",
       icon: "",
       type: "",
-      alrt: false,
+      alrt: true,
     });
   };
   return (
@@ -60,12 +102,13 @@ function Parent() {
       <div>
         <h6>מידע נוסף</h6>
 
-        {Api.map((child) => (
+        {fakeArry.map((child) => (
           <Children
-            key={child.key}
-            name={child.name}
-            exit={child.exit}
-            school={child.school}
+            key={child.id}
+            firstName={child.firstName}
+            favoriteStation={child.favoriteStation.name}
+            school={child.school.station}
+            
           />
         ))}
       </div>
