@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import Form from "./Screen_3/components/Form";
 import "./index.css";
-import App from "./Screen_3/components/Child";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

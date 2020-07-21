@@ -1,23 +1,44 @@
 import React from "react";
+import childrensMock from "./childrens.mock";
+import Child from "./Child"
 import "./Schedule.css";
 import { Collapse } from "antd";
 const { Panel } = Collapse;
 
-function callback(key) {
-  console.log(key);
-}
+const weekDays=[
+  "Sunday","Monday", "Tuesday", "Wensday", "Thursday", "Friday"
+]
+
+// const data =[
+// {
+//   Day={
+    
+//   }
+
+// }
+// ]
+//    "
+
+// ]
 
 export default function Schedule() {
-  const text = "Here will be the Child Component";
+  const text = "hello";
   return (
     <div>
       <h1 className="header">עריכת שעות סיום</h1>
-      <Collapse className="collapseMenu" onChange={callback}>
+      <Collapse className="collapseMenu">
+        
         <Panel header="ראשון" key="1">
-          <p>{text}</p>
+          {childrensMock.map((child, childIndex) => (
+            <Child 
+            key={childIndex}
+            name={child.name}
+            time={child.time}
+             />
+          ))}
         </Panel>
         <Panel header="שני" key="2">
-          <p>{text}</p>
+          <p>{"text"}</p>
         </Panel>
         <Panel header="שלישי" key="3">
           <p>{text}</p>
