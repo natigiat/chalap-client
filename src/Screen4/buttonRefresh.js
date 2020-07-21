@@ -7,7 +7,10 @@ const RefreshButton = (props) => {
   //const [products, setProducts] = useState([]);
 
   return (
-    <Button className="refresh" onClick={props.updateBusLocations}></Button>
+    <Button className="refresh" onClick={props.updateBusLocations}>
+      <img src="/images/refresh.png" alt="refresh" />
+      ריענון מפה
+    </Button>
   );
 };
 

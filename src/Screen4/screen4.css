@@ -3,21 +3,19 @@
 .ant-tabs-tab {
   color: black;
 }
-/* 
+
 .routeDir {
   width: 50%;
-  color: black;
-  font-size: x-large;
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 29px;
-  text-align: center;
-
-  color: #000000;
 }
-
-.routeTab {
-  width: 50%;
-} */
+.ant-btn {
+  color: black;
+}
+button.ant-btn.refresh {
+  z-index: 10;
+  top: 43px;
+  right: 809px;
+  bottom: 58px;
+  /* float: right; */
+  /* right: 199px; */
+  left: -22px;
+}
