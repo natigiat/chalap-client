@@ -38,10 +38,10 @@ function Screen5() {
 
   return (
     <div>
-      <GoodWord children={[names]} type="good_word" onSubmit={onSubmit1} />
-      <Complain children={[names]} type="report" onSubmit={onSubmit1} />
-      <Vioelence children={[names]} type="vioelence" onSubmit={onSubmit1} />
-      <Losts children={[names]} type="lost" onSabmit={onSubmit1} />
+      <GoodWord children={[]} type="good_word" onSubmit={onSubmit1} />
+      <Complain children={[]} type="report" onSubmit={onSubmit1} />
+      <Vioelence children={[]} type="vioelence" onSubmit={onSubmit1} />
+      <Losts children={[]} type="lost" onSabmit={onSubmit1} />
     </div>
   );
 }
