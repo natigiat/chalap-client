@@ -1,4 +1,8 @@
 @import "~antd/dist/antd.css";
+img {
+  border-radius: 50%;
+  height: 80px;
+}
 
 .frame {
   position: absolute;
