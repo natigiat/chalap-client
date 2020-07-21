@@ -48,6 +48,10 @@ function Losts(props) {
   };
   console.log(choose);
 
+  function handleChange(value, name) {
+    console.log("hi", name.children);
+  }
+
   return (
     <Form name="control-hooks" onFinish={onFinish}>
       <h1>אבידות</h1>
@@ -59,11 +63,11 @@ function Losts(props) {
         <Select
           defaultValue="בחר ילד"
           style={{ width: 120 }}
-          //   onChange={handleChange}
+          onChange={handleChange}
           placeholder="בחר ילד"
         >
-          {names.map((value) => (
-            <Option>{value}</Option>
+          {names.map((value, index) => (
+            <Option key={index}>{value}</Option>
           ))}
         </Select>
       </Form.Item>

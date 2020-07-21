@@ -6,12 +6,13 @@ function Complain(props) {
   const onFinish = (values) => {
     console.log(values);
   };
+
   const names = ["avi", "ruhama", "ttt"];
   const { TextArea } = Input;
   const { Option } = Select;
 
-  function handleChange(value) {
-    console.log(`selected ${value}`);
+  function handleChange(value, name) {
+    console.log("hi", name.children);
   }
   // button chuse
   const options = [
@@ -20,10 +21,12 @@ function Complain(props) {
   ];
 
   const [choose, setChoose] = useState();
-  const onChange4 = (e) => {
+  const onChangeRide = (e) => {
     setChoose(e.target.value);
   };
+
   console.log(choose);
+
   return (
     <Form name="control-hooks" onFinish={onFinish}>
       <h1> תלונה</h1>
@@ -48,8 +51,8 @@ function Complain(props) {
           onChange={handleChange}
           placeholder="בחר ילד"
         >
-          {names.map((value) => (
-            <Option>{value}</Option>
+          {names.map((value, index) => (
+            <Option key={index}>{value}</Option>
           ))}
         </Select>
       </Form.Item>
@@ -62,7 +65,7 @@ function Complain(props) {
         <br />
         <Radio.Group
           options={options}
-          onChange={onChange4}
+          onChangeRide={onChangeRide}
           optionType="button"
           buttonStyle="solid"
         />
