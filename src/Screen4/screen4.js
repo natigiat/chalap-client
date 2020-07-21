@@ -3,9 +3,9 @@ import React from "react";
 import "./screen4.css";
 import Map from "./map";
 import StudentList from "./Studentlist";
-import ShuttleTravelRoute from "./ShuttleTravelRoute";
+// import ShuttleTravelRoute from "./ShuttleTravelRoute";
 import { Button } from "antd";
-import Reporting from "./Reporting";
+// import Reporting from "./Reporting";
 
 let path = ["ירושלים", "מעלה מכמש"];
 
