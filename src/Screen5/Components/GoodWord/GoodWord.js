@@ -8,7 +8,7 @@ function GoodWord(props) {
     props.onsubmit();
   };
 
-  const names = ["avi", "ruhama", "ttt"];
+  const names = [props.children];
   const { TextArea } = Input;
   const { Option } = Select;
   const options = [

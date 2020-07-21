@@ -4,9 +4,8 @@ import Complain from "./Components/Complain/Complain";
 import Vioelence from "./Components/Violence/Violence";
 import Losts from "./Components/Losts/Losts";
 import axios from "axios";
+
 function Screen5() {
-  const type = ["Losts", "Unusual Events", "Drive problems"];
-  const names = ["Ayelet Ben Daha  n", "Shimrit Levi", "Yuval Dayan"];
   const onSubmit1 = (value) => {
     console.log(value);
     axios
@@ -14,13 +13,15 @@ function Screen5() {
         "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/reports/",
         {
           id: 2,
+          type: "lost",
+
           RouteId: 1,
           UserId: 1,
           StudentId: 1,
           message: "boaz",
           involvedStudents: "שמות המעורבים",
           anonymousMessage: true,
-          type: "lost",
+
           address: "כתובת",
           image: "https://imageurl.com",
           subject: "ג",
