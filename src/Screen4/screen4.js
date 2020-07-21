@@ -5,32 +5,9 @@ import Map from "./map";
 import StudentList from "./Studentlist";
 // import ShuttleTravelRoute from "./ShuttleTravelRoute";
 import { Button } from "antd";
-// import Reporting from "./Reporting";
-
-let path = ["ירושלים", "מעלה מכמש"];
-
-let routeTimes = ["08:30", "09:30", "10:30"];
+import Reporting from "./Reporting";
 
 const Screen4 = (props) => {
-  const getStudentData = (studentId) => {
-    switch (studentId) {
-      case 1:
-        path = ["ירושלים", "מעלה מכמש"];
-        routeTimes = ["08:30", "09:30", "10:30"];
-        break;
-      case 2:
-        path = ["בני אדם", "מעלה מכמש"];
-        routeTimes = ["08:30", "09:00", "10:00"];
-        break;
-      case 3:
-        path = ["אש קודש", "שילה"];
-        routeTimes = ["08:10", "08:20", "08:30"];
-        break;
-      default:
-      // code block
-    }
-  };
-
   const students = [
     {
       id: 1,
@@ -46,9 +23,25 @@ const Screen4 = (props) => {
     },
   ];
 
-  const buildStudentsData = () => {
-    for (let id = 0; id < students.length; id++) {}
-  };
+  const studentRouteInfo = [
+    {
+      startPoint: "בני אדם",
+      endPoint: "מעלה מכמש",
+    },
+    {
+      startPoint: "מעלה מכמש",
+      endPoint: "כוכב יעקב",
+    },
+    {
+      startPoint: "אש קודש",
+      endPoint: "שילה",
+    },
+  ];
+  const studentRouteTimes = [
+    ["08:30", "09:00", "10:00"],
+    ["08:30", "09:30", "10:30"],
+    ["08:10", "08:40"],
+  ];
 
   const coordinates = [
     { lat: 31.864347, lng: 35.260679, desc: "home" },
@@ -71,6 +64,7 @@ const Screen4 = (props) => {
       </Button>
       <Map coordinates={coordinates} />
       {/* <ShuttleTravelRoute path={path} routeTimes={routeTimes} /> */}
+      <Reporting />
     </div>
   );
 };
