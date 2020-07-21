@@ -1,76 +1,78 @@
 @import "~antd/dist/antd.css";
 .ant-input {
-    position: relative;
-    left: 24%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-variant: tabular-nums;
-    list-style: none;
-    -webkit-font-feature-settings: 'tnum';
-    font-feature-settings: 'tnum', "tnum";
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    min-width: 0;
-    padding: 4px 11px;
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 14px;
-    line-height: 1.5715;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #d9d9d9;
-    border-radius: 2px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+  position: relative;
+  left: 24%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .ant-input-affix-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    min-width: 0;
-    padding: 4px 21px;
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 14px;
-    line-height: 1.5715;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #d9d9d9;
-    border-radius: 2px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    left: 24%;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 21px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  left: 24%;
 }
 
-.page{
-    
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.password{
-    
-    box-shadow: 1px 1px 3px black;
-    padding: 2rem;
-    border-radius: 7px;
+.logInValidation {
+  box-shadow: 1px 1px 3px black;
+  padding: 2rem;
+  border-radius: 7px;
 }
-.passwordItems{
-    display: flex;
-    /* background-color: lawngreen; */
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
+.logIn {
+  box-shadow: 1px 1px 3px black;
+  padding: 2rem;
+  border-radius: 7px;
 }
-.algincenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.passwordItems {
+  display: flex;
+  /* background-color: lawngreen; */
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.algincenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

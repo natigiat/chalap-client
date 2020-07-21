@@ -3,8 +3,8 @@ import { Input, Form, Checkbox, Button } from "antd";
 
 const LogIn = (props) => {
   const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
+    labelCol: { span: 90 },
+    wrapperCol: { span: -10 },
   };
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
@@ -15,7 +15,6 @@ const LogIn = (props) => {
   const onFinish = (values) => {
     console.log("Success:", values);
     props.check(values.username, "LogIn");
-    setRander(1);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

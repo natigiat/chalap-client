@@ -1,0 +1,74 @@
+.studentSettingUpdate {
+  position: relative;
+  border: 1px solid black;
+  width: 188px;
+  height: 336px;
+  margin: auto;
+  border-radius: 20px;
+}
+button.ant-btn.btnlater.ant-btn-primary {
+  position: absolute;
+  background: black;
+  color: white;
+  border: none;
+  width: 124px;
+  height: 48px;
+  border-radius: 7px;
+  top: 210px;
+  left: 28px;
+  font-size: 22px;
+}
+
+button.ant-btn.btnFence.ant-btn-primary {
+  background: #ede8e8;
+  color: black;
+  position: absolute;
+  border: none;
+  width: 124px;
+  height: 42px;
+  border-radius: 7px;
+  top: 219px;
+  left: 28px;
+  font-size: 22px;
+}
+.textx {
+  width: 22px;
+  height: 22px;
+  border-radius: 19px;
+  background: #ede8e8;
+  top: 8px;
+  left: 155px;
+  font-weight: bold;
+  position: absolute;
+}
+.text1 {
+  position: absolute;
+  width: 73px;
+  height: 122px;
+  left: calc(50% - 75px / 2);
+  top: 22px;
+  font-size: 24px;
+  line-height: 91.8%;
+  text-align: center;
+}
+.text2 {
+  position: absolute;
+  width: 73px;
+  height: 122px;
+  left: calc(50% - 75px / 2);
+  top: 42px;
+  font-size: 15px;
+  line-height: 91.8%;
+  text-align: center;
+}
+.text3 {
+  position: absolute;
+  width: 158px;
+  height: 12px;
+  left: calc(50% - 162px / 2 - 0.5px);
+  top: 479px;
+  font-size: 13px;
+  line-height: 91.8%;
+  text-align: center;
+  color: #c4c4c4;
+}
