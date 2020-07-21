@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Select } from "./node_modules/antd";
+import { Form, Input, Button, Select } from "antd";
 
 function Violence() {
   const onFinish = (values) => {
