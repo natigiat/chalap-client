@@ -2,9 +2,6 @@ import React from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 const MapContainer = (props) => {
-  console.log(props);
-  console.log(props.coordinates[0].lat);
-  console.log(props.coordinates[2].lat);
   return (
     <Map
       google={props.google}
