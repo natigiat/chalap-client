@@ -37,34 +37,28 @@ const Reporting = () => {
           <div>
             <div className="button">
               <img src="logo192.png" alt="" className="button1" />
-              <br></br>
               אבדה
             </div>
             <div className="button">
               <img src="logo192.png" alt="" className="button2" />
-              <br></br>
               מציאה
             </div>
 
             <div className="button">
               <img src="logo192.png" alt="" className="button3" />
-              <br></br>
               אלימות
             </div>
             <div className="button">
               <img src="logo192.png" alt="" className="button4" />
-              <br></br>
               תלונה
             </div>
 
             <div className="button">
               <img src="logo192.png" alt="" className="button5" />
-              <br></br>
               מילה טובה
             </div>
             <div>
               <img src="logo192.png" alt="" className="button6" />
-              <br></br>
               פנייה למוקד
             </div>
           </div>
