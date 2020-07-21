@@ -1,13 +1,22 @@
 import React from "react";
 // import logo from "./logo.svg";
 import "./screen4.css";
-import Map from "./map";
+import GoogleApiWrapper from "./map";
 import StudentList from "./Studentlist";
 // import ShuttleTravelRoute from "./ShuttleTravelRoute";
 import { Button } from "antd";
 import Reporting from "./Reporting";
 
 const Screen4 = (props) => {
+  //const [routeDirection, setRouteDirection] = useState("הלוך");
+
+  //   useEffect(() => {
+  //     // axios.get("https://quilt-flax-chemistry.glitch.me/products").then((res) => {
+  //     //     setRouteDirection(res.data);
+
+  //     // });
+  //   }, routeDirection);
+
   const students = [
     {
       id: 1,
@@ -53,16 +62,26 @@ const Screen4 = (props) => {
     },
   ];
 
+  //const [products, setProducts] = useState([]);
+
   return (
     <div className="Screen4">
       {/* <div><StudentList students={students} onChange={setStudentData}/></div> */}
-      <Button className="routeDir" type="link">
+      <Button
+        className="routeDir"
+        type="link"
+        //onClick={setRouteDirection("הלוך")}
+      >
         הלוך
       </Button>
-      <Button className="routeDir" type="link">
+      <Button
+        className="routeDir"
+        type="link"
+        //onClick={setRouteDirection("חזור")}
+      >
         חזור
       </Button>
-      <Map coordinates={coordinates} />
+      <GoogleApiWrapper coordinates={coordinates} />
       {/* <ShuttleTravelRoute path={path} routeTimes={routeTimes} /> */}
       <Reporting />
     </div>
