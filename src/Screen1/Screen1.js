@@ -19,10 +19,10 @@ function Screen1() {
   };
   return (
     <div className="screen1">
-      {/* <LogIn check={Demoserver} message={errorDemoToNumPhon} /> */}
+      <LogIn check={Demoserver} message={errorDemoToNumPhon} />
       <br></br>
-      {/* <LogInValidation check={Demoserver} message={errorDemoToPassword} /> */}
-      <StudentSettingMenu />
+      <LogInValidation check={Demoserver} message={errorDemoToPassword} />
+      {/* <StudentSettingMenu /> */}
     </div>
   );
 }

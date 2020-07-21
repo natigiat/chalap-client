@@ -25,12 +25,12 @@ const StudentSettingMenu = () => {
       <span className="text2">תוכל להגדיר מחדש גם בהמשך</span>
 
       <Form.Item {...tailLayout}>
-        <Button type="primary" className="btnlater">
+        <Button type="primary" name="jhg" className="btnlater">
           הגדר
         </Button>
       </Form.Item>
       <Form.Item {...tailLayout}>
-        <Button type="primary" className="btnFence">
+        <Button type="primary" name="jhg" className="btnFence">
           אחר כך
         </Button>
       </Form.Item>
