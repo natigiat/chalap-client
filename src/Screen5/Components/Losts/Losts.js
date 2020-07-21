@@ -12,6 +12,7 @@ import {
   Switch,
 } from "antd";
 import "./Losts.css";
+import { OmitProps } from "antd/lib/transfer/ListBody";
 
 function Losts() {
   const onFinish = (values) => {
