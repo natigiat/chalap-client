@@ -11,7 +11,7 @@ import RouteButton from "./Components/RouteButton/RouteButton";
 import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
-  const [showPopup, setShowPopup] = useState(0);
+  const [showPopup, setShowPopup] = useState(1);
   //const [routeDirection, setRouteDirection] = useState("הלוך");
 
   //   useEffect(() => {
@@ -66,19 +66,6 @@ const Screen4 = (props) => {
     },
   ];
 
-  //const [products, setProducts] = useState([]);
-
-  // const { TabPane } = Tabs;
-  // console.log(ridesMock);
-  // console.log("----------------");
-
-  // let studentRidesInfo = [];
-  // console.log(ridesMock.rides);
-  // for (let ridesInd = 0; ridesInd < ridesMock.rides.length; ridesInd++) {
-  //   studentRidesInfo.push([{rides[ridesInd].statTime}]);
-  //   console.log(ridesMock.rides[ridesInd]);
-  // }
-
   return (
     <div className="Screen4">
       <div className="routeDirButtons">
@@ -90,21 +77,12 @@ const Screen4 = (props) => {
         </div>
       </div>
 
-      {/* <Button className="routeDir" type="link">
-        הלוך
-      </Button>
-      <Button className="routeDir" type="link" disabled>
-        חזור
-      </Button> */}
-      {/* <div className="routeDirTab">
-        <RouteDirTab />
-      </div> */}
       <div className="mapWrapper">
-        {/* <span className="refreshBtn"> */}
         <RefreshButton className="refreshBtn" />
-        {/* </span> */}
+
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
+
       {showPopup ? (
         <div className="popupAddStudents">
           <PopupAddStudents />

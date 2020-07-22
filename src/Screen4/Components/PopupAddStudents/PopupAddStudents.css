@@ -1,12 +1,39 @@
-.popupAddStudents {
+.popupAdd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   height: 165px;
-  width: 100%;
-  /* display: flex; */
+  width: 80%;
   position: absolute;
   bottom: 0px;
   z-index: 1;
+  background-color: white;
 }
 
-.popupTrigger {
-  visibility: hidden;
+.popupAdd img {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  /* margin: auto; */
+  margin-top: 18px;
+}
+
+.missingText {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19.04px;
+  line-height: 28px;
+  /* text-align: center; */
+  color: #7a7a7a;
+}
+
+.btnAddStudents {
+  padding: 4px 20px;
+  /* margin: auto; */
+  background: #7a7a7a;
+  border-radius: 7px;
+  color: white;
+  /* display: block; */
 }

@@ -52,6 +52,10 @@ button.ant-btn.refresh {
   position: absolute;
   bottom: 0px;
   z-index: 1;
+  /* margin: 0 auto; */
+  border-radius: 6.1875px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiperWrapper {
