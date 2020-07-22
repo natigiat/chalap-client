@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Select, DatePicker, Radio, Checkbox } from "antd";
+import { Form, Input, Button, Select, DatePicker, Row, Col } from "antd";
 import { TimePicker } from "antd";
 import moment from "moment";
 import { Upload } from "antd";
@@ -57,56 +57,54 @@ function GoodWord(props) {
         console.log(file, fileList);
       }
     },
-    defaultFileList: [
-      {
-        uid: "1",
-        name: "xxx.png",
-        status: "done",
-        response: "Server Error 500", // custom error message to show
-        url: "http://www.baidu.com/xxx.png",
-      },
-      {
-        uid: "2",
-        name: "yyy.png",
-        status: "done",
-        url: "http://www.baidu.com/yyy.png",
-      },
-      {
-        uid: "3",
-        name: "zzz.png",
-        status: "error",
-        response: "Server Error 500", // custom error message to show
-        url: "http://www.baidu.com/zzz.png",
-      },
-    ],
   };
 
   return (
     <Form className="report" name="control-hooks" onFinish={onFinish}>
       <div className="title">טופס פניה</div>
-      <div className="date">
-        <Form.Item>
-          <DatePicker onChange={onChangedate} rules={[{ require: true }]} />
-        </Form.Item>
-        <TimePicker
-          className="hour"
-          defaultValue={moment("12:08", format)}
-          format={format}
-          onChange={onTimeChange}
-          rules={[{ require: true }]}
-        />
-        <Form.Item name="Origin" label="" rules={[{ required: true }]}>
-          <TextArea rows={1} placeholder="מוצא" />
-        </Form.Item>
-        <Form.Item name="Destination" label="" rules={[{ required: true }]}>
-          <TextArea rows={1} placeholder="יעד" />
-        </Form.Item>
-      </div>
+      <Row className="row">
+        <Col className="col">
+          <Form.Item>
+            <DatePicker
+              className="date"
+              onChange={onChangedate}
+              rules={[{ require: true }]}
+            />
+          </Form.Item>
+          <Form.Item
+            className="textarea1"
+            name="Origin"
+            label=""
+            rules={[{ required: true }]}
+          >
+            <TextArea rows={2} placeholder="מוצא" />
+          </Form.Item>
+        </Col>
+        <Col className="col">
+          <Form.Item>
+            <TimePicker
+              className="hour"
+              defaultValue={moment("12:08", format)}
+              format={format}
+              onChange={onTimeChange}
+              rules={[{ require: true }]}
+            />
+          </Form.Item>
+          <Form.Item
+            className="textarea1"
+            name="Destination"
+            label=""
+            rules={[{ required: true }]}
+          >
+            <TextArea rows={2} placeholder="יעד" />
+          </Form.Item>
+        </Col>
+      </Row>
       <Form.Item>
         <Select
           className="select"
           defaultValue="בחר נושא פניה"
-          style={{ width: 250 }}
+          // style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר נושא פניה"
           rules={[{ required: true }]}
@@ -118,8 +116,13 @@ function GoodWord(props) {
           ))}
         </Select>
       </Form.Item>
-      <Form.Item name="messege" label="" rules={[{ required: true }]}>
-        <TextArea rows={6} placeholder="תוכן הפניה" />
+      <Form.Item
+        className="textarea2"
+        name="messege"
+        label=""
+        rules={[{ required: true }]}
+      >
+        <TextArea rows={8} placeholder="תוכן הפניה" />
       </Form.Item>
       <Upload {...files}>
         <Button>
