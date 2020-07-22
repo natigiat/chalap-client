@@ -42,7 +42,7 @@ function Screen1() {
         phone_number: `${value}`,
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.data.send);
         setphoneNum(value);
       })
       .catch((err) => console.log(err));

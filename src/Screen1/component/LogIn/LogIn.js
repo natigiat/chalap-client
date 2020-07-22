@@ -46,10 +46,10 @@ const LogIn = (props) => {
       <Form.Item>
         {/* {props.message === "incorrect" && (
             <div className="error">המספר אינו קיים במערכת</div>
-          )}
-          {props.message === "correct" && (
-            <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
-          )} */}
+          )}*/}
+        {props.answerLogin && (
+          <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
+        )}
       </Form.Item>
     </Form>
   );
