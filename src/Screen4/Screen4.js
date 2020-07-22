@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import logo from "./logo.svg";
 import "./Screen4.css";
 import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
@@ -8,16 +8,17 @@ import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
 import RefreshButton from "./Components/RefreshButton/RefreshButton";
 import RouteButton from "./Components/RouteButton/RouteButton";
+import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
-  //const [routeDirection, setRouteDirection] = useState("הלוך");
+  const [showPopup, setShowPopup] = useState(0);
+  const [hourSelected, setHourSelected] = useState(0);
+  const [studentSelected, setStudentSelected] = useState();
 
-  //   useEffect(() => {
-  //     // axios.get("https://quilt-flax-chemistry.glitch.me/products").then((res) => {
-  //     //     setRouteDirection(res.data);
-
-  //     // });
-  //   }, routeDirection);
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   document.title = `You clicked ${count} times`;
+  // }, hourSelected);
 
   const students = [
     {
@@ -33,7 +34,6 @@ const Screen4 = (props) => {
       name: "yosef",
     },
   ];
-
   const studentRouteInfo = [
     {
       startPoint: "בני אדם",
@@ -53,7 +53,6 @@ const Screen4 = (props) => {
     ["08:30", "09:30", "10:30"],
     ["08:10", "08:40"],
   ];
-
   const coordinates = [
     { lat: 31.864347, lng: 35.260679, desc: "home" },
     { lat: 31.932534, lng: 35.022965, desc: "school" },
@@ -63,20 +62,6 @@ const Screen4 = (props) => {
       desc: "bus location",
     },
   ];
-
-  //const [products, setProducts] = useState([]);
-
-  // const { TabPane } = Tabs;
-  // console.log(ridesMock);
-  // console.log("----------------");
-
-  // let studentRidesInfo = [];
-  // console.log(ridesMock.rides);
-  // for (let ridesInd = 0; ridesInd < ridesMock.rides.length; ridesInd++) {
-  //   studentRidesInfo.push([{rides[ridesInd].statTime}]);
-  //   console.log(ridesMock.rides[ridesInd]);
-  // }
-
   return (
     <div className="Screen4">
       <div className="routeDirButtons">
@@ -87,29 +72,23 @@ const Screen4 = (props) => {
           <RouteButton text={"חזור"} />
         </div>
       </div>
-
-      {/* <Button className="routeDir" type="link">
-        הלוך
-      </Button>
-      <Button className="routeDir" type="link" disabled>
-        חזור
-      </Button> */}
-      {/* <div className="routeDirTab">
-        <RouteDirTab />
-      </div> */}
       <div className="mapWrapper">
-        {/* <span className="refreshBtn"> */}
         <RefreshButton className="refreshBtn" />
-        {/* </span> */}
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
-      <div className="swiperWrapper">
-        <Carousel
-          students={students}
-          studentRouteInfo={studentRouteInfo}
-          studentRouteTimes={studentRouteTimes}
-        />
-      </div>
+      {showPopup ? (
+        <div className="popupAddStudents">
+          <PopupAddStudents />
+        </div>
+      ) : (
+        <div className="swiperWrapper">
+          <Carousel
+            students={students}
+            studentRouteInfo={studentRouteInfo}
+            studentRouteTimes={studentRouteTimes}
+          />
+        </div>
+      )}
     </div>
   );
 };

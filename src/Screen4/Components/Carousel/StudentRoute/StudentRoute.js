@@ -12,6 +12,7 @@ const StudentRoute = (props) => {
   const openReportingModal = () => {};
   const [visible, setVisible] = useState(false);
   const routeTimesArray = props.routeTimes;
+  const [addClassName, setAddClassName] = useState("");
   return (
     <div className="StudentRoute">
       <div className="studentHeader">
@@ -37,7 +38,12 @@ const StudentRoute = (props) => {
 
       <div className="hours">
         {props.routeTimes.map((routeTime) => (
-          <div className="hour">{routeTime}</div>
+          <button
+            className="hour"
+            // onClick={() => setAddClassName("sellectedHour")}
+          >
+            {routeTime}
+          </button>
         ))}
       </div>
 
