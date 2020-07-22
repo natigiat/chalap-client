@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "../Children/Children";
+import Insidekids from "./insideKids/insideKids";
 import "./Parent.css";
 
 function Parent() {
@@ -59,7 +60,7 @@ function Parent() {
 
       <div>
         <h6>מידע נוסף</h6>
-
+        <Insidekids />
         {Api.map((child) => (
           <Children
             key={child.key}
