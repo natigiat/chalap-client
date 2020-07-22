@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import "./GoogleApiWrapper.css";
+import mapStyle from "./StyleMap";
 
 const MapContainer = (props) => {
   console.log(props);
   console.log(props.coordinates[0].lat);
   console.log(props.coordinates[2].lat);
+
+  const [marker, setMarker] = useState();
+
+  const [visible, setVisible] = useState(false);
+
   return (
     <Map
       google={props.google}
+      styles={mapStyle}
       style={{ width: "100%", height: "100%", position: "relative" }}
       initialCenter={{
         lat: props.coordinates[0].lat,
@@ -75,11 +82,22 @@ const MapContainer = (props) => {
             props.coordinates[2].lng
           ),
         }}
+        onClick={(p, m, e) => {
+          setMarker(m);
+          setVisible(!visible);
+        }}
       />
+
+      <InfoWindow visible={visible} marker={marker}>
+        <div>
+          <p>שעת יציאה</p>
+        </div>
+      </InfoWindow>
     </Map>
   );
 };
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyBRcSVADr0_EbDMWNQP94bV-M2AJQSXUmU",
+  language: "Japan",
 })(MapContainer);
