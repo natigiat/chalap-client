@@ -56,7 +56,7 @@ function GoodWord(props) {
   return (
     <Form className="report" name="control-hooks" onFinish={onFinish}>
       <div className="title">טופס פניה</div>
-      <Row className="row">
+      <Row className="row" align="center">
         <Col className="col">
           <Form.Item>
             <DatePicker
