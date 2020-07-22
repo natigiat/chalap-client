@@ -12,10 +12,12 @@ import {
   Switch,
   Route,
   Link,
+  useHistory,
   Redirect,
 } from "react-router-dom";
 
 function Screen1() {
+  const history = useHistory();
   const [PasswordCheck, setPasswordCheck] = useState(false);
   const [DemoToNumPhon, setDemoToNumPhon] = useState(false);
   const [validationObject, setValidationObject] = useState({
@@ -28,18 +30,6 @@ function Screen1() {
   });
 
   window.document.title = "Bootcamp";
-
-  const passwordCheckFn = (password) => {
-    const regular = /^[0-9]+$/;
-
-    if (password.length < 4 || password.length > 4 || !regular.test(password)) {
-      setPasswordCheck(true);
-    }
-
-    if (password.length === 4 && regular.test(password)) {
-      setPasswordCheck(false);
-    }
-  };
 
   const apiRequestphoneNum = (value) => {
     const regular = /^[0-9]+$/;
@@ -56,7 +46,7 @@ function Screen1() {
           console.log(res);
           setValidationObject({
             phoneNum: value,
-            phoneNumValid: 1,
+            phoneNumValid: 2,
             password: 0,
             passwordValid: 0,
             phoneNumberParent: 0,
@@ -71,62 +61,89 @@ function Screen1() {
 
   //send post request in login validation
   const apiRequestPassword = (password) => {
-    if (!PasswordCheck) {
-      axios
-        .post(
-          "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",
-          {
-            phone_number: `${validationObject.phoneNum}`,
-            one_time_password: `${password}`,
-          }
-        )
-
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => console.log(err));
-      console.log("nichnas la post sisma");
-      console.log(validationObject.phoneNum, password);
-    }
-    console.log("lo nichnas la post sisma");
-    console.log(validationObject.phoneNum, password);
-  };
-  const axiosPost = () => apiRequestphoneNum("0527323002");
-
-  return (
-    <div className="page">
-      <button onClick={axiosPost}>axiospost</button>
-      <Splash />
-
-      <div>
+    console.log("password" + password);
+    axios
+      .post(
+        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",
         {
+          phone_number: `${validationObject.phoneNum}`,
+          one_time_password: `${password}`,
+        }
+      )
+
+      .then((res) => {
+        console.log(res);
+        setValidationObject({
+          phoneNum: validationObject.phoneNum,
+          phoneNumValid: 3,
+          password: password,
+          passwordValid: typeof res.data,
+          phoneNumberParent: 0,
+          ParentAcceptsStudent: 0,
+        });
+      });
+  };
+
+  const pageVieww = (page) => {
+    console.log(typeof page);
+    switch (page) {
+      case 0:
+        setTimeout(() => {
+          setValidationObject({
+            phoneNumValid: 1,
+          });
+        }, 3000);
+        return <Splash />;
+        break;
+
+      case 1:
+        return (
           <LogIn
             check={apiRequestphoneNum}
             message={validationObject}
             setPhoneNum={setValidationObject}
           />
-        }
-      </div>
-      <br></br>
-      <div>
-        <LogInValidation
-          check={apiRequestPassword}
-          passwordCheck={PasswordCheck}
-          checkFn={passwordCheckFn}
-          phoneNum={validationObject.phoneNum}
-          password={PasswordCheck}
-        />
-      </div>
-      <StudentSettingMenu />
-      <StudentSettingUpdate
-        check={apiRequestphoneNum}
-        message={validationObject}
-      />
-      {validationObject.phoneNumValid === 1 && (
-        <Router>
-          <Redirect to="./LogInValidation">logInValidation</Redirect>
-        </Router>
-      )}
+        );
+        break;
+
+      case 2:
+        return (
+          <LogInValidation
+            check={apiRequestPassword}
+            phoneNum={validationObject.phoneNum}
+          />
+        );
+
+        break;
+
+      case 3:
+        return (
+          <StudentSettingMenu
+            check={apiRequestPassword}
+            phoneNum={validationObject.phoneNum}
+          />
+        );
+
+        break;
+
+      case 4:
+        return (
+          <StudentSettingUpdate
+            check={apiRequestphoneNum}
+            message={validationObject}
+          />
+        );
+
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  return (
+    <div className="page">
+      <div>{pageVieww(validationObject.phoneNumValid)}</div>
     </div>
   );
 }

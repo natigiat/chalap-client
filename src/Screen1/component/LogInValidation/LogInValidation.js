@@ -13,12 +13,9 @@ const LogInValidation = (props) => {
   };
 
   const onFinish = (values) => {
-    console.log("Success:", values);
-    console.log(values["password"]);
-    props.check(values["password"]);
-    props.checkFn(values["password"]);
-    console.log(props.passwordCheck);
-    console.log("shalom");
+    console.log("Success:", values.password);
+    // props.setPhoneNum(props.message.Password =values);
+    props.check(values.password);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

@@ -27,7 +27,7 @@ function App() {
             path="/auth/"
             render={({ match: { url } }) => (
               <>
-                <Route path={`${url}/login/`} component={LogIn} exact />
+                <Route path={`${url}/login/`} component={Screen1} exact />
                 <Route
                   path={`${url}/login-validation/`}
                   component={LogInValidation}

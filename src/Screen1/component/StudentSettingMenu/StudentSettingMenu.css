@@ -1,11 +1,8 @@
 .SettingContainer {
   border-radius: 12px;
-  border: 1px solid #e0d2d2;
   align-items: center;
   flex-direction: column;
   padding: 2rem !important;
-  width: 80%;
-  margin: 69px auto;
   text-align: center;
 }
 

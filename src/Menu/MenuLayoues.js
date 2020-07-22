@@ -38,6 +38,7 @@ const MenuLayoues = () => {
         return <Screen5 />;
 
       default:
+        // return<Splash />;
         return <Screen4 />;
     }
   };

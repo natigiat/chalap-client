@@ -16,8 +16,12 @@
   align-items: center;
   text-align: center;
 }
-.logInValidationHeader{
-    font-size: 14px;
+.logInValidationHeader {
+  font-size: 14px;
+}
+
+.logInValidation {
+  padding: 20px;
 }
 
 /*antd default error message desgin*/
