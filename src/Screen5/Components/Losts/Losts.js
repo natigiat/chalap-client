@@ -33,6 +33,7 @@ function Losts(props) {
 
   const onFinish = (values) => {
     const dataReport = {
+      type: props.type,
       Messege: values["messege"],
       StudentId: childname,
       Date: date,
@@ -70,7 +71,11 @@ function Losts(props) {
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אבידות</h1>
 
-      <Form.Item name="messege" label="פרטי האבידה">
+      <Form.Item
+        name="messege"
+        label="פרטי האבידה"
+        rules={[{ required: true }]}
+      >
         <TextArea rows={6} />
       </Form.Item>
 

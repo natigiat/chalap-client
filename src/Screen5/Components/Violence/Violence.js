@@ -3,9 +3,27 @@ import React, { useState } from "react";
 import { Form, Input, Button, Radio, Select, DatePicker, Checkbox } from "antd";
 
 function Violence(props) {
+  const [date, setDate] = useState();
+  console.log(date);
+
+  function onChangedate(date, dateString) {
+    setDate(dateString);
+    console.log(date);
+  }
   const onFinish = (values) => {
-    console.log(values);
+    const dataReport = {
+      type: props.type,
+      Messege: values["messege"],
+      StudentId: childname,
+      Date: date,
+      RouteId: choose,
+      anunims: anunims,
+    };
+    console.log(dataReport);
+
+    props.onSubmit(dataReport);
   };
+
   const names = ["avi", "babi", "gagi"];
 
   console.log(props.type);
@@ -19,15 +37,20 @@ function Violence(props) {
   const { TextArea } = Input;
   const { Option } = Select;
 
-  const onChange4 = (e) => {
+  const onChangeRide = (e) => {
     setChoose(e.target.value);
   };
   console.log(choose);
 
+  const [childname, setChildname] = useState();
   function handleChange(value, name) {
+    setChildname(name.children);
     console.log("hi", name.children);
   }
+
+  const [anunims, setAnunims] = useState(false);
   function onChangebox(e) {
+    setAnunims(e.target.checked);
     console.log(`checked = ${e.target.checked}`);
   }
   return (
@@ -36,7 +59,7 @@ function Violence(props) {
 
       <Form.Item
         className="textarea1"
-        name="note"
+        name="messege"
         label=""
         rules={[{ required: true }]}
       >
@@ -60,13 +83,13 @@ function Violence(props) {
 
       <div className="date">
         <Form.Item name="date" label="">
-          <DatePicker onChange={handleChange} /> :תאריך
+          <DatePicker onChange={onChangedate} /> :תאריך
         </Form.Item>
 
         <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
-            onChange={onChange4}
+            onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />

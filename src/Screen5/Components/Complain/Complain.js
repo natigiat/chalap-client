@@ -16,13 +16,17 @@ function Complain(props) {
 
   const onFinish = (values) => {
     const dataReport = {
+      type: props.type,
       Messege: values["messege"],
       StudentId: name,
       Date: date,
       RouteId: choose,
+      anunims: anunims,
     };
+    props.onSubmit(dataReport);
     console.log(dataReport);
   };
+
   const [name, setname] = useState();
   function handleChange(value, name) {
     setname(name.children);
@@ -41,7 +45,9 @@ function Complain(props) {
 
   console.log(choose);
 
+  const [anunims, setAnunims] = useState(false);
   function onChangebox(e) {
+    setAnunims(e.target.checked);
     console.log(`checked = ${e.target.checked}`);
   }
 
@@ -50,7 +56,7 @@ function Complain(props) {
       <h1 className="title"> תלונה</h1>
 
       <Form.Item
-        name="complaint details"
+        name="messege"
         label="פרטי המקרה"
         plceholder="מה קרה"
         // rules={[{ required: true }]}

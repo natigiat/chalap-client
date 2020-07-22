@@ -19,26 +19,50 @@ function Screen5() {
         setStudentName(response.data);
       });
   }, []);
+  const [Messege, setMessege] = useState();
+  const [StudentId, setStudentId] = useState();
+  const [Dateofcase, setDate] = useState();
+  const [RouteId, setRouteId] = useState();
+  const [anunims, setanunims] = useState();
+
   const onSubmit1 = (value) => {
-    console.log(value);
+    console.log(value.type);
+    setMessege(String(value.Messege));
+    setStudentId(value.StudentId);
+    setDate(String("2020-07-08 00:00:00"));
+    setRouteId(String(value.RouteId));
+    setanunims(value.anunims);
+  };
+  console.log(Dateofcase);
+  console.log(StudentId);
+  console.log(typeof RouteId);
+  console.log(typeof anunims);
+
+  useEffect(() => {
+    posttoserver();
+  }, [Messege]);
+
+  const posttoserver = () => {
     axios
       .post(
         "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/reports/",
         {
-          id: 2,
-          type: "lost",
-
-          RouteId: 1,
-          UserId: 1,
-          StudentId: 1,
-          message: "boaz",
-          involvedStudents: "שמות המעורבים",
-          anonymousMessage: true,
-
-          address: "כתובת",
-          image: "https://imageurl.com",
-          subject: "ג",
-          date: "2020-07-08 00:00:00",
+          id: null,
+          type: null,
+          RouteId: 2,
+          UserId: null,
+          StudentId: null,
+          message: Messege,
+          involvedStudents: null,
+          anonymousMessage: null,
+          address: null,
+          image: null,
+          subject: null,
+          date: Dateofcase,
+          createdAt: "2020-07-21T20:18:50.000Z",
+          updatedAt: "2020-07-21T20:18:50.000Z",
+          deletedAt: null,
+          anonymousMessage: anunims,
         }
       )
       .then((res) => {
@@ -47,6 +71,7 @@ function Screen5() {
       .catch((err) => {
         console.log(err);
       });
+    console.log(Messege);
   };
   // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
 
@@ -66,7 +91,7 @@ function Screen5() {
         onSubmit={onSubmit1}
       />
       <br />
-      <Losts children={[StudentName]} type="lost" onSabmit={onSubmit1} />
+      <Losts children={[StudentName]} type="lost" onSubmit={onSubmit1} />
     </div>
   );
 }
