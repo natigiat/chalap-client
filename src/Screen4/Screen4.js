@@ -98,9 +98,9 @@ const Screen4 = (props) => {
         <RouteDirTab />
       </div> */}
       <div className="mapWrapper">
-        <span className="refreshBtn">
-          <RefreshButton />
-        </span>
+        {/* <span className="refreshBtn"> */}
+        <RefreshButton className="refreshBtn" />
+        {/* </span> */}
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
       <div className="swiperWrapper">
