@@ -58,8 +58,8 @@ const Screen4 = (props) => {
     { lat: 31.864347, lng: 35.260679, desc: "home" },
     { lat: 31.932534, lng: 35.022965, desc: "school" },
     {
-      lat: -40,
-      lng: 160,
+      lat: 31.864347,
+      lng: 35.160679,
       desc: "bus location",
     },
   ];

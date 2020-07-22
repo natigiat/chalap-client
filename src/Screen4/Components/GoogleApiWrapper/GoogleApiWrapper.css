@@ -1,5 +1,5 @@
 .map {
-  position: static !important;
+  /* position: static !important; */
   width: 100% !important;
-  height: 400px !important;
+  height: 100% !important;
 }
