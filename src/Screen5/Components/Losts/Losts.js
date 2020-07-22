@@ -33,6 +33,7 @@ function Losts(props) {
 
   const onFinish = (values) => {
     const dataReport = {
+      type: props.type,
       Messege: values["messege"],
       StudentId: childname,
       Date: date,
@@ -69,29 +70,28 @@ function Losts(props) {
   return (
     <Form className="body" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אבידות</h1>
-      <div className="divstyle">
-        פרטי האבידה
-        <Form.Item name="lost details" label="">
-          <TextArea rows={6} placeholder="מה אבד לך?" />
-        </Form.Item>
-      </div>
-      <div className="divstyle1">
-        למי אבד
-        <Form.Item>
-          <Select
-            className="select"
-            defaultValue="בחר ילד"
-            style={{ width: 250 }}
-            onChange={handleChange}
-            placeholder="בחר ילד"
-          >
-            {names.map((value, index) => (
-              <Option key={index}>{value}</Option>
-            ))}
-          </Select>
-        </Form.Item>
-      </div>
-      <br />
+
+      <Form.Item
+        name="messege"
+        label="פרטי האבידה"
+        rules={[{ required: true }]}
+      >
+        <TextArea rows={6} />
+      </Form.Item>
+
+      <Form.Item>
+        <Select
+          className="select"
+          defaultValue="בחר ילד"
+          style={{ width: 250 }}
+          onChange={handleChange}
+          placeholder="בחר ילד"
+        >
+          {names.map((value, index) => (
+            <Option key={index}>{value}</Option>
+          ))}
+        </Select>
+      </Form.Item>
 
       <div className="date">
         <Form.Item name="date" label="">
