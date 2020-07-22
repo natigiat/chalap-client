@@ -8,7 +8,9 @@ import "./Screen5.css";
 
 function Screen5() {
   const [StudentName, setStudentName] = useState([]);
-  const [thisURL, setthisURL] = useState("https://ant.design/components/losts");
+  const [thisURL, setthisURL] = useState(
+    "https://ant.design/components/good_word"
+  );
   useEffect(() => {
     axios
       .get(
@@ -80,25 +82,11 @@ function Screen5() {
 
   return (
     <div className="form">
-      {thisType === "good_word" ? (
-        <GoodWord
-          children={[StudentName]}
-          type="good_word"
-          onSubmit={onSubmit1}
-        />
-      ) : thisType === "complain" ? (
-        <Complain children={[StudentName]} type="report" onSubmit={onSubmit1} />
-      ) : thisType === "vioelence" ? (
-        <Vioelence
-          children={[StudentName]}
-          type="vioelence"
-          onSubmit={onSubmit1}
-        />
-      ) : (
-        thisType === "losts" && (
-          <Losts children={[StudentName]} type="lost" onSubmit={onSubmit1} />
-        )
-      )}
+      <GoodWord
+        children={[StudentName]}
+        type="good_word"
+        onSubmit={onSubmit1}
+      />
     </div>
   );
 }
