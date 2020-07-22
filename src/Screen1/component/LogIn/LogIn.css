@@ -1,0 +1,9 @@
+.PhoneContainer {
+  text-align: center;
+}
+.sendPass {
+  color: gray !important;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  padding: 0 2rem !important;
+}
