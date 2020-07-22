@@ -11,7 +11,10 @@
   color: black !important;
   padding: 20px 0 !important;
 } */
-
+.routeDirButtons {
+  display: block;
+  height: 33px;
+}
 .routeBtn {
   width: 50%;
   float: right;
@@ -29,8 +32,15 @@
   z-index: 1;
 }
 
-.mapWrapper {
+button.ant-btn.refresh {
   position: absolute;
+  top: 10px;
+  left: 17px;
+  z-index: 22;
+}
+
+.mapWrapper {
+  position: relative;
   width: 100%;
   height: calc(100vh - (121px)) !important;
   margin-top: 2px;
@@ -40,7 +50,7 @@
   /* width: 100%;
   top: 634px; */
 
-  bottom: calc(100vh - (1320px));
+  bottom: 0px;
   width: 100%;
   /* top: 16px; */
   z-index: 1;
