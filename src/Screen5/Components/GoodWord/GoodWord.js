@@ -13,48 +13,42 @@ function GoodWord(props) {
     { name: "אלימות", type: "violence" },
     { name: "תלונה", type: "report" },
   ];
-  console.log(typeRequest);
 
   const { TextArea } = Input;
   const { Option } = Select;
   const format = "HH:mm";
 
   const [date, setDate] = useState();
-
   function onChangedate(date, dateString) {
     setDate(dateString);
-    console.log(date);
   }
   const [time, setTime] = useState();
   function onTimeChange(time, timestring) {
     setTime(timestring);
-    console.log("ירושלים של זהב");
   }
 
   const [type, setType] = useState();
 
   function handleChange(value) {
-    console.log("hi", value);
     setType(value);
   }
 
   const onFinish = (values) => {
     const dataReport = {
       type: type,
-      Messege: values["messege"],
-      Date: date,
+      message: values["message"],
+      date: date,
       origin: values["Origin"],
       destination: values["Destination"],
       time: time,
     };
-    console.log("DATAREPORT", dataReport);
     props.onSubmit(dataReport);
   };
   const files = {
     action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
     onChange({ file, fileList }) {
       if (file.status !== "uploading") {
-        console.log(file, fileList);
+        // console.log(file, fileList);
       }
     },
   };
