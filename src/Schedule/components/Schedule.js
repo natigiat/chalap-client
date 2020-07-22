@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Child from "./Child";
 import "./Schedule.css";
 import "./Child.css";
@@ -20,15 +19,16 @@ const Children = [
   { name: "shuki", time: "15:00" },
 ];
 
-export default function Schedule() {
+function Schedule() {
   const [ChildrenState, setChildrenState] = useState(Children);
+
   const onClickNewTime = (newTime, index) => {
     Children[index].time = newTime;
-
     setChildrenState([...Children]);
   };
+
   return (
-    <div>
+    <div className="Schedule">
       <h1 className="header">עריכת שעות סיום</h1>
       <Collapse className="collapseMenu">
         {weekDays.map((day, i) => (
@@ -48,3 +48,4 @@ export default function Schedule() {
     </div>
   );
 }
+export default Schedule;

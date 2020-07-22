@@ -1,11 +1,10 @@
 @import "~antd/dist/antd.css";
 
-.header{
-    text-align: center;
-
+.Schedule .header {
+  text-align: center;
 }
 
-.ant-collapse > .ant-collapse-item > .ant-collapse-header {
-background-color: grey;
-color:white;
+.Schedule .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: grey;
+  color: white;
 }

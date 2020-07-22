@@ -1,65 +1,81 @@
 @import "~antd/dist/antd.css";
 
-.ant-collapse-content > .ant-collapse-content-box {
+.Schedule .ant-collapse-content > .ant-collapse-content-box {
   padding: 0px;
 }
-.text {
-  display: inline-block;
-}
-.child {
+
+.oneChild {
+  width: 100%;
   background: #f1f1f1;
   border: 1px solid #808080;
-  padding-bottom: 28px;
+  padding-bottom: 0px;
+  display: flex;
 }
-.name {
-  position: absolute;
-  right: 68px;
+
+.oneChild2 {
+  width: 100%;
+  height: auto;
+  background: #f1f1f1;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.oneChild .text {
+  width: 100%;
+  display: inline-block;
+}
+
+.oneChild .name {
+  margin-right: 19px;
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
   color: #808080;
 }
-.time {
-  position: absolute;
 
-  left: 61px;
-
+.oneChild .time {
+  float: left;
   font-family: Heebo;
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-
   color: #808080;
 }
-.img1 {
-  position: absolute;
+
+.oneChild .divImgPen {
+  margin-bottom: -32px;
+  margin-left: 11px;
+  margin-right: 7px;
+}
+
+.oneChild .img1 {
   left: 33px;
 }
-.img2 {
-  position: absolute;
-  left: 29px;
+
+.oneChild .img2 {
+  margin-top: -38px;
 }
-.img3 {
-  position: absolute;
-  right: 22px;
+
+.oneChild .img3 {
+  height: 32px;
+  margin-right: 25px;
 }
-.img4 {
-  position: relative;
-  right: 26px;
-  top: -6px;
+
+.oneChild .img4 {
+  height: 15px;
+  margin-right: -21px;
 }
-.none {
+
+.oneChild .none {
   display: none;
 }
-.input2 {
-  position: absolute;
-  margin-top: 4px;
-  margin-right: 264px;
-}
-.button2 {
-  position: absolute;
 
-  margin-right: 229px;
-  margin-top: 4px;
+.oneChild .input {
+  float: left;
+}
+
+.oneChild .button {
+  float: left;
 }
