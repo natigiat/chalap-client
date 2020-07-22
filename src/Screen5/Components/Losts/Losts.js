@@ -94,24 +94,24 @@ function Losts(props) {
       </Form.Item>
 
       <div className="date">
-        <Form.Item name="date as" label="מתי אבד">
-          <DatePicker onChange={onChangedate} />
+        <Form.Item name="date" label="">
+          <DatePicker onChangeDate={onChangedate} /> :תאריך
         </Form.Item>
 
-        <Form.Item label="באיזה הסעה" name="bus way: ">
-          <br />
+        <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
             onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
+          {":הסעה"}
         </Form.Item>
       </div>
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
-          Submit
+          שליחה
         </Button>
       </Form.Item>
     </Form>

@@ -26,6 +26,10 @@ function Violence(props) {
 
   const names = ["avi", "babi", "gagi"];
 
+  function onChangeDate(date, dateString) {
+    console.log(dateString);
+  }
+
   console.log(props.type);
   const options = [
     { label: "הלוך", value: "הלוך " },
@@ -67,10 +71,10 @@ function Violence(props) {
       </Form.Item>
       <Form.Item>
         <Select
+          className="select"
           defaultValue="בחר ילד"
-          style={{ width: 120 }}
+          style={{ width: 250 }}
           onChange={handleChange}
-          placeholder="בחר ילד"
         >
           {names.map((value, index) => (
             <Option key={index}>{value}</Option>

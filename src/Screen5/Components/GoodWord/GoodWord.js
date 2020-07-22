@@ -82,21 +82,20 @@ function GoodWord(props) {
           <DatePicker />
         </Form.Item>
 
-        <Form.Item label="באיזה הסעה">
-          <br />
+        <Form.Item name="bus" label="" className="btn">
           <Radio.Group
             options={options}
             onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
+          {":הסעה"}
         </Form.Item>
       </div>
       <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
-      <br />
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
-          Submit
+          שליחה
         </Button>
       </Form.Item>
     </Form>
