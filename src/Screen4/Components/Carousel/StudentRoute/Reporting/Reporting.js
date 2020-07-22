@@ -1,7 +1,7 @@
 import "./Reporting.css";
 import React, { useState } from "react";
 import { Modal, Button } from "antd";
-import { Link } from "react-router-dom";
+import ReportButton from "./ReportButton/ReportButton.js";
 
 const Reporting = () => {
   const [visible, setVisible] = useState(false);
@@ -20,6 +20,14 @@ const Reporting = () => {
     console.log(e);
     setVisible(false);
   };
+  const reportButtons = [
+    { id: 1, title: "מציאה", img: "logo192.png", link: "find" },
+    { id: 1, title: "אבדה", img: "logo192.png", link: "lost" },
+    { id: 1, title: "אלימות", img: "logo192.png", link: "violence" },
+    { id: 1, title: "תלונה", img: "logo192.png", link: "report" },
+    { id: 1, title: "מילה טובה", img: "logo192.png", link: "good_word" },
+    { id: 1, title: "פנייה למוקד", img: "logo192.png", link: "moked" },
+  ];
 
   return (
     <>
@@ -36,34 +44,14 @@ const Reporting = () => {
       >
         <div>
           <div>
-            <Link to="/reports/losts">
-              <div className="button">
-                <img src="logo192.png" alt="" className="button1" />
-                אבדה
-              </div>
-            </Link>
-            <div className="button">
-              <img src="logo192.png" alt="" className="button2" />
-              מציאה
-            </div>
-
-            <div className="button">
-              <img src="logo192.png" alt="" className="button3" />
-              אלימות
-            </div>
-            <div className="button">
-              <img src="logo192.png" alt="" className="button4" />
-              תלונה
-            </div>
-
-            <div className="button">
-              <img src="logo192.png" alt="" className="button5" />
-              מילה טובה
-            </div>
-            <div>
-              <img src="logo192.png" alt="" className="button6" />
-              פנייה למוקד
-            </div>
+            {reportButtons.map((reportButton) => (
+              <ReportButton
+                id={reportButton.id}
+                title={reportButton.title}
+                img={reportButton.img}
+                link={reportButton.link}
+              />
+            ))}
           </div>
         </div>
       </Modal>

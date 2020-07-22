@@ -23,7 +23,7 @@ const LogIn = (props) => {
 
   return (
     <Form
-      className="PhoneContainer"
+      className="PhoneContainer padding-wrapper "
       {...layout}
       name="basic"
       initialValues={{ remember: true }}

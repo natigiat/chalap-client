@@ -63,7 +63,7 @@ function Screen1() {
   };
 
   return (
-    <div className="screen1">
+    <div className="screen1 padding-wrapper ">
       {/* <button onClick={() => console.log(StudentName)}>axios</button> */}
       <div>{<LogIn check={apiRequestphoneNum} message={DemoToNumPhon} />}</div>
       <br></br>

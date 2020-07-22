@@ -3,8 +3,13 @@ import StudentRoute from "./StudentRoute/StudentRoute";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Virtual,
+} from "swiper";
 // Import Swiper styles
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
@@ -12,7 +17,7 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 
 // install Swiper components
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, Virtual, A11y]);
 
 const Carousel = (props) => {
   const students = props.students;
@@ -40,14 +45,26 @@ const Carousel = (props) => {
       endPoint: "כוכב יעקב",
       routeTimes: ["08:10", "08:40"],
     },
+    {
+      id: 4,
+      name: "טל שלום",
+      startPoint: "עטרת",
+      endPoint: "נווה צוף",
+      routeTimes: ["08:00", "08:30"],
+    },
   ];
-
   return (
     <Swiper
+      className="studentsSwiper"
       spaceBetween={20}
       slidesPerView={3}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwipeLeft={(e) => console.log("slide change: " + e)}
+      onSlideChange={(e) => console.log("slide change: " + e)}
+      onSwiper={(swiper) => console.log("swiper: " + swiper)}
+      Virtual={true}
+      centeredSlides={true}
+      grabCursor={true}
+      mousewheel
     >
       {studentsArray.map((student) => (
         <SwiperSlide>
@@ -57,6 +74,7 @@ const Carousel = (props) => {
             startPoint={student.startPoint}
             endPoint={student.startPoint}
             routeTimes={student.routeTimes}
+            // loop={true}
           />
         </SwiperSlide>
       ))}
