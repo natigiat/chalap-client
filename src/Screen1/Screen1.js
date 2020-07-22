@@ -31,17 +31,17 @@ function Screen1() {
  
   window.document.title = "Bootcamp";
 
-  const passwordCheckFn = (password) =>{
-    const regular = /^[0-9]+$/;
+  // const passwordCheckFn = (password) =>{
+  //   const regular = /^[0-9]+$/;
     
-    if(password.length < 4|| password.length > 4 || !regular.test(password)  ){
-      setPasswordCheck(true)
-    }
+  //   if(password.length < 4|| password.length > 4 || !regular.test(password)  ){
+  //     setPasswordCheck(true)
+  //   }
     
-    if(password.length === 4 && regular.test(password)){
-      setPasswordCheck(false);
-    }
-  };
+  //   if(password.length === 4 && regular.test(password)){
+  //     setPasswordCheck(false);
+  //   }
+  // };
 
   const apiRequestphoneNum = (value) => {
     const regular = /^[0-9]+$/;
@@ -72,7 +72,7 @@ function Screen1() {
   //send post request in login validation
   const apiRequestPassword = (password) => {
 
-        if(!PasswordCheck){
+       
           axios.post( "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",{
 
             "phone_number": `${validationObject.phoneNum}`,
@@ -82,14 +82,19 @@ function Screen1() {
            
            .then(res=>{
              console.log(res)
-             
+             setValidationObject({
+              phoneNum:validationObject.phoneNum,
+              phoneNumValid:1,
+              password:password,
+              passwordValid:typeof res.data,
+              phoneNumberParent :0,
+              ParentAcceptsStudent :0})
             })
-           .catch(err=>console.log(err))
-            console.log('nichnas la post sisma')
-            console.log(validationObject.phoneNum,password);
-        }
-        console.log('lo nichnas la post sisma');
-        console.log(validationObject.phoneNum,password);
+             
+            
+           
+         
+        
      
     
   };
@@ -106,8 +111,8 @@ function Screen1() {
       </div>
       <br></br>
       <div>
-        <LogInValidation check={apiRequestPassword} passwordCheck={PasswordCheck} checkFn = {passwordCheckFn}
-         phoneNum =  {validationObject.phoneNum} password ={PasswordCheck}/>
+        <LogInValidation check={apiRequestPassword}
+         phoneNum =  {validationObject.phoneNum}/>
       </div>
       <StudentSettingMenu />
       <StudentSettingUpdate check={apiRequestphoneNum} message={validationObject}/>
@@ -116,7 +121,10 @@ function Screen1() {
         <Redirect to = './LogInValidation'>logInValidation</Redirect>
       </Router>)}
 
-
+      {validationObject.passwordValid==="object"&&(
+      <Router>
+        <Redirect to = './StudentSettingMenu'>logInValidation</Redirect>
+      </Router>)}
     </div>
   );
 }
