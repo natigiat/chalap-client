@@ -37,7 +37,8 @@ const Reporting = () => {
           <div>
             <div className="button">
               <img src="logo192.png" alt="" className="button1" />
-              אבדה
+              <br />
+              <span className="reportText">אבדה</span>
             </div>
             <div className="button">
               <img src="logo192.png" alt="" className="button2" />
