@@ -112,7 +112,7 @@ function Screen1() {
       <br></br>
       <div>
         <LogInValidation check={apiRequestPassword}
-         phoneNum =  {validationObject.phoneNum}/>
+         phoneNum =  {validationObject.phoneNum} password = {validationObject.password}/>
       </div>
       <StudentSettingMenu />
       <StudentSettingUpdate check={apiRequestphoneNum} message={validationObject}/>
