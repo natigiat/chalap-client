@@ -12,15 +12,11 @@ import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
   const [showPopup, setShowPopup] = useState(1);
-  //const [routeDirection, setRouteDirection] = useState("הלוך");
+  const [hourSelected, setHourSelected] = useState(1);
 
-  //   useEffect(() => {
-  //     // axios.get("https://quilt-flax-chemistry.glitch.me/products").then((res) => {
-  //     //     setRouteDirection(res.data);
-
-  //     // });
-  //   }, routeDirection);
-
+  // const setHourSelected = () => {
+  //   console.log("bla bla bla");
+  // };
   const students = [
     {
       id: 1,
@@ -35,7 +31,6 @@ const Screen4 = (props) => {
       name: "yosef",
     },
   ];
-
   const studentRouteInfo = [
     {
       startPoint: "בני אדם",
@@ -55,7 +50,6 @@ const Screen4 = (props) => {
     ["08:30", "09:30", "10:30"],
     ["08:10", "08:40"],
   ];
-
   const coordinates = [
     { lat: 31.864347, lng: 35.260679, desc: "home" },
     { lat: 31.932534, lng: 35.022965, desc: "school" },
@@ -65,7 +59,6 @@ const Screen4 = (props) => {
       desc: "bus location",
     },
   ];
-
   return (
     <div className="Screen4">
       <div className="routeDirButtons">
@@ -76,13 +69,10 @@ const Screen4 = (props) => {
           <RouteButton text={"חזור"} />
         </div>
       </div>
-
       <div className="mapWrapper">
         <RefreshButton className="refreshBtn" />
-
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
-
       {showPopup ? (
         <div className="popupAddStudents">
           <PopupAddStudents />
