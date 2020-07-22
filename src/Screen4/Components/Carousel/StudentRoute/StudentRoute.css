@@ -1,10 +1,9 @@
 @import "~antd/dist/antd.css";
 
 .StudentRoute {
-  width: 266px;
-  height: 150px;
+  width: 100%;
 
-  margin: auto;
+  /* margin: auto; */
   padding: 15px;
   background-color: white;
   opacity: 0.9;
