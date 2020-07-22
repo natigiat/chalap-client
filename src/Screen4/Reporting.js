@@ -1,6 +1,7 @@
 import "./Reporting.css";
 import React, { useState } from "react";
 import { Modal, Button } from "antd";
+import { Link } from "react-router-dom";
 
 const Reporting = () => {
   const [visible, setVisible] = useState(false);
@@ -35,10 +36,12 @@ const Reporting = () => {
       >
         <div>
           <div>
-            <div className="button">
-              <img src="logo192.png" alt="" className="button1" />
-              אבדה
-            </div>
+            <Link to="/reports/losts">
+              <div className="button">
+                <img src="logo192.png" alt="" className="button1" />
+                אבדה
+              </div>
+            </Link>
             <div className="button">
               <img src="logo192.png" alt="" className="button2" />
               מציאה
