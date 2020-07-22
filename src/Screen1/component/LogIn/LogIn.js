@@ -37,7 +37,7 @@ const LogIn = (props) => {
         name="username"
         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
       >
-        <Input placeholder="הזן מספר טלפון" />
+        <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit" className="sendPass">

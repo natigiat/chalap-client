@@ -1,25 +1,26 @@
-
-.signStudentContainer{
+.signStudentContainer {
   display: flex;
   justify-content: space-evenly;
   border: black 1px solid;
   border-radius: 12px;
   align-items: center;
   flex-direction: column;
-  box-shadow: 1px 1px 4px black!important;
-  padding: 2rem!important;
+  box-shadow: 1px 1px 4px black !important;
+  padding: 2rem !important;
   width: 50%;
 }
-.btnlater{
-  color: gray!important;
-    background-color: transparent !important;
-    border: 1px solid gray !important;
-
+.btnlater {
+  color: gray !important;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
 }
-.StudentPhoneInput{
+.StudentPhoneInput {
   margin: 0.7rem;
-  
 }
-.StudentPhoneInput::placeholder{
+.StudentPhoneInput::placeholder {
   text-align: center;
 }
+/* .btnSelect {
+  width: 50%;
+  border: 1px solid black;
+} */
