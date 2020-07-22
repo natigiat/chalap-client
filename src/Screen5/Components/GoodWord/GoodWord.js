@@ -25,11 +25,17 @@ function GoodWord(props) {
     setDate(dateString);
     console.log(date);
   }
+  const [time, setTime] = useState();
+  function onTimeChange(time, timestring) {
+    setTime(timestring);
+    console.log("ירושלים של זהב");
+  }
 
   const [type, setType] = useState();
 
   function handleChange(value) {
     console.log("hi", value);
+    setType(value);
   }
 
   const onFinish = (values) => {
@@ -37,8 +43,11 @@ function GoodWord(props) {
       type: type,
       Messege: values["messege"],
       Date: date,
+      origin: values["Origin"],
+      destination: values["Destination"],
+      time: time,
     };
-    console.log(dataReport);
+    console.log("DATAREPORT", dataReport);
     props.onSubmit(dataReport);
   };
   const files = {
@@ -81,12 +90,17 @@ function GoodWord(props) {
         </Form.Item>
       </div>
       <div className="hourS5">
-        <TimePicker defaultValue={moment("12:08", format)} format={format} />,
+        <TimePicker
+          defaultValue={moment("12:08", format)}
+          format={format}
+          onChange={onTimeChange}
+          rules={[{ require: true }]}
+        />
       </div>
-      <Form.Item name="note" label="" rules={[{ required: true }]}>
+      <Form.Item name="Origin" label="" rules={[{ required: true }]}>
         <TextArea rows={1} placeholder="מוצא" />
       </Form.Item>
-      <Form.Item name="note" label="" rules={[{ required: true }]}>
+      <Form.Item name="Destination" label="" rules={[{ required: true }]}>
         <TextArea rows={1} placeholder="יעד" />
       </Form.Item>
       <Form.Item>
@@ -99,7 +113,9 @@ function GoodWord(props) {
           rules={[{ required: true }]}
         >
           {typeRequest.map((value, index) => (
-            <Option key={index}>{value.name}</Option>
+            <Option key={index} value={value.type}>
+              {value.name}
+            </Option>
           ))}
         </Select>
       </Form.Item>
