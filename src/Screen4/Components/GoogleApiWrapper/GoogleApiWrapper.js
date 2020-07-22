@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import "./GoogleApiWrapper.css";
 import mapStyle from "./StyleMap";
@@ -89,9 +89,14 @@ const MapContainer = (props) => {
       />
 
       <InfoWindow visible={visible} marker={marker}>
-        <div>
-          <p>שעת יציאה</p>
+        <div className="PopUp">
+          <div>
+            <img className="BusImg" src="/Images/BusImage.svg" alt=""></img>
+          </div>
+          <div className="BusHour">9:30</div>
         </div>
+
+        <div>{/* <p>שעת יציאה</p> */}</div>
       </InfoWindow>
     </Map>
   );
