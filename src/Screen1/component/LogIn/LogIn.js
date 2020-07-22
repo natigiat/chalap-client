@@ -15,7 +15,7 @@ const LogIn = (props) => {
 
   const onFinish = (values) => {
     console.log("Success:", values.username);
-    props.setPhoneNum(values.username);
+    // props.setPhoneNum((props.message.PhoneNum = values.username));
     props.check(values.username);
   };
   const onFinishFailed = (errorInfo) => {
