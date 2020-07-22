@@ -41,12 +41,12 @@ function Screen1() {
       .post("http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms", {
         phone_number: `${value}`,
       })
-
       .then((res) => {
         console.log(res);
         setphoneNum(value);
       })
       .catch((err) => console.log(err));
+    console.log("sdfghj");
   };
   const apiRequestPassword = (Password) => {
     axios
@@ -84,3 +84,4 @@ function Screen1() {
 }
 
 export default Screen1;
+// 0528585475
