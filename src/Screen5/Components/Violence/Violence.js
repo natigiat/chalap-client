@@ -35,14 +35,14 @@ function Violence(props) {
     console.log(`checked = ${e.target.checked}`);
   }
   return (
-    <Form className="body" name="control-hooks" onFinish={onFinish}>
+    <Form className="all report" name="control-hooks" onFinish={onFinish}>
       <h1 className="title">אלימות </h1>
 
       <Form.Item
-        className="textarea1"
         name="note"
         label=""
-        rules={[{ required: true }]}
+        className="textarea1"
+        rules={[{ required: true, message: "אנא הכנס תוכן" }]}
       >
         <TextArea rows={6} placeholder="תיאור המקרה ..." />
       </Form.Item>
@@ -50,7 +50,6 @@ function Violence(props) {
         <Select
           className="select"
           defaultValue="בחר ילד"
-          style={{ width: 250 }}
           onChange={handleChange}
         >
           {names.map((value, index) => (
@@ -58,26 +57,32 @@ function Violence(props) {
           ))}
         </Select>
       </Form.Item>
-      <Form.Item name="mans" label="" rules={[{ required: true }]}>
+      <Form.Item className="textarea2" name="mans" label="">
         <TextArea rows={4} placeholder="אנשים מעורבים" />
       </Form.Item>
 
       <div className="date">
         <Form.Item name="date" label="">
-          <DatePicker onChangeDate={onChangeDate} /> :תאריך
+          תאריך:
+          <DatePicker
+            onChangeDate={onChangeDate}
+            rules={[{ required: true, message: "אנא הכנס תוכן" }]}
+          />{" "}
         </Form.Item>
 
         <Form.Item name="bus" label="" className="btn">
+          {"הסעה:"}
           <Radio.Group
             options={options}
             onChangeRide={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
-          {":הסעה"}
         </Form.Item>
       </div>
-      <Checkbox onChange={onChangebox}>הישאר אנונימי</Checkbox>
+      <Checkbox className="anonimus" onChange={onChangebox}>
+        הישאר אנונימי
+      </Checkbox>
       <Form.Item>
         <Button className="button" type="primary" htmlType="submit">
           שליחה

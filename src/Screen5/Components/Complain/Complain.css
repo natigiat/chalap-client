@@ -1,6 +1,6 @@
 @import "~antd/dist/antd.css";
 
-.body {
+/* .body {
   margin-left: 500px;
   width: 350px;
   border: 4px;
@@ -11,8 +11,8 @@
   text-align: right;
   font-size: 20px;
   font-weight: 700;
-}
-.title {
+} */
+/* .title {
   background-color: rgb(211, 211, 211);
   height: 50px;
   text-align: center;
@@ -49,4 +49,4 @@
 }
 .btn label.ant-radio-button-wrapper {
   margin-right: 20px;
-}
+} */

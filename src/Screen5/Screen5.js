@@ -51,7 +51,7 @@ function Screen5() {
   // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
 
   return (
-    <div className="form">
+    <div className="form" dir="rtl">
       <GoodWord
         children={[StudentName]}
         type="good_word"
