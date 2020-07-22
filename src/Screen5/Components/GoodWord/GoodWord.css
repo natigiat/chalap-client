@@ -1,52 +1,46 @@
 @import "~antd/dist/antd.css";
 
-/* .body {
-  margin-left: 500px;
-  width: 350px;
-  border: 4px;
-  border-radius: 10px;
-  border-color: blue;
-  border-style: solid;
-  padding: 15px;
-  text-align: right;
-  font-size: 20px;
-  font-weight: 700;
-} */
-/* .title {
-  background-color: rgb(211, 211, 211);
-  height: 50px;
+.report .all {
+  width: 100%;
+}
+.report .title {
   text-align: center;
   font-size: 25px;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 15px;
+  margin-top: 110px;
 }
-.select {
+.textarea1.ant-row.ant-form-item {
+  width: 80%;
+  margin: 30px auto 30px;
+}
+.select.ant-select.select.ant-select-single.ant-select-show-arrow {
+  width: 50% !important;
   border: rgb(206, 206, 206);
   border-style: solid;
   border-width: 2px;
   border-radius: 6px;
   text-align: center;
-  margin-right: 30px;
+  margin: 0 auto 30px;
 }
-.textarea2 {
-  text-align: right;
-  width: 200px;
+.textarea2.ant-row.ant-form-item {
+  width: 70%;
+  margin: 0 auto 30px;
 }
 .date {
-  background-color: rgb(230, 230, 230);
   padding: 25px;
-  width: 280px;
-  height: 140px;
-  border-radius: 10px;
-  margin-left: 18px;
+  width: 30%;
+  margin: 0 auto 30px;
   text-align: center;
-}
-.button {
-  background-color: rgb(180, 180, 180);
-  margin: 20px 25px;
-  width: 250px;
 }
 .btn label.ant-radio-button-wrapper {
   margin-right: 20px;
-} */
+  background-color: rgb(192, 192, 192);
+}
+.anonimus.ant-checkbox-input {
+  margin: 0 30px;
+}
+.button.ant-btn-primary {
+  width: 60%;
+  margin: 30px auto;
+}

@@ -4,7 +4,7 @@ import { TimePicker } from "antd";
 import moment from "moment";
 import { Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import "./GoodWord";
+import "./GoodWord.css";
 
 function GoodWord(props) {
   const typeRequest = [
@@ -82,27 +82,26 @@ function GoodWord(props) {
   };
 
   return (
-    <Form className="body" name="control-hooks" onFinish={onFinish}>
-      <h1 className="title">טופס פניה</h1>
+    <Form className="report" name="control-hooks" onFinish={onFinish}>
+      <div className="title">טופס פניה</div>
       <div className="date">
         <Form.Item>
           <DatePicker onChange={onChangedate} rules={[{ require: true }]} />
         </Form.Item>
-      </div>
-      <div className="hourS5">
         <TimePicker
+          className="hour"
           defaultValue={moment("12:08", format)}
           format={format}
           onChange={onTimeChange}
           rules={[{ require: true }]}
         />
+        <Form.Item name="Origin" label="" rules={[{ required: true }]}>
+          <TextArea rows={1} placeholder="מוצא" />
+        </Form.Item>
+        <Form.Item name="Destination" label="" rules={[{ required: true }]}>
+          <TextArea rows={1} placeholder="יעד" />
+        </Form.Item>
       </div>
-      <Form.Item name="Origin" label="" rules={[{ required: true }]}>
-        <TextArea rows={1} placeholder="מוצא" />
-      </Form.Item>
-      <Form.Item name="Destination" label="" rules={[{ required: true }]}>
-        <TextArea rows={1} placeholder="יעד" />
-      </Form.Item>
       <Form.Item>
         <Select
           className="select"

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GoodWord from "./Components/GoodWord/GoodWord";
-import Complain from "./Components/Complain/Complain";
-import Vioelence from "./Components/Violence/Violence";
-import Losts from "./Components/Losts/Losts";
 import "./Screen5.css";
 
 function Screen5() {
@@ -37,41 +34,41 @@ function Screen5() {
     setDate(String(value.date));
   };
 
-  useEffect(() => {
-    posttoserver();
-  }, [Messege]);
+  // useEffect(() => {
+  //   posttoserver();
+  // }, [Messege]);
 
-  const posttoserver = () => {
-    axios
-      .post(
-        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/reports/",
-        {
-          id: null,
-          type: null,
-          RouteId: 2,
-          UserId: null,
-          StudentId: null,
-          message: Messege,
-          involvedStudents: null,
-          anonymousMessage: null,
-          address: null,
-          image: null,
-          subject: null,
-          date: Dateofcase,
-          createdAt: "2020-07-21T20:18:50.000Z",
-          updatedAt: "2020-07-21T20:18:50.000Z",
-          deletedAt: null,
-          anonymousMessage: anunims,
-        }
-      )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    console.log(Messege);
-  };
+  // const posttoserver = () => {
+  //   axios
+  //     .post(
+  //       "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/reports/",
+  //       {
+  //         id: null,
+  //         type: null,
+  //         RouteId: 2,
+  //         UserId: null,
+  //         StudentId: null,
+  //         message: Messege,
+  //         involvedStudents: null,
+  //         anonymousMessage: null,
+  //         address: null,
+  //         image: null,
+  //         subject: null,
+  //         date: Dateofcase,
+  //         createdAt: "2020-07-21T20:18:50.000Z",
+  //         updatedAt: "2020-07-21T20:18:50.000Z",
+  //         deletedAt: null,
+  //         anonymousMessage: anunims,
+  //       }
+  //     )
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   console.log(Messege);
+  // };
 
   return (
     <div className="form" dir="rtl">
