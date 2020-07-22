@@ -3,9 +3,27 @@ import React, { useState } from "react";
 import { Form, Input, Button, Radio, Select, DatePicker, Checkbox } from "antd";
 
 function Violence(props) {
+  const [date, setDate] = useState();
+  console.log(date);
+
+  function onChangedate(date, dateString) {
+    setDate(dateString);
+    console.log(date);
+  }
   const onFinish = (values) => {
-    console.log(values);
+    const dataReport = {
+      type: props.type,
+      Messege: values["messege"],
+      StudentId: childname,
+      Date: date,
+      RouteId: choose,
+      anunims: anunims,
+    };
+    console.log(dataReport);
+
+    props.onSubmit(dataReport);
   };
+
   const names = ["avi", "babi", "gagi"];
 
   function onChangeDate(date, dateString) {
@@ -28,10 +46,15 @@ function Violence(props) {
   };
   console.log(choose);
 
+  const [childname, setChildname] = useState();
   function handleChange(value, name) {
+    setChildname(name.children);
     console.log("hi", name.children);
   }
+
+  const [anunims, setAnunims] = useState(false);
   function onChangebox(e) {
+    setAnunims(e.target.checked);
     console.log(`checked = ${e.target.checked}`);
   }
   return (
@@ -39,7 +62,8 @@ function Violence(props) {
       <h1 className="title">אלימות </h1>
 
       <Form.Item
-        name="note"
+        className="textarea1"
+        name="messege"
         label=""
         className="textarea1"
         rules={[{ required: true, message: "אנא הכנס תוכן" }]}
@@ -63,18 +87,14 @@ function Violence(props) {
 
       <div className="date">
         <Form.Item name="date" label="">
-          תאריך:
-          <DatePicker
-            onChangeDate={onChangeDate}
-            rules={[{ required: true, message: "אנא הכנס תוכן" }]}
-          />{" "}
+          <DatePicker onChange={onChangedate} /> :תאריך
         </Form.Item>
 
         <Form.Item name="bus" label="" className="btn">
           {"הסעה:"}
           <Radio.Group
             options={options}
-            onChangeRide={onChangeRide}
+            onChange={onChangeRide}
             optionType="button"
             buttonStyle="solid"
           />
