@@ -66,7 +66,7 @@ const Screen4 = (props) => {
 
   //const [products, setProducts] = useState([]);
 
-  // const { TabPane } = Tabs;
+  const { TabPane } = Tabs;
   // console.log(ridesMock);
   // console.log("----------------");
 
@@ -79,17 +79,18 @@ const Screen4 = (props) => {
 
   return (
     <div className="Screen4">
-      <Button className="routeDir" type="link">
+      {/* <Button className="routeDir" type="link">
         הלוך
       </Button>
       <Button className="routeDir" type="link" disabled>
         חזור
-      </Button>
-      <RefreshButton />
-      {/* <Tabs defaultActiveKey="1">
+      </Button> */}
+      <Tabs defaultActiveKey="1">
         <TabPane className="routeTab" tab="הלוך" key="1"></TabPane>
         <TabPane className="routeTab" tab="חזור" key="2" disabled></TabPane>
-      </Tabs> */}
+      </Tabs>
+      <RefreshButton />
+
       <div className="mapWrapper">
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
@@ -104,5 +105,4 @@ const Screen4 = (props) => {
     </div>
   );
 };
-
 export default Screen4;
