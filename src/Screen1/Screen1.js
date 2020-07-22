@@ -6,11 +6,13 @@ import StudentSettingMenu from "./component/StudentSettingMenu/StudentSettingMen
 import StudentSettingUpdate from "./component/StudentSettingUpdate/StudentSettingUpdate";
 import axios from "axios";
 import Password from "antd/lib/input/Password";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Screen1() {
   const [PasswordCheck, setPasswordCheck] = useState(false);
   const [DemoToNumPhon, setDemoToNumPhon] = useState(false);
   const [phoneNum, setphoneNum] = useState(null);
+  const [NumIsValid, setNumIsValid] = useState(0);
 
   const [StudentName, setStudentName] = useState([]);
   window.document.title = "Bootcamp";
@@ -43,23 +45,26 @@ function Screen1() {
       })
       .then((res) => {
         console.log(res.data.send);
-        setphoneNum(value);
+        if (res.data.send === 1) {
+          setphoneNum(value);
+        }
       })
       .catch((err) => console.log(err));
     console.log("sdfghj");
   };
   const apiRequestPassword = (Password) => {
-    axios
-      .post(
-        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",
-        {
-          phone: `${phoneNum}`,
-          one_time_password: `${Password}`,
-        }
-      )
+    console.log(Password, phoneNum);
+    // axios
+    //   .post(
+    //     "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",
+    //     {
+    //       phone: `${phoneNum}`,
+    //       one_time_password: `${Password}`,
+    //     }
+    //   )
 
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    // .then((res) => console.log(res))
+    // .catch((err) => console.log(err));
   };
 
   return (
@@ -79,6 +84,11 @@ function Screen1() {
         check={apiRequestphoneNum}
         message={DemoToNumPhon}
       />
+      {NumIsValid === 1 && (
+        <Router>
+          <Link to="/LogInValidation"></Link>
+        </Router>
+      )}
     </div>
   );
 }
