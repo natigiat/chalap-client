@@ -1,0 +1,12 @@
+.popupAddStudents {
+  height: 165px;
+  width: 100%;
+  /* display: flex; */
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.popupTrigger {
+  visibility: hidden;
+}

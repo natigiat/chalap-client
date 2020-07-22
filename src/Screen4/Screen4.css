@@ -46,6 +46,13 @@ button.ant-btn.refresh {
   height: calc(100vh - (33px)) !important;
   margin-top: 2px;
 }
+.popupAddStudents {
+  width: 100%;
+  /* display: flex; */
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
 
 .swiperWrapper {
   /* width: 100%;

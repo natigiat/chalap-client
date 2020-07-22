@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import logo from "./logo.svg";
 import "./Screen4.css";
 import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
@@ -11,6 +11,7 @@ import RouteButton from "./Components/RouteButton/RouteButton";
 import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
+  const [showPopup, setShowPopup] = useState(0);
   //const [routeDirection, setRouteDirection] = useState("הלוך");
 
   //   useEffect(() => {
@@ -104,16 +105,19 @@ const Screen4 = (props) => {
         {/* </span> */}
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
-      {/* <div>
-        <PopupAddStudents />
-      </div> */}
-      <div className="swiperWrapper">
-        <Carousel
-          students={students}
-          studentRouteInfo={studentRouteInfo}
-          studentRouteTimes={studentRouteTimes}
-        />
-      </div>
+      {showPopup ? (
+        <div className="popupAddStudents">
+          <PopupAddStudents />
+        </div>
+      ) : (
+        <div className="swiperWrapper">
+          <Carousel
+            students={students}
+            studentRouteInfo={studentRouteInfo}
+            studentRouteTimes={studentRouteTimes}
+          />
+        </div>
+      )}
     </div>
   );
 };
