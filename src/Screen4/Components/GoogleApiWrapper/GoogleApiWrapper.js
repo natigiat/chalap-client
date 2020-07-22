@@ -1,5 +1,6 @@
 import React from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import "./GoogleApiWrapper.css";
 
 const MapContainer = (props) => {
   console.log(props);
@@ -24,7 +25,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[0].lng,
         }}
         icon={{
-          url: "/Images/home-run.png",
+          url: "https://image.flaticon.com/icons/svg/609/609803.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[0].lat,
             props.coordinates[0].lng
@@ -44,7 +45,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[1].lng,
         }}
         icon={{
-          url: "/Images/school.png",
+          url: "https://image.flaticon.com/icons/svg/926/926379.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[1].lat,
             props.coordinates[1].lng
@@ -63,7 +64,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[2].lng,
         }}
         icon={{
-          url: "/Images/transport.png",
+          url: "https://image.flaticon.com/icons/svg/808/808375.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[2].lat,
             props.coordinates[2].lng
