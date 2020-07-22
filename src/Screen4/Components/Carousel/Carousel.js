@@ -57,7 +57,7 @@ const Carousel = (props) => {
     <Swiper
       className="studentsSwiper"
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={1.5}
       onSlideChange={(e) => console.log("slide change: " + e)}
       onSwiper={(swiper) => console.log("swiper: " + swiper)}
       centeredSlides={true}

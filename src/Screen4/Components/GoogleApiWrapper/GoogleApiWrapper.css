@@ -3,3 +3,17 @@
   width: 100% !important;
   height: 100% !important;
 }
+
+.BusImg {
+  float: right;
+}
+
+.BusHour {
+  float: right;
+  margin-right: 5px;
+}
+
+.PopUp {
+  width: 45px;
+  margin-top: 5px;
+}
