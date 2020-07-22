@@ -11,12 +11,27 @@ function Screen1() {
   const [PasswordCheck, setPasswordCheck] = useState(false);
   const [DemoToNumPhon, setDemoToNumPhon] = useState(false);
   const [phoneNum, setphoneNum] = useState(null);
+
+  const [StudentName, setStudentName] = useState([]);
   window.document.title = "Bootcamp";
 
+  useEffect(() => {
+    axios
+      .get(
+        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
+      )
+      .then(function (response) {
+        console.log(response.data);
+        setStudentName(response.data);
+      });
+  }, []);
+
   const passwordCheckFn = (password) => {
-    if (password.length < 4 || Password.length > 4) {
+    if (password.length < 4 || password.length > 4) {
       setPasswordCheck(true);
-    } else {
+    }
+
+    if (password.length === 4) {
       setPasswordCheck(false);
     }
   };
@@ -46,20 +61,24 @@ function Screen1() {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
+
   return (
-    <div className="page">
-      {/* <button onClick={() => console.log(phoneNum)}>post Password</button> */}
-      {/* <div>{<LogIn check={apiRequestphoneNum} message={DemoToNumPhon} />}</div> */}
+    <div className="screen1">
+      {/* <button onClick={() => console.log(StudentName)}>axios</button> */}
+      <div>{<LogIn check={apiRequestphoneNum} message={DemoToNumPhon} />}</div>
       <br></br>
       <div>
-        {/* <LogInValidation
+        <LogInValidation
           check={apiRequestPassword}
-          passwordStatus={PasswordCheck}
+          passwordCheck={PasswordCheck}
           checkFn={passwordCheckFn}
-        /> */}
+        />
       </div>
-      {/* <StudentSettingMenu /> */}
-      <StudentSettingUpdate />
+      <StudentSettingMenu />
+      <StudentSettingUpdate
+        check={apiRequestphoneNum}
+        message={DemoToNumPhon}
+      />
     </div>
   );
 }

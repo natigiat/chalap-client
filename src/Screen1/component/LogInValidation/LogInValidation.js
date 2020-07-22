@@ -1,12 +1,12 @@
 import React from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 import { OmitProps } from "antd/lib/transfer/ListBody";
-import '../LogInValidation/LogInValidation.css';
+import "../LogInValidation/LogInValidation.css";
 
 const LogInValidation = (props) => {
   const layout = {
-    labelCol: { span: 0 },
-    wrapperCol: { span: 5 },
+    labelCol: { span: 4 },
+    wrapperCol: { span: 25 },
   };
   const tailLayout = {
     wrapperCol: { offset: 10, span: 3 },
@@ -17,7 +17,7 @@ const LogInValidation = (props) => {
     console.log(values["password"]);
     props.check(values["password"]);
     props.checkFn(values["password"]);
-    console.log(props.passwordStatus);
+    console.log(props.passwordCheck);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -26,6 +26,7 @@ const LogInValidation = (props) => {
   return (
     <div className="logInValidation">
       <Form
+        className="passwordContainer"
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
@@ -33,25 +34,24 @@ const LogInValidation = (props) => {
         onFinishFailed={onFinishFailed}
       >
         <h3>הזן את הקוד שנשלח לנייד</h3>
-        {props.passwordStatus === true ? '' : <h5>סיסמה שגוייה</h5>}
+        {props.passwordCheck === false ? "" : <h5>סיסמה שגוייה</h5>}
 
-        <Form.Item className= "firstiput"
+        <Form.Item
           label=""
           name="password"
           rules={[{ required: true, message: "הכנס סיסמה" }]}
         >
-          <Input.Password />
+          <Input.Password className="passwordInput" />
         </Form.Item>
-        
+
         <Form.Item {...tailLayout}>
-          
-          <Button className = 'sendPassword' type="primary" htmlType="submit" >
+          <Button className="sendPassword" type="primary" htmlType="submit">
             שלח
           </Button>
-        
         </Form.Item>
-        <Button type="primary" className="auth-btn">לא קיבלתי </Button>
-    
+        <Button type="primary" className="auth-btn">
+          לא קיבלתי{" "}
+        </Button>
       </Form>
     </div>
   );

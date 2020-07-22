@@ -1,74 +1,142 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input, Form, Checkbox, Button, Select } from "antd";
 import "./StudentSettingUpdate.css";
 
-const StudentSettingUpdate = () => {
-  const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
+const StudentSettingUpdate = (props) => {
+  const [rander, setRander] = useState(0);
+  const [StudentName, setStudentName] = useState([]);
+
+  const layout1 = {
+    labelCol: { span: 90 },
+    wrapperCol: { span: -10 },
   };
-  const tailLayout = {
+  const tailLayout1 = {
     wrapperCol: { offset: 8, span: 16 },
   };
+  const inputValue = 0;
 
-  const LogIn = () => {};
-  const onFinish = (values) => {
-    console.log("Success:", values);
+  const onFinish1 = (values) => {
+    console.log("Success:", values.username);
+    props.check(values.username);
   };
-
-  const onFinishFailed = (errorInfo) => {
+  const onFinishFailed1 = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
+  //regular input functions
+  const layout = {
+    labelCol: { span: 0 },
+    wrapperCol: { span: 25 },
+  };
+  const tailLayout = {
+    wrapperCol: { offset: 0, span: 0 },
+  };
+
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  // slect input functions
+
+  const { Option } = Select;
+
+  function onChange(value) {
+    console.log(`selected ${value}`);
+  }
+
+  function onBlur() {
+    console.log("blur");
+  }
+
+  function onFocus() {
+    console.log("focus");
+  }
+
+  function onSearch(val) {
+    console.log("search:", val);
+  }
+
   return (
-    <div classsName="parentDiv1">
-      <h1 className="text1"> הרשאה לתלמיד</h1>
-      <br></br>
-      <br></br>
-      <h3 className="text2"> מעוניין לרשום את ילדך במערכת?</h3>
-      <h3 className="text3"> הזן את מספרי הטלפון שלהם </h3>
-      <Form
-        {...layout}
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
+    <Form
+      className="PhoneContainer"
+      {...layout1}
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish1}
+      onFinishFailed={onFinishFailed1}
+    >
+      <h2>הרשאה לתלמיד</h2>
+      <h3>?מעוניין לרשום את ילדך למערכת</h3>
+      {/* select input */}
+      <Select
+        className="btnSelect"
+        showSearch
+        style={{ width: 400 }}
+        placeholder="Select a person"
+        optionFilterProp="children"
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        onSearch={onSearch}
+        filterOption={(input, option) =>
+          option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+        }
       >
-        <Form.Item
-          label=""
-          name="name"
-          rules={[{ required: true, message: "הכנס את שם הילד" }]}
-        >
-          <Select className="selectChild" />
-        </Form.Item>
-
-        <Form.Item
-          label=" "
-          name="tel"
-          rules={[{ required: true, message: " הכנס את מספר הטלפון  " }]}
-        >
-          <Input className="setPhoneNumber" />
-        </Form.Item>
-
-        <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-          <Checkbox className="rememberMe">זכור אותי</Checkbox>
-        </Form.Item>
-
-        <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit" className="submitLoginChild">
-            שלח
-          </Button>
-        </Form.Item>
-      </Form>
+        {StudentName.map((student) => (
+          <Option value={student}>{student}</Option>
+        ))}
+      </Select>
       <br></br>
-      <br></br>
-
-      <h6 className="after">
-        {" "}
-        לאחר הזנת המספר במערכת תשלח הודעה אל הילד עם סיסמה וקוד אימות{" "}
-      </h6>
-    </div>
+      <Form.Item
+        className="firstiput"
+        name="username"
+        rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
+      >
+        <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
+      </Form.Item>
+      <Form.Item {...tailLayout1}>
+        <Button type="primary" htmlType="submit" className="sendPass">
+          שלח סיסמה
+        </Button>
+      </Form.Item>
+      <Form.Item>
+        {/* {props.message === "incorrect" && (
+          <div className="error">המספר אינו קיים במערכת</div>
+        )}
+        {props.message === "correct" && (
+          <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
+        )} */}
+      </Form.Item>
+    </Form>
   );
 };
 
 export default StudentSettingUpdate;
+
+// return (
+
+//     <Form.Item {...tailLayout} className = 'signStudentContainer'>
+
+// <br></br>
+// <Form.Item className ="StudentPhoneInput"
+//         name="username"
+//         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
+//       >
+//         <Input placeholder="הזן מספר טלפון" />
+//       </Form.Item>
+//       <Form.Item {...tailLayout}>
+//         <Button type="primary" htmlType="submit" className = 'sendPass'>
+//           שלח סיסמה
+//         </Button>
+//       </Form.Item>
+//       <Form.Item>
+// {/* <Input className = 'StudentPhoneInput' placeholder="הזן מספר טלפון" /> */}
+//       <Button type="primary" name="jhg" className="btnlater"> הגדר</Button>
+//       <Button type="primary" name="jhg" className="btnFence">אחר כך</Button>
+
+//     </Form.Item>
+//     // <span className="text3">לאחר הזנת הטלפון ישלח אל הילד sms עם הקוד</span>
+//     </Form.Item>
+// );

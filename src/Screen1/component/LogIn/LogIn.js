@@ -22,37 +22,36 @@ const LogIn = (props) => {
   };
 
   return (
-    <div className="logIn">
-      <Form
-        {...layout}
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
+    <Form
+      className="PhoneContainer"
+      {...layout}
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+    >
+      <h1>!שלום</h1>
+      <h4>הרשמו על מהת לקבל לורום איפסום. דולור סיט אמט, קונסקטורמח</h4>
+      <Form.Item
+        name="username"
+        rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
       >
-        <h1>!שלום</h1>
-        <h4>הרשמו על מהת לקבל לורום איפסום. דולור סיט אמט, קונסקטורמח</h4>
-        <Form.Item
-          name="username"
-          rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
-        >
-          <Input placeholder="הזן מספר טלפון" />
-        </Form.Item>
-        <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
-            שלח סיסמה
-          </Button>
-        </Form.Item>
-        <Form.Item>
-          {props.message === "incorrect" && (
+        <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
+      </Form.Item>
+      <Form.Item {...tailLayout}>
+        <Button type="primary" htmlType="submit" className="sendPass">
+          שלח סיסמה
+        </Button>
+      </Form.Item>
+      <Form.Item>
+        {/* {props.message === "incorrect" && (
             <div className="error">המספר אינו קיים במערכת</div>
           )}
           {props.message === "correct" && (
             <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
-          )}
-        </Form.Item>
-      </Form>
-    </div>
+          )} */}
+      </Form.Item>
+    </Form>
   );
 };
 
