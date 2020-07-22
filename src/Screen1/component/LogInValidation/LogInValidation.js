@@ -46,12 +46,8 @@ const LogInValidation = (props) => {
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-<<<<<<< HEAD
           
           <Button className='sendPassword' type="primary" htmlType="submit" onClick = {props.check} >
-=======
-          <Button className="sendPassword" type="primary" htmlType="submit">
->>>>>>> fdc3c56a965a9467c1dace39f2e3f96cee2e3e62
             שלח
           </Button>
         </Form.Item>
