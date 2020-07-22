@@ -29,20 +29,13 @@ function Screen5() {
   console.log("thisType=", thisType);
 
   const [Messege, setMessege] = useState();
-  const [StudentId, setStudentId] = useState();
-  const [Dateofcase, setDate] = useState();
-  const [RouteId, setRouteId] = useState();
-  const [anunims, setanunims] = useState();
+
+  const [Date, setDate] = useState();
 
   const onSubmit1 = (value) => {
-    // console.log(value.type);
     setMessege(String(value.Messege));
-    setStudentId(value.StudentId);
-    setDate(String("2020-07-08 00:00:00"));
-    setRouteId(String(value.RouteId));
-    setanunims(value.anunims);
+    setDate(String(value.date));
   };
-  console.log(Dateofcase);
 
   useEffect(() => {
     posttoserver();
