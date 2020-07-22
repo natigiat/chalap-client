@@ -1,13 +1,13 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "./screen4.css";
-import GoogleApiWrapper from "./map";
-import StudentList from "./Studentlist";
+import "./Screen4.css";
+import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
+//import StudentList from "./Studentlist";
 import { Button } from "antd";
 import { Tabs } from "antd";
-import Carousel from "./Carousel";
+import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
-import RefreshButton from "./buttonRefresh";
+import RefreshButton from "./Components/RefreshButton/RefreshButton";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -67,31 +67,42 @@ const Screen4 = (props) => {
   //const [products, setProducts] = useState([]);
 
   const { TabPane } = Tabs;
-  console.log(ridesMock);
-  console.log("----------------");
+  // console.log(ridesMock);
+  // console.log("----------------");
+
+  // let studentRidesInfo = [];
+  // console.log(ridesMock.rides);
+  // for (let ridesInd = 0; ridesInd < ridesMock.rides.length; ridesInd++) {
+  //   studentRidesInfo.push([{rides[ridesInd].statTime}]);
+  //   console.log(ridesMock.rides[ridesInd]);
+  // }
+
   return (
     <div className="Screen4">
-      {/* <div><StudentList students={students} onChange={setStudentData}/></div> */}
-      <Button className="routeDir" type="link">
+      {/* <Button className="routeDir" type="link">
         הלוך
       </Button>
       <Button className="routeDir" type="link" disabled>
         חזור
-      </Button>
-      <RefreshButton />
-      {/* <Tabs defaultActiveKey="1">
+      </Button> */}
+      <Tabs defaultActiveKey="1">
         <TabPane className="routeTab" tab="הלוך" key="1"></TabPane>
         <TabPane className="routeTab" tab="חזור" key="2" disabled></TabPane>
-      </Tabs> */}
-      <GoogleApiWrapper coordinates={coordinates} />
-      {/* <ShuttleTravelRoute path={path} routeTimes={routeTimes} /> */}
-      <Carousel
-        students={students}
-        studentRouteInfo={studentRouteInfo}
-        studentRouteTimes={studentRouteTimes}
-      />
+      </Tabs>
+      <RefreshButton />
+
+      <div className="mapWrapper">
+        <GoogleApiWrapper coordinates={coordinates} />
+      </div>
+
+      <div className="swiperWrapper">
+        <Carousel
+          students={students}
+          studentRouteInfo={studentRouteInfo}
+          studentRouteTimes={studentRouteTimes}
+        />
+      </div>
     </div>
   );
 };
-
 export default Screen4;
