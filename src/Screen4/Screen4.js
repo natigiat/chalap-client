@@ -4,10 +4,10 @@ import "./Screen4.css";
 import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
 //import StudentList from "./Studentlist";
 import { Button } from "antd";
-import { Tabs } from "antd";
 import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
 import RefreshButton from "./Components/RefreshButton/RefreshButton";
+import RouteButton from "./Components/RouteButton/RouteButton";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -66,7 +66,7 @@ const Screen4 = (props) => {
 
   //const [products, setProducts] = useState([]);
 
-  const { TabPane } = Tabs;
+  // const { TabPane } = Tabs;
   // console.log(ridesMock);
   // console.log("----------------");
 
@@ -79,22 +79,30 @@ const Screen4 = (props) => {
 
   return (
     <div className="Screen4">
+      <div className="routeDirButtons">
+        <div className="routeBtn selected">
+          <RouteButton text={"הלוך"} />
+        </div>
+        <div className="routeBtn">
+          <RouteButton text={"חזור"} />
+        </div>
+      </div>
+
       {/* <Button className="routeDir" type="link">
         הלוך
       </Button>
       <Button className="routeDir" type="link" disabled>
         חזור
       </Button> */}
-      <Tabs defaultActiveKey="1">
-        <TabPane className="routeTab" tab="הלוך" key="1"></TabPane>
-        <TabPane className="routeTab" tab="חזור" key="2" disabled></TabPane>
-      </Tabs>
-      <RefreshButton />
-
+      {/* <div className="routeDirTab">
+        <RouteDirTab />
+      </div> */}
       <div className="mapWrapper">
+        <div className="refreshBtn">
+          <RefreshButton />
+        </div>
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
-
       <div className="swiperWrapper">
         <Carousel
           students={students}
