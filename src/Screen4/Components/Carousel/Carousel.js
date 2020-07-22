@@ -74,7 +74,7 @@ const Carousel = (props) => {
             startPoint={student.startPoint}
             endPoint={student.startPoint}
             routeTimes={student.routeTimes}
-            loop={true}
+            // loop={true}
           />
         </SwiperSlide>
       ))}

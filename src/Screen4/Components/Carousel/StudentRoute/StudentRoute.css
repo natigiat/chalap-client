@@ -1,8 +1,9 @@
 @import "~antd/dist/antd.css";
 
-.StudentRoute {
+.studentsSwiper {
   width: 100%;
-
+}
+.StudentRoute {
   /* margin: auto; */
   padding: 15px;
   background-color: white;
