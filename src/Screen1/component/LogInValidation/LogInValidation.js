@@ -18,6 +18,7 @@ const LogInValidation = (props) => {
     props.check(values["password"]);
     props.checkFn(values["password"]);
     console.log(props.passwordCheck);
+    console.log("shalom");
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -41,15 +42,16 @@ const LogInValidation = (props) => {
           name="password"
           rules={[{ required: true, message: "הכנס סיסמה" }]}
         >
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item>
           <Input.Password className="passwordInput" />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-          <Button className="sendPassword" type="primary" htmlType="submit">
+          <Button
+            className="sendPassword"
+            type="primary"
+            htmlType="submit"
+            onClick={props.check}
+          >
             שלח
           </Button>
         </Form.Item>

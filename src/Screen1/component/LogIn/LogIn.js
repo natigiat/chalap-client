@@ -15,6 +15,7 @@ const LogIn = (props) => {
 
   const onFinish = (values) => {
     console.log("Success:", values.username);
+    props.setPhoneNum(values.username);
     props.check(values.username);
   };
   const onFinishFailed = (errorInfo) => {
@@ -23,7 +24,7 @@ const LogIn = (props) => {
 
   return (
     <Form
-      className="PhoneContainer padding-wrapper "
+      className="PhoneContainer"
       {...layout}
       name="basic"
       initialValues={{ remember: true }}
@@ -33,13 +34,12 @@ const LogIn = (props) => {
       <h1>!שלום</h1>
       <h4>הרשמו על מהת לקבל לורום איפסום. דולור סיט אמט, קונסקטורמח</h4>
       <Form.Item
-        className="firstiput"
         name="username"
         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
       >
         <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
       </Form.Item>
-      <Form.Item>
+      <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit" className="sendPass">
           שלח סיסמה
         </Button>
@@ -52,6 +52,9 @@ const LogIn = (props) => {
             <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
           )} */}
       </Form.Item>
+      <h6 className="LogInDescriptionText">
+        לאחר הזנת מספר הטלפון יישלח אלייך SMS עם קוד אימות
+      </h6>
     </Form>
   );
 };
