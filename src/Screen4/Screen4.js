@@ -17,8 +17,16 @@ const Screen4 = (props) => {
 
   // useEffect(() => {
   //   // Update the document title using the browser API
-  //   document.title = `You clicked ${count} times`;
-  // }, hourSelected);
+  //   console.log(`You clicked ${hourSelected}`);
+  // });
+
+  const handleHourSelected = (hour) => {
+    setHourSelected(hour);
+  };
+
+  const handleStudentSelected = (studentId) => {
+    setStudentSelected(studentId);
+  };
 
   const students = [
     {
@@ -74,7 +82,7 @@ const Screen4 = (props) => {
       </div>
       <div className="mapWrapper">
         <RefreshButton className="refreshBtn" />
-        <GoogleApiWrapper coordinates={coordinates} />
+        <GoogleApiWrapper coordinates={coordinates} hourToMark={hourSelected} />
       </div>
       {showPopup ? (
         <div className="popupAddStudents">
@@ -86,6 +94,8 @@ const Screen4 = (props) => {
             students={students}
             studentRouteInfo={studentRouteInfo}
             studentRouteTimes={studentRouteTimes}
+            selectedHour={handleHourSelected}
+            studentSelected={handleStudentSelected}
           />
         </div>
       )}
