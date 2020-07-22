@@ -7,18 +7,25 @@ import Losts from "./Components/Losts/Losts";
 import "./Screen5.css";
 
 function Screen5() {
-  console.log("hi boaz");
   const [StudentName, setStudentName] = useState([]);
+  const [thisURL, setthisURL] = useState("https://ant.design/components/losts");
   useEffect(() => {
     axios
       .get(
         "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
       )
       .then(function (response) {
-        console.log(response.data);
+        console.log("DATA", response.data);
         setStudentName(response.data);
+        // setthisURL(window.location.href);
       });
   }, []);
+  //"thisType" הקוד לוקח את החלק האחרון של הכתובת ומכניס למשתנה
+  let parts = thisURL.split("/");
+  // let thisType = "vioelence";
+  let thisType = parts[parts.length - 1];
+  console.log("thisType=", thisType);
+
   const [Messege, setMessege] = useState();
   const [StudentId, setStudentId] = useState();
   const [Dateofcase, setDate] = useState();
@@ -26,7 +33,7 @@ function Screen5() {
   const [anunims, setanunims] = useState();
 
   const onSubmit1 = (value) => {
-    console.log(value.type);
+    // console.log(value.type);
     setMessege(String(value.Messege));
     setStudentId(value.StudentId);
     setDate(String("2020-07-08 00:00:00"));
@@ -34,9 +41,6 @@ function Screen5() {
     setanunims(value.anunims);
   };
   console.log(Dateofcase);
-  console.log(StudentId);
-  console.log(typeof RouteId);
-  console.log(typeof anunims);
 
   useEffect(() => {
     posttoserver();
@@ -73,25 +77,28 @@ function Screen5() {
       });
     console.log(Messege);
   };
-  // const names = ["Ayelet Ben Dahan", "Shimrit Levi", "Yuval Dayan"];
 
   return (
     <div className="form">
-      <GoodWord
-        children={[StudentName]}
-        type="good_word"
-        onSubmit={onSubmit1}
-      />{" "}
-      <br />
-      <Complain children={[StudentName]} type="report" onSubmit={onSubmit1} />
-      <br />
-      <Vioelence
-        children={[StudentName]}
-        type="vioelence"
-        onSubmit={onSubmit1}
-      />
-      <br />
-      <Losts children={[StudentName]} type="lost" onSubmit={onSubmit1} />
+      {thisType === "good_word" ? (
+        <GoodWord
+          children={[StudentName]}
+          type="good_word"
+          onSubmit={onSubmit1}
+        />
+      ) : thisType === "complain" ? (
+        <Complain children={[StudentName]} type="report" onSubmit={onSubmit1} />
+      ) : thisType === "vioelence" ? (
+        <Vioelence
+          children={[StudentName]}
+          type="vioelence"
+          onSubmit={onSubmit1}
+        />
+      ) : (
+        thisType === "losts" && (
+          <Losts children={[StudentName]} type="lost" onSubmit={onSubmit1} />
+        )
+      )}
     </div>
   );
 }
