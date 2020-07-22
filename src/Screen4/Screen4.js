@@ -11,12 +11,15 @@ import RouteButton from "./Components/RouteButton/RouteButton";
 import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
-  const [showPopup, setShowPopup] = useState(1);
-  const [hourSelected, setHourSelected] = useState(1);
+  const [showPopup, setShowPopup] = useState(0);
+  const [hourSelected, setHourSelected] = useState(0);
+  const [studentSelected, setStudentSelected] = useState();
 
-  // const setHourSelected = () => {
-  //   console.log("bla bla bla");
-  // };
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   document.title = `You clicked ${count} times`;
+  // }, hourSelected);
+
   const students = [
     {
       id: 1,
