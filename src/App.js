@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import Call from "./Screen_3/components/SetChilde/SetChilde";
-
+import HotLine from "./Screen_3/components/Login/Login";
 function App() {
   return (
     <div>
-      <Call />
+      <HotLine />
     </div>
   );
 }

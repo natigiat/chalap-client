@@ -1,0 +1,115 @@
+.parentDiv1 {
+  position: relative;
+  width: 375px;
+  height: 667px;
+
+  background: #5f4d4d;
+}
+
+/* דימלתל האשרה */
+
+.text1 {
+  position: absolute;
+  width: 125px;
+  height: 26px;
+  right: 125px;
+  top: 70px;
+
+  /* h4 */
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.text2 {
+  /* ?תכרעמל ךיידלי תא םושרל ןיינועמ */
+
+  position: absolute;
+  width: 310px;
+  height: 44px;
+  right: 18px;
+  top: calc(50% - 44px / 2 - 232.5px);
+
+  /* p */
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 21px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+
+  color: #000000;
+}
+
+.text3 {
+  /* ?תכרעמל ךיידלי תא םושרל ןיינועמ */
+
+  position: absolute;
+  width: 310px;
+  height: 44px;
+  right: 18px;
+  top: calc(50% - 44px / 2 - 202.5px);
+
+  /* p */
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 21px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+
+  color: #000000;
+}
+
+.selectChild {
+  /* Frame 16 */
+
+  position: absolute;
+  width: 340px;
+  height: 41px;
+  right: 17px;
+  top: 208px;
+
+  border: 0.982143px solid #000000;
+  box-sizing: border-box;
+}
+
+.setPhoneNumber {
+  /* Frame 15 */
+
+  position: absolute;
+  width: 340px;
+  height: 41px;
+  right: 17px;
+  top: 262px;
+
+  border: 0.982143px solid #000000;
+  box-sizing: border-box;
+}
+.rememberMe {
+  position: absolute;
+  right: 17px;
+  top: 332px;
+}
+
+.submitLoginChild {
+  position: absolute;
+  right: 17px;
+  top: 362px;
+}
+
+.after {
+  position: absolute;
+  right: 17px;
+  top: 282px;
+}
