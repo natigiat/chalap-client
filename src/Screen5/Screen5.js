@@ -46,7 +46,7 @@ function Screen5() {
         {
           message,
           type,
-          address: `${origin} -> ${destination}`,
+          address: `${origin} ${"->"} ${destination}`,
           date: `${date} ${time}`,
         }
       )
