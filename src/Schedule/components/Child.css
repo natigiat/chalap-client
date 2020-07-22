@@ -1,0 +1,81 @@
+@import "~antd/dist/antd.css";
+
+.Schedule .ant-collapse-content > .ant-collapse-content-box {
+  padding: 0px;
+}
+
+.oneChild {
+  width: 100%;
+  background: #f1f1f1;
+  border: 1px solid #808080;
+  padding-bottom: 0px;
+  display: flex;
+}
+
+.oneChild2 {
+  width: 100%;
+  height: auto;
+  background: #f1f1f1;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.oneChild .text {
+  width: 100%;
+  display: inline-block;
+}
+
+.oneChild .name {
+  margin-right: 19px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  color: #808080;
+}
+
+.oneChild .time {
+  float: left;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  color: #808080;
+}
+
+.oneChild .divImgPen {
+  margin-bottom: -32px;
+  margin-left: 11px;
+  margin-right: 7px;
+}
+
+.oneChild .img1 {
+  left: 33px;
+}
+
+.oneChild .img2 {
+  margin-top: -38px;
+}
+
+.oneChild .img3 {
+  height: 32px;
+  margin-right: 25px;
+}
+
+.oneChild .img4 {
+  height: 15px;
+  margin-right: -21px;
+}
+
+.oneChild .none {
+  display: none;
+}
+
+.oneChild .input {
+  float: left;
+}
+
+.oneChild .button {
+  float: left;
+}

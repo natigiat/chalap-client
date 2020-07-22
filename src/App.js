@@ -1,15 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Result } from "antd";
+import Schedule from "./Schedule/components/Schedule";
 import Moked from "./Screen_3/components/Moked"
+import { Result } from "antd";
+
+
+
 function App() {
   return (
 
-  <div>
-  <Moked/>
-  </div>
-  )
+      <div>
+     <Moked/>
+   
+      <Schedule />
+     </div>
+  );
 }
 
 export default App;
