@@ -10,7 +10,12 @@
   border-radius: 100px;
 }
 
-img {
+.refreshImg {
   width: 25px;
   height: 25px;
+}
+.refresh {
+  width: 150px;
+  height: 40px;
+  border-radius: 100px;
 }
