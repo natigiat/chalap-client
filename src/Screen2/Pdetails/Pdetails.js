@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Button } from "antd";
-import "./Children.css";
 
 function Pdetails(props) {
   return (
-    <div className="child" onClick={props.catchChild}>
-      <div className="name">{props.name}</div>
-      <div>
-        <span className="exit"> {props.exit}</span>
-        <span> ----> </span>
-        <span className="school">{props.school}</span>
+    <div>
+      <div className="kidsdetails">
+        <h2>{props.address}</h2>
+        <div></div>
+        <div className="kidsdetails"> {props.school}</div>
+        <div>{props.phone}</div>{" "}
+        <span onClick={console.log("callmy")}>הרשמה</span>
       </div>
     </div>
   );
