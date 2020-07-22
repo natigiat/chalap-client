@@ -18,6 +18,7 @@ const LogInValidation = (props) => {
     props.check(values["password"]);
     props.checkFn(values["password"]);
     console.log(props.passwordCheck);
+    console.log('shalom');
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -46,7 +47,7 @@ const LogInValidation = (props) => {
         
         <Form.Item {...tailLayout}>
           
-          <Button className='sendPassword' type="primary" htmlType="submit" >
+          <Button className='sendPassword' type="primary" htmlType="submit" onClick = {props.check} >
             שלח
           </Button>
         

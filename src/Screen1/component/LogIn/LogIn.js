@@ -15,6 +15,7 @@ const LogIn = (props) => {
 
   const onFinish = (values) => {
     console.log("Success:", values.username);
+    props.setPhoneNum(values.username);
     props.check(values.username);
   };
   const onFinishFailed = (errorInfo) => {
@@ -51,6 +52,7 @@ const LogIn = (props) => {
             <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
           )} */}
         </Form.Item>
+        <h6 className = 'LogInDescriptionText'>לאחר הזנת מספר הטלפון יישלח אלייך SMS עם קוד אימות</h6>
       </Form>
     
   );
