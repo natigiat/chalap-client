@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
 import "./Parent.css";
+import Pdetails from "../Pdetails/Pdetails";
+import Settinghours from "../Settinghours/Settinghours";
 function Parent() {
   const [Api, setapi] = useState([
     {
@@ -70,6 +72,8 @@ function Parent() {
             }}
           />
         ))}
+        <Pdetails />
+        <Settinghours />
       </div>
     </div>
   );
