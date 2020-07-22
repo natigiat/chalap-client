@@ -104,9 +104,9 @@ const Screen4 = (props) => {
         {/* </span> */}
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
-      <div>
+      {/* <div>
         <PopupAddStudents />
-      </div>
+      </div> */}
       <div className="swiperWrapper">
         <Carousel
           students={students}
