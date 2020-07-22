@@ -16,7 +16,7 @@ const MapContainer = (props) => {
       }}
       disableDefaultUI={true}
       className={"map"}
-      zoom={11}
+      zoom={10}
     >
       <Marker
         title={"בית"}
@@ -26,7 +26,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[0].lng,
         }}
         icon={{
-          url: "https://image.flaticon.com/icons/svg/609/609803.svg",
+          url: "/Images/Home.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[0].lat,
             props.coordinates[0].lng
@@ -46,7 +46,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[1].lng,
         }}
         icon={{
-          url: "https://image.flaticon.com/icons/svg/926/926379.svg",
+          url: "/Images/School.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[1].lat,
             props.coordinates[1].lng
@@ -65,7 +65,7 @@ const MapContainer = (props) => {
           lng: props.coordinates[2].lng,
         }}
         icon={{
-          url: "https://image.flaticon.com/icons/svg/808/808375.svg",
+          url: "/Images/Bus.svg",
           anchor: new props.google.maps.Point(
             props.coordinates[2].lat,
             props.coordinates[2].lng
