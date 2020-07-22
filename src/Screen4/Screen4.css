@@ -23,8 +23,8 @@
 }
 
 .refreshBtn {
-  left: -944px;
-  top: 45px;
+  left: calc(100vh - (1456px));
+  top: calc(100vh - (580px));
   position: relative;
   z-index: 1;
 }
@@ -39,7 +39,7 @@
   /* width: 100%;
   top: 634px; */
 
-  bottom: -832px;
+  bottom: calc(100vh - (1320px));
   width: 100%;
   /* top: 16px; */
   z-index: 1;
