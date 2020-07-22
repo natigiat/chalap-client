@@ -1,28 +1,27 @@
 @import "~antd/dist/antd.css";
 
 .StudentRoute {
-  width: 100%;
-  height: 50%;
-  margin: 6px;
+  width: 266px;
+  height: 150px;
+
+  margin: auto;
   padding: 15px;
   background-color: white;
   opacity: 0.9;
   border-radius: 7px;
+  box-shadow: 0px 0px 10px grey;
 }
 
 .studentHeader {
   height: 50px;
 }
 .studentImage {
-  /* display: inline; */
-  /* width: 20%; */
   float: right;
+  font-family: Heebo;
 }
 .studentDetails {
-  /* display: inline; */
   margin-right: 10px;
   float: right;
-  width: 80%;
   text-align: right;
 }
 .studentImage img {
@@ -32,10 +31,11 @@
 }
 
 .studentName {
-  font-size: large;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: bold;
 }
 .notice {
+  font-size: 11px;
   /* text-align: right;
 
   right: 60px;
@@ -46,6 +46,7 @@
 .path {
   text-align: right;
   margin-bottom: 5px;
+  font-size: 11.1375px;
 }
 .startPoint {
   display: inline;
@@ -54,7 +55,6 @@
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
   line-height: 26px;
 
   color: #000000;
@@ -71,7 +71,6 @@
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
   line-height: 26px;
 
   color: #000000;

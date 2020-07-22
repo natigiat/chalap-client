@@ -18,23 +18,48 @@ const Carousel = (props) => {
   const students = props.students;
   const studentRouteInfo = props.studentRouteInfo;
   const studentRouteTimes = props.studentRouteTimes;
+  const studentsArray = [
+    {
+      id: 1,
+      name: "שירה",
+      startPoint: "בית אל",
+      endPoint: "חן עפרה",
+      routeTimes: ["08:30", "09:00", "10:00"],
+    },
+    {
+      id: 2,
+      name: "יעקב",
+      startPoint: "אש קודש",
+      endPoint: "שילה",
+      routeTimes: ["08:30", "09:30", "10:30"],
+    },
+    {
+      id: 3,
+      name: "יוסף",
+      startPoint: "מעלה מכמש",
+      endPoint: "כוכב יעקב",
+      routeTimes: ["08:10", "08:40"],
+    },
+  ];
 
   return (
     <Swiper
-      spaceBetween={40}
-      slidesPerView={1}
+      spaceBetween={20}
+      slidesPerView={3}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>
-        <StudentRoute />
-      </SwiperSlide>
-      ;
-      {/* {students.map((student) => {
+      {studentsArray.map((student) => (
         <SwiperSlide>
-          <StudentRoute studentName={student.name}/>
-        </SwiperSlide>;
-      })} */}
+          <StudentRoute
+            key={student.id}
+            studentName={student.name}
+            startPoint={student.startPoint}
+            endPoint={student.startPoint}
+            routeTimes={student.routeTimes}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
