@@ -33,7 +33,7 @@ const LogInValidation = (props) => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <h3>הזן את הקוד שנשלח לנייד</h3>
+        <h3 className="logInValidationHeader">הזן את הקוד שנשלח לנייד</h3>
         {props.passwordCheck === false ? "" : <h5>סיסמה שגוייה</h5>}
 
         <Form.Item

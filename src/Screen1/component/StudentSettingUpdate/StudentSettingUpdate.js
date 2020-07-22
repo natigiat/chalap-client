@@ -70,24 +70,25 @@ const StudentSettingUpdate = (props) => {
       <h2>הרשאה לתלמיד</h2>
       <h3>?מעוניין לרשום את ילדך למערכת</h3>
       {/* select input */}
-      <Select
-        className="btnSelect"
-        showSearch
-        style={{ width: 400 }}
-        placeholder="Select a person"
-        optionFilterProp="children"
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onSearch={onSearch}
-        filterOption={(input, option) =>
-          option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-        }
-      >
-        {StudentName.map((student) => (
-          <Option value={student}>{student}</Option>
-        ))}
-      </Select>
+      <div className="btnSelect">
+        <Select
+          showSearch
+          style={{ width: 173, border: " 1px solid black" }}
+          placeholder="Select a person"
+          optionFilterProp="children"
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onSearch={onSearch}
+          filterOption={(input, option) =>
+            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          }
+        >
+          {StudentName.map((student) => (
+            <Option value={student}>{student}</Option>
+          ))}
+        </Select>
+      </div>
       <br></br>
       <Form.Item
         className="firstiput"
