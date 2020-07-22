@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Select, DatePicker, Radio, Checkbox } from "antd";
+import { Form, Input, Button, Select, DatePicker, Row, Col } from "antd";
 import { TimePicker } from "antd";
 import moment from "moment";
 import { Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import "./GoodWord";
+import "./GoodWord.css";
 
 function GoodWord(props) {
   const typeRequest = [
@@ -13,98 +13,110 @@ function GoodWord(props) {
     { name: "אלימות", type: "violence" },
     { name: "תלונה", type: "report" },
   ];
-  console.log(typeRequest);
 
   const { TextArea } = Input;
   const { Option } = Select;
   const format = "HH:mm";
 
   const [date, setDate] = useState();
-
   function onChangedate(date, dateString) {
     setDate(dateString);
-    console.log(date);
+  }
+  const [time, setTime] = useState();
+  function onTimeChange(time, timestring) {
+    setTime(timestring);
   }
 
   const [type, setType] = useState();
 
   function handleChange(value) {
-    console.log("hi", value);
+    setType(value);
   }
 
   const onFinish = (values) => {
     const dataReport = {
       type: type,
-      Messege: values["messege"],
-      Date: date,
+      message: values["message"],
+      date: date,
+      origin: values["Origin"],
+      destination: values["Destination"],
+      time: time,
     };
-    console.log(dataReport);
     props.onSubmit(dataReport);
   };
   const files = {
     action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
     onChange({ file, fileList }) {
       if (file.status !== "uploading") {
-        console.log(file, fileList);
+        // console.log(file, fileList);
       }
     },
-    defaultFileList: [
-      {
-        uid: "1",
-        name: "xxx.png",
-        status: "done",
-        response: "Server Error 500", // custom error message to show
-        url: "http://www.baidu.com/xxx.png",
-      },
-      {
-        uid: "2",
-        name: "yyy.png",
-        status: "done",
-        url: "http://www.baidu.com/yyy.png",
-      },
-      {
-        uid: "3",
-        name: "zzz.png",
-        status: "error",
-        response: "Server Error 500", // custom error message to show
-        url: "http://www.baidu.com/zzz.png",
-      },
-    ],
   };
 
   return (
-    <Form className="body" name="control-hooks" onFinish={onFinish}>
-      <h1 className="title">טופס פניה</h1>
-      <div className="date">
-        <Form.Item>
-          <DatePicker onChange={onChangedate} rules={[{ require: true }]} />
-        </Form.Item>
-      </div>
-      <div className="hourS5">
-        <TimePicker defaultValue={moment("12:08", format)} format={format} />,
-      </div>
-      <Form.Item name="note" label="" rules={[{ required: true }]}>
-        <TextArea rows={1} placeholder="מוצא" />
-      </Form.Item>
-      <Form.Item name="note" label="" rules={[{ required: true }]}>
-        <TextArea rows={1} placeholder="יעד" />
-      </Form.Item>
+    <Form className="report" name="control-hooks" onFinish={onFinish}>
+      <div className="title">טופס פניה</div>
+      <Row className="row">
+        <Col className="col">
+          <Form.Item>
+            <DatePicker
+              className="date"
+              onChange={onChangedate}
+              rules={[{ require: true }]}
+            />
+          </Form.Item>
+          <Form.Item
+            className="textarea1"
+            name="Origin"
+            label=""
+            rules={[{ required: true }]}
+          >
+            <TextArea rows={2} placeholder="מוצא" />
+          </Form.Item>
+        </Col>
+        <Col className="col">
+          <Form.Item>
+            <TimePicker
+              className="hour"
+              defaultValue={moment("12:08", format)}
+              format={format}
+              onChange={onTimeChange}
+              rules={[{ require: true }]}
+            />
+          </Form.Item>
+          <Form.Item
+            className="textarea1"
+            name="Destination"
+            label=""
+            rules={[{ required: true }]}
+          >
+            <TextArea rows={2} placeholder="יעד" />
+          </Form.Item>
+        </Col>
+      </Row>
       <Form.Item>
         <Select
           className="select"
           defaultValue="בחר נושא פניה"
-          style={{ width: 250 }}
+          // style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר נושא פניה"
           rules={[{ required: true }]}
         >
           {typeRequest.map((value, index) => (
-            <Option key={index}>{value.name}</Option>
+            <Option key={index} value={value.type}>
+              {value.name}
+            </Option>
           ))}
         </Select>
       </Form.Item>
-      <Form.Item name="messege" label="" rules={[{ required: true }]}>
-        <TextArea rows={6} placeholder="תוכן הפניה" />
+      <Form.Item
+        className="textarea2"
+        name="messege"
+        label=""
+        rules={[{ required: true }]}
+      >
+        <TextArea rows={8} placeholder="תוכן הפניה" />
       </Form.Item>
       <Upload {...files}>
         <Button>
