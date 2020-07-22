@@ -1,21 +1,21 @@
-.PhoneContainer{
-    display: flex;
-    justify-content: space-evenly;
-    border: black 1px solid;
-    border-radius: 12px;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 1px 1px 4px black!important;
-    padding: 2rem!important;
-    width: 50%;
+.PhoneContainer {
+  display: flex;
+  justify-content: space-evenly;
+  border: black 1px solid;
+  border-radius: 12px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 4px black !important;
+  padding: 2rem !important;
+  width: 50%;
 }
-.sendPass{
-    color: gray!important;
-    background-color: transparent !important;
-    border: 1px solid gray !important;
-    padding: 0 2rem!important;
-    right: 48px;
-    position: relative;
+.sendPass {
+  color: gray !important;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  padding: 0 2rem !important;
+  right: 48px;
+  position: relative;
 }
 .LogInDescriptionText{
     font-size: 12px;

@@ -4,7 +4,7 @@ import "./Screen1.css";
 import LogIn from "./component/LogIn/LogIn";
 import StudentSettingMenu from "./component/StudentSettingMenu/StudentSettingMenu";
 import StudentSettingUpdate from "./component/StudentSettingUpdate/StudentSettingUpdate";
-import axios from "axios"
+import axios from "axios";
 import Password from "antd/lib/input/Password";
 import {
   BrowserRouter as Router,
@@ -17,6 +17,7 @@ import {
 function Screen1() {
   const [PasswordCheck, setPasswordCheck] = useState(false);
   const [DemoToNumPhon, setDemoToNumPhon] = useState(false);
+<<<<<<< HEAD
   const [phoneNum, setphoneNum] = useState([0,0]);
   window.document.title = "Bootcamp";
 
@@ -28,14 +29,36 @@ function Screen1() {
     }
     
     if(password.length === 4 && regular.test(password)){
+=======
+  const [phoneNum, setphoneNum] = useState(null);
+
+  const [StudentName, setStudentName] = useState([]);
+  window.document.title = "Bootcamp";
+
+  useEffect(() => {
+    axios
+      .get(
+        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
+      )
+      .then(function (response) {
+        console.log(response.data);
+        setStudentName(response.data);
+      });
+  }, []);
+
+  const passwordCheckFn = (password) => {
+    if (password.length < 4 || password.length > 4) {
+      setPasswordCheck(true);
+    }
+
+    if (password.length === 4) {
+>>>>>>> fdc3c56a965a9467c1dace39f2e3f96cee2e3e62
       setPasswordCheck(false);
     }
-   
-    
-
-  }
+  };
 
   const apiRequestphoneNum = (value) => {
+<<<<<<< HEAD
     const regular = /^[0-9]+$/;
 
     if(regular.test(value) && value.length === 10){
@@ -78,8 +101,35 @@ function Screen1() {
         console.log(phoneNum[0],password);
      
     
+=======
+    axios
+      .post("http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms", {
+        phone_number: `${value}`,
+      })
+
+      .then((res) => {
+        console.log(res);
+        setphoneNum(value);
+      })
+      .catch((err) => console.log(err));
   };
+  const apiRequestPassword = (Password) => {
+    axios
+      .post(
+        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/sms/validate",
+        {
+          phone: `${phoneNum}`,
+          one_time_password: `${Password}`,
+        }
+      )
+
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+>>>>>>> fdc3c56a965a9467c1dace39f2e3f96cee2e3e62
+  };
+
   return (
+<<<<<<< HEAD
     <div className="page">
       
     
@@ -98,6 +148,24 @@ function Screen1() {
       </Router>)}
 
 
+=======
+    <div className="screen1">
+      {/* <button onClick={() => console.log(StudentName)}>axios</button> */}
+      <div>{<LogIn check={apiRequestphoneNum} message={DemoToNumPhon} />}</div>
+      <br></br>
+      <div>
+        <LogInValidation
+          check={apiRequestPassword}
+          passwordCheck={PasswordCheck}
+          checkFn={passwordCheckFn}
+        />
+      </div>
+      <StudentSettingMenu />
+      <StudentSettingUpdate
+        check={apiRequestphoneNum}
+        message={DemoToNumPhon}
+      />
+>>>>>>> fdc3c56a965a9467c1dace39f2e3f96cee2e3e62
     </div>
   );
 }

@@ -1,67 +1,66 @@
-import React,{useState} from "react";
-import { Input, Form, Checkbox, Button,Select } from "antd";
+import React, { useState } from "react";
+import { Input, Form, Checkbox, Button, Select } from "antd";
 import "./StudentSettingUpdate.css";
 
 const StudentSettingUpdate = (props) => {
   const [rander, setRander] = useState(0);
+  const [StudentName, setStudentName] = useState([]);
 
-  
-const layout1 = {
-  labelCol: { span: 90 },
-  wrapperCol: { span: -10 },
-};
-const tailLayout1 = {
-  wrapperCol: { offset: 8, span: 16 },
-};
-const inputValue = 0;
+  const layout1 = {
+    labelCol: { span: 90 },
+    wrapperCol: { span: -10 },
+  };
+  const tailLayout1 = {
+    wrapperCol: { offset: 8, span: 16 },
+  };
+  const inputValue = 0;
 
-const onFinish1 = (values) => {
-  console.log("Success:", values.username);
-  props.check(values.username);
-};
-const onFinishFailed1 = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
+  const onFinish1 = (values) => {
+    console.log("Success:", values.username);
+    props.check(values.username);
+  };
+  const onFinishFailed1 = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
 
-//regular input functions
-const layout = {
-  labelCol: { span: 0 },
-  wrapperCol: { span: 25 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 0, span: 0 },
-};
+  //regular input functions
+  const layout = {
+    labelCol: { span: 0 },
+    wrapperCol: { span: 25 },
+  };
+  const tailLayout = {
+    wrapperCol: { offset: 0, span: 0 },
+  };
 
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
-// slect input functions
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  // slect input functions
 
-const { Option } = Select;
+  const { Option } = Select;
 
-function onChange(value) {
-console.log(`selected ${value}`);
-}
+  function onChange(value) {
+    console.log(`selected ${value}`);
+  }
 
-function onBlur() {
-console.log('blur');
-}
+  function onBlur() {
+    console.log("blur");
+  }
 
-function onFocus() {
-console.log('focus');
-}
+  function onFocus() {
+    console.log("focus");
+  }
 
-function onSearch(val) {
-console.log('search:', val);
-}
+  function onSearch(val) {
+    console.log("search:", val);
+  }
 
-
-return (
-  
-    <Form className = 'PhoneContainer'
+  return (
+    <Form
+      className="PhoneContainer"
       {...layout1}
       name="basic"
       initialValues={{ remember: true }}
@@ -69,34 +68,37 @@ return (
       onFinishFailed={onFinishFailed1}
     >
       <h2>הרשאה לתלמיד</h2>
-       <h3>?מעוניין לרשום את ילדך למערכת</h3>
-            {/* select input */}
-            <Select
-        showSearch
-        style={{ width: 400 }}
-        placeholder="Select a person"
-        optionFilterProp="children"
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onSearch={onSearch}
-        filterOption={(input, option) =>
-          option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-  }
-  >
-  <Option value="jack">Jack</Option>
-  <Option value="lucy">Lucy</Option>
-  <Option value="tom">Tom</Option>
-</Select>
-<br></br>
-      <Form.Item className ="firstiput"
+      <h3>?מעוניין לרשום את ילדך למערכת</h3>
+      {/* select input */}
+      <div className="btnSelect">
+        <Select
+          showSearch
+          style={{ width: 173, border: " 1px solid black" }}
+          placeholder="Select a person"
+          optionFilterProp="children"
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onSearch={onSearch}
+          filterOption={(input, option) =>
+            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          }
+        >
+          {StudentName.map((student) => (
+            <Option value={student}>{student}</Option>
+          ))}
+        </Select>
+      </div>
+      <br></br>
+      <Form.Item
+        className="firstiput"
         name="username"
         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
       >
-        <Input placeholder="הזן מספר טלפון" />
+        <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
       </Form.Item>
       <Form.Item {...tailLayout1}>
-        <Button type="primary" htmlType="submit" className = 'sendPass'>
+        <Button type="primary" htmlType="submit" className="sendPass">
           שלח סיסמה
         </Button>
       </Form.Item>
@@ -109,32 +111,14 @@ return (
         )} */}
       </Form.Item>
     </Form>
-  
-);
-
+  );
 };
 
 export default StudentSettingUpdate;
 
-
-
-
-
-
-
-
-
-
-
 // return (
-  
 
-
-   
-    
 //     <Form.Item {...tailLayout} className = 'signStudentContainer'>
-             
-       
 
 // <br></br>
 // <Form.Item className ="StudentPhoneInput"
@@ -152,8 +136,7 @@ export default StudentSettingUpdate;
 // {/* <Input className = 'StudentPhoneInput' placeholder="הזן מספר טלפון" /> */}
 //       <Button type="primary" name="jhg" className="btnlater"> הגדר</Button>
 //       <Button type="primary" name="jhg" className="btnFence">אחר כך</Button>
-        
-      
+
 //     </Form.Item>
 //     // <span className="text3">לאחר הזנת הטלפון ישלח אל הילד sms עם הקוד</span>
 //     </Form.Item>
