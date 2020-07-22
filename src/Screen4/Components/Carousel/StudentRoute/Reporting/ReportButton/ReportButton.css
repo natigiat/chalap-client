@@ -1,0 +1,21 @@
+.RPtitle {
+  font-family: Heebo important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16.0352px;
+  line-height: 24px;
+  text-align: center;
+}
+.RPimg {
+  height: 70px important;
+  width: 70px important;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.RPbutton {
+  text-align: center;
+  height: 100px;
+  width: 50%;
+  float: right;
+  text-align: center;
+}
