@@ -8,6 +8,7 @@ import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
 import RefreshButton from "./Components/RefreshButton/RefreshButton";
 import RouteButton from "./Components/RouteButton/RouteButton";
+import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
   //const [routeDirection, setRouteDirection] = useState("הלוך");
@@ -103,6 +104,9 @@ const Screen4 = (props) => {
         {/* </span> */}
         <GoogleApiWrapper coordinates={coordinates} />
       </div>
+      {/* <div>
+        <PopupAddStudents />
+      </div> */}
       <div className="swiperWrapper">
         <Carousel
           students={students}
