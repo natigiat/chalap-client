@@ -24,6 +24,9 @@
     width: 50%;
     
 }
+.logInValidationHeader{
+    font-size: 14px;
+}
 
  
  /*antd default error message desgin*/
