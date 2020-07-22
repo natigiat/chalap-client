@@ -42,7 +42,7 @@ button.ant-btn.refresh {
 .mapWrapper {
   position: relative;
   width: 100%;
-  height: calc(100vh - (33px)) !important;
+  height: calc(100vh - (86px)) !important;
   margin-top: 2px;
 }
 

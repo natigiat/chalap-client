@@ -1,0 +1,14 @@
+.menu_mobile_link {
+  width: 25%;
+}
+
+.menu_mobile {
+  display: flex;
+}
+
+.menu_mobile_link img {
+  margin: 10px auto;
+  width: 20px;
+  display: block;
+  cursor: pointer;
+}

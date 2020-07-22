@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Parent from "./Screen2";
+
 import Screen1 from "./Screen1/Screen1";
 
 import { Router, Switch, Route } from "react-router";
@@ -9,11 +9,10 @@ import LogIn from "./Screen1/component/LogIn/LogIn";
 import LogInValidation from "./Screen1/component/LogInValidation/LogInValidation";
 import StudentSettingMenu from "./Screen1/component/StudentSettingMenu/StudentSettingMenu";
 import StudentSettingUpdate from "./Screen1/component/StudentSettingUpdate/StudentSettingUpdate";
-import Screen4 from "./Screen4/Screen4";
-import Screen5 from "./Screen5/Screen5";
 
 import Schedule from "./Screen3/components/Schedule/components/Schedule";
 import MySons from "./Screen3/components/SetChilde/SetChilde";
+import MenuLayoues from "./Menu/MenuLayoues";
 
 const history = createBrowserHistory();
 
@@ -22,7 +21,7 @@ function App() {
     <Router history={history}>
       <div className="main-wrapper">
         <Switch>
-          <Route path={`/`} component={Parent} exact />
+          <Route path={`/`} component={MenuLayoues} exact />
 
           <Route
             path="/auth/"
@@ -51,10 +50,6 @@ function App() {
               </>
             )}
           />
-
-          <Route path={`/map`} component={Screen4} exact />
-
-          <Route path={`/reports/:type`} component={Screen5} exact />
 
           <Route path={`/scheduale`} component={Schedule} exact />
           <Route path={`/scheduale/edit`} component={MySons} exact />
