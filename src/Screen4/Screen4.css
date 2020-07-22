@@ -23,7 +23,7 @@
 }
 
 .refreshBtn {
-  left: calc(100vh - (1456px));
+  left: -85%;
   top: calc(100vh - (580px));
   position: relative;
   z-index: 1;
@@ -33,6 +33,7 @@
   position: absolute;
   width: 100%;
   height: calc(100vh - (121px)) !important;
+  margin-top: 2px;
 }
 
 .swiperWrapper {

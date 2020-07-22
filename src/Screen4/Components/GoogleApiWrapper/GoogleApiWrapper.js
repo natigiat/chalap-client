@@ -14,6 +14,7 @@ const MapContainer = (props) => {
         lat: props.coordinates[0].lat,
         lng: props.coordinates[0].lng,
       }}
+      disableDefaultUI={true}
       className={"map"}
       zoom={11}
     >

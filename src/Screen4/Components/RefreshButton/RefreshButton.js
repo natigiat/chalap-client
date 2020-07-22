@@ -8,7 +8,7 @@ const RefreshButton = (props) => {
 
   return (
     <Button className="refresh" onClick={props.updateBusLocations}>
-      <img src="/images/refresh.png" alt="refresh" />
+      <img className="refreshImg" src="/images/refresh.png" alt="refresh" />
       ריענון מפה
     </Button>
   );
