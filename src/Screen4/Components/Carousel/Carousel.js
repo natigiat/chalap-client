@@ -58,13 +58,12 @@ const Carousel = (props) => {
       className="studentsSwiper"
       spaceBetween={20}
       slidesPerView={3}
-      onSwipeLeft={(e) => console.log("slide change: " + e)}
       onSlideChange={(e) => console.log("slide change: " + e)}
       onSwiper={(swiper) => console.log("swiper: " + swiper)}
-      Virtual={true}
       centeredSlides={true}
       grabCursor={true}
-      mousewheel
+      updateOnWindowResize={true}
+      loop={true}
     >
       {studentsArray.map((student) => (
         <SwiperSlide>
@@ -74,7 +73,6 @@ const Carousel = (props) => {
             startPoint={student.startPoint}
             endPoint={student.startPoint}
             routeTimes={student.routeTimes}
-            // loop={true}
           />
         </SwiperSlide>
       ))}
