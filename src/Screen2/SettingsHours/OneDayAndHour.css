@@ -1,26 +1,29 @@
 .OneDayAndHour {
-  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  border: 2px solid #ebebeb;
   height: 67px;
   line-height: 65px;
 }
 .OneDayAndHour .Day {
   float: right;
-  font-family: Heebo;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 500;
   margin-right: 16%;
 }
 .OneDayAndHour .Hour {
   float: left;
-  font-family: Heebo;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 500;
   margin-left: 20%;
 }
 .OneDayAndHour .Clock {
-  width: 22px;
+  width: 30px;
   margin-top: 22px;
   position: absolute;
   right: 77%;
