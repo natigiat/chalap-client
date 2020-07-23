@@ -60,14 +60,16 @@ const Carousel = (props) => {
       className="studentsSwiper"
       spaceBetween={24}
       slidesPerView={1.5}
-      onSlideChange={(e) => {}}
+      onSlideChange={(e) => {
+        console.log(e);
+      }}
       onSwiper={(swiper) => console.log(swiper)}
       centeredSlides={true}
       grabCursor={true}
       loop={true}
     >
       {studentsArray.map((student, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide className="studentsSwiperSlide" key={index}>
           <StudentRoute
             // activeSlider={
             //   index === addClassToActiveSlider ? "activeSlider" : ""
