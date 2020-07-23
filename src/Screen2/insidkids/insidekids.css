@@ -5,51 +5,45 @@
   padding: 50px;
 }
 .insidekids .name {
-  /* text-align: center; */
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 .insidekids .altImageAvatar {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
+  background-color: slateblue;
 }
 .insidekids .tab {
   width: 80%;
   margin: 0 auto;
 }
-.ant-tabs-nav-list {
+.insidekids .ant-tabs-nav-list {
   /* width: 80%; */
   text-align: center;
 }
-.ant-tabs-nav-list {
+.insidekids .ant-tabs-nav-list {
   width: 100%;
 }
-.ant-tabs-ink-bar {
+.insidekids .ant-tabs-ink-bar {
   width: 50%;
 }
-.ant-tabs-tab {
+.insidekids .ant-tabs-tab {
   width: 50%;
   color: red;
 }
-#rc-tabs-0-tab-1 {
+.insidekids #rc-tabs-0-tab-1 {
   font-size: 20px;
 }
-#rc-tabs-0-tab-2 {
+.insidekids #rc-tabs-0-tab-2 {
   font-size: 20px;
 }
-.ant-tabs-tab-active {
+.insidekids .ant-tabs-tab-active {
   color: rgb(92, 225, 65);
-  /* margin: 0px 30px;
-  text-align: end; */
 }
-/* .ant-tabs-tab.ant-tabs-tab-active {
-  margin: 0 65px;
-} */
-/* ant-tabs-ink-bar-animated */
 .insidekids .ant-avatar-string {
   font-size: 80px;
-  top: 10px;
+  top: 40px;
   text-align: center;
   font-weight: 700;
 }

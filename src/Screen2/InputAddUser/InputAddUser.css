@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .popupInputAddUeser{
     display: flex;
     justify-content: center;
@@ -23,3 +24,65 @@
     width: 100%;
     font-weight: 500;
 }
+=======
+.popupInputAddUeser {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 370px;
+}
+img.addUserImage {
+  /* display: flex; */
+  position: absolute;
+  bottom: 300px;
+}
+
+.anotherChild {
+  width: 100%;
+}
+
+.anotherChildText {
+  width: 100%;
+}
+
+.popupInputAddUeser .popup-content {
+  background: #f4f4f4;
+  text-align: center;
+}
+element.style {
+  width: 75%;
+}
+.popupInputAddUeser .anotherChildText {
+  height: 82px;
+  width: 219px;
+  text-align: center;
+}
+
+.popupInputAddUeser button.ant-btn.ant-btn-primary {
+  height: 41px;
+  width: 219px;
+}
+*/ .popupInputAddUeser .anotherChildText {
+  height: 82px;
+  /* width: 219px; */
+  text-align: center;
+}
+.ant-btn.ant-btn-primary {
+  width: 100%;
+}
+.giveCallBackBtn {
+  width: 100%;
+  margin-left: 12.5%;
+}
+.giveCallBackBtn Button {
+  background-color: #fe6c35;
+}
+.ant-row.ant-form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+>>>>>>> 6c74e9871ce98e4647e5cb581b9855e13b981b84
