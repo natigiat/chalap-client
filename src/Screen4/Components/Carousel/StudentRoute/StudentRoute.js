@@ -22,7 +22,10 @@ const StudentRoute = (props) => {
 
         <div className="studentDetails">
           <div className="studentName">{props.studentName}</div>
-          <div className="notice">אין עיכובים צפויים</div>
+          <div className="notice">
+            <img className="noticeDot" src="/images/Ellipse.svg" />
+            אין עיכובים צפויים
+          </div>
         </div>
       </div>
 
@@ -45,7 +48,7 @@ const StudentRoute = (props) => {
         ))}
       </div>
 
-      <Reporting />
+      {/* <Reporting /> */}
     </div>
   );
 };
