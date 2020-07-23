@@ -10,18 +10,18 @@ import {
 
 function Pdetails(props) {
   return (
-    <div className="kidsdetails">
-      <div className="kid">
+    <div className="kidsdetails9">
+      <div className="kid9">
         <HomeOutlined /> {props.address}
       </div>
-      <div className="kid">
+      <div className="kid9">
         <EnvironmentOutlined /> {props.school}
       </div>
-      <div className="permissionRow">
-        <div className="kid1">
+      <div className="permissionRow9">
+        <div className="kid11">
           <PhoneOutlined /> {props.phone}
         </div>
-        <div className="givePermission">
+        <div className="givePermission9">
           <Radio.Button onClick={console.log("callmy")}>תן הרשאה</Radio.Button>
         </div>
       </div>
