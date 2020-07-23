@@ -14,23 +14,20 @@ const LogInValidation = (props) => {
   };
 
   const onFinish = (values) => {
-    
     const check = /^[0-9]+$/;
     console.log("Success:", values.password);
-    if(values.password.length === 4 && check.test(values.password)){
-      setPasswordCheck(false)
+    if (values.password.length === 4 && check.test(values.password)) {
+      setPasswordCheck(false);
+      props.check(values.password);
       console.log(PasswordCheck);
-    }else{
+    } else {
       setPasswordCheck(true);
     }
     console.log(PasswordCheck);
-    // props.setPhoneNum(props.message.Password =values);
-    props.check(values.password);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  
 
   return (
     <div className="logInValidation">
@@ -40,31 +37,31 @@ const LogInValidation = (props) => {
         name="basic"
         initialValues={{ remember: true }}
         onFinish={onFinish}
-        
         onFinishFailed={onFinishFailed}
       >
         <h3 className="logInValidationHeader">הזן את הקוד שנשלח לנייד</h3>
 
-     
-        { PasswordCheck&& <h5>סיסמה שגוייה</h5>}
+        {PasswordCheck && <h5>סיסמה שגוייה</h5>}
 
         <Form.Item
           label=""
           name="password"
           rules={[{ required: true, message: "הכנס סיסמה" }]}
         >
-          <Input.Password className="passwordInput" placeholder = '...' />
+          <Input.Password className="passwordInput" placeholder="..." />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-          
-          <Button className='sendPassword' type="primary" htmlType="submit" onClick = {props.check} >
+          <Button
+            className="sendPassword"
+            type="primary"
+            htmlType="submit"
+            onClick={props.check}
+          >
             שלח
           </Button>
         </Form.Item>
-     <div className="auth-btn1">        לא קיבלתי קוד אנא שילחו לי שוב
-
-        </div>
+        <div className="auth-btn1"> לא קיבלתי קוד אנא שילחו לי שוב</div>
       </Form>
     </div>
   );

@@ -15,11 +15,15 @@ const StudentSettingUpdate = (props) => {
   };
   const inputValue = 0;
 
-  const onFinish1 = (values) => {
-    console.log("Success:", values.username);
-    props.check(values.username);
+  const onFinish = (values) => {
+    console.log(values);
+    const regular = /^[0-9]+$/;
+    if (regular.test(values.phonenumber) && values.phonenumber.length === 10) {
+      console.log("Success:", values.phonenumber);
+      props.check(values.phonenumber);
+    }
   };
-  const onFinishFailed1 = (errorInfo) => {
+  const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
@@ -30,13 +34,6 @@ const StudentSettingUpdate = (props) => {
   };
   const tailLayout = {
     wrapperCol: { offset: 0, span: 0 },
-  };
-
-  const onFinish = (values) => {
-    console.log("Success:", values);
-  };
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
   // slect input functions
 
@@ -64,8 +61,8 @@ const StudentSettingUpdate = (props) => {
       {...layout1}
       name="basic"
       initialValues={{ remember: true }}
-      onFinish={onFinish1}
-      onFinishFailed={onFinishFailed1}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
     >
       <h2>הרשאה לתלמיד</h2>
       <h3>?מעוניין לרשום את ילדך למערכת</h3>
@@ -115,29 +112,3 @@ const StudentSettingUpdate = (props) => {
 };
 
 export default StudentSettingUpdate;
-
-// return (
-
-//     <Form.Item {...tailLayout} className = 'signStudentContainer'>
-
-// <br></br>
-// <Form.Item className ="StudentPhoneInput"
-//         name="username"
-//         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
-//       >
-//         <Input placeholder="הזן מספר טלפון" />
-//       </Form.Item>
-//       <Form.Item {...tailLayout}>
-//         <Button type="primary" htmlType="submit" className = 'sendPass'>
-//           שלח סיסמה
-//         </Button>
-//       </Form.Item>
-//       <Form.Item>
-// {/* <Input className = 'StudentPhoneInput' placeholder="הזן מספר טלפון" /> */}
-//       <Button type="primary" name="jhg" className="btnlater"> הגדר</Button>
-//       <Button type="primary" name="jhg" className="btnFence">אחר כך</Button>
-
-//     </Form.Item>
-//     // <span className="text3">לאחר הזנת הטלפון ישלח אל הילד sms עם הקוד</span>
-//     </Form.Item>
-// );
