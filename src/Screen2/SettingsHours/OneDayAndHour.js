@@ -6,7 +6,7 @@ import MyClock from "./react-timekeeper";
 function OneDayAndHour(props) {
   const [Hour, setHour] = useState(props.Hour);
   return (
-    <div className="OneDayAndHour">
+    <div dir="ltr" className="OneDayAndHour">
       <span className="Day">{props.Day}</span>
       <span className="Hour">{Hour}</span>
       <Popup

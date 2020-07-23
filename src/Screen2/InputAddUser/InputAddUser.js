@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
-//import './InputAddUser.css';
+import "./InputAddUser.css";
 import { Form, Input, Button } from "antd";
+// import newChildImage from '../../Screen2/images/newChildImage.png'
+
 
 const layout = {
   labelCol: {
@@ -29,36 +30,40 @@ const InputAddUser = (props) => {
   };
 
   return (
-    <div>
-      <div>יש לי ילד נוסף</div>
-      <div>שרוצה לנסוע אתכם</div>
-      <Form
-        {...layout}
-        name="basic"
-        initialValues={{
-          remember: true,
-        }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-      >
-        <Form.Item
-          name="username"
-          rules={[
-            {
-              required: true,
-              message: "נא להכניס שם",
-            },
-          ]}
-        >
-          <Input placeholder="שם התלמיד" />
-        </Form.Item>
+    <div className="popupInputAddUeser">
 
-        <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
-            חזרו אלי לנייד
+      <img src="/images/screen2_newChildImage.png" alt="" className="addUserImage" />
+      <div className="anotherChild">
+        <div className="anotherChildText">יש לי ילד נוסף<br />
+      שרוצה לנסוע אתכם</div>
+        <Form
+          {...layout}
+          name="basic"
+          initialValues={{
+            remember: true,
+          }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+        >
+          <Form.Item
+            name="username"
+            rules={[
+              {
+                required: true,
+                message: "נא להכניס שם",
+              },
+            ]}
+          >
+            <Input placeholder="שם התלמיד" />
+          </Form.Item>
+
+          <Form.Item {...tailLayout}>
+            <Button type="primary" htmlType="submit">
+              חזרו אלי לנייד
           </Button>
-        </Form.Item>
-      </Form>
+          </Form.Item>
+        </Form>
+      </div>
     </div>
   );
 };

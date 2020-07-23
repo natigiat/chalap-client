@@ -4,7 +4,7 @@ import { Tabs, Avatar } from "antd";
 import Pdetails from "../Pdetails/Pdetails";
 import "./insidekids.css";
 
-function Insidekids({ child }) {
+function Insidekids(props) {
   const DaysAndHours = [
     { Day: "ראשון", Hour: "13:45" },
     { Day: "שני", Hour: "13:00" },
@@ -23,14 +23,17 @@ function Insidekids({ child }) {
   function callback(key) {
     console.log(key);
   }
-  console.log(child);
+  console.log(props);
   return (
     <div className="insidekids">
       <div className="nameimg">
-        <Avatar className="altImageAvatar">{child.firstName?.[0]}</Avatar>
+        <Avatar className="altImageAvatar">
+          {props.selectedChild?.firstName?.[0]}
+        </Avatar>
         <br />
         <br />
-        <div className="name">{child.firstName}</div>
+
+        <div className="name">{props.selectedChild?.firstName}</div>
       </div>
       <br />
       <br />
@@ -38,9 +41,9 @@ function Insidekids({ child }) {
         <Tabs className="tab" defaultActiveKey="1" onChange={callback}>
           <TabPane tab="פרטים אישיים" key="1">
             <Pdetails
-              address={child.school?.station?.name}
-              school={child.favoriteStation?.name}
-              phone={child.favoriteStation?.id}
+              address={props.selectedChild?.school?.station?.name}
+              school={props.selectedChild?.favoriteStation?.name}
+              phone={props.selectedChild?.favoriteStation?.id}
             />
           </TabPane>
           <TabPane tab="שעת סיום" key="2">
