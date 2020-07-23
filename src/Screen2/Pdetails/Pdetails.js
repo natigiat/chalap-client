@@ -15,17 +15,14 @@ function Pdetails(props) {
         <HomeOutlined /> {props.address}
       </div>
       <div className="kid">
-        {" "}
         <EnvironmentOutlined /> {props.school}
       </div>
-      <div>
-        <div className="kid">
-          <PhoneOutlined /> {props.phone}{" "}
-        </div>{" "}
-        <div>
-          <Radio.Button className="kid4" onClick={console.log("callmy")}>
-            תן הרשאה
-          </Radio.Button>
+      <div className="permissionRow">
+        <div className="kid1">
+          <PhoneOutlined /> {props.phone}
+        </div>
+        <div className="givePermission">
+          <Radio.Button onClick={console.log("callmy")}>תן הרשאה</Radio.Button>
         </div>
       </div>
     </div>
