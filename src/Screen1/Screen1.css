@@ -6,5 +6,5 @@
   border-color: black;
 }
 .screen1{
-  direction: rtl;
+  direction: rtl!important;
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import LogInValidation from "./component/LogInValidation/LogInValidation";
 import "./Screen1.css";
 import LogIn from "./component/LogIn/LogIn";
-import StudentSettingMenu from "./component/StudentSettingMenu/StudentSettingMenu";
 import StudentSettingUpdate from "./component/StudentSettingUpdate/StudentSettingUpdate";
 import Splash from "./component/Splash/Splash"
 import HomeStation from "./component/HomeStation/HomeStation"
@@ -49,6 +48,7 @@ function Screen1() {
             passwordValid: 0,
             phoneNumberParent: 0,
             ParentAcceptsStudent: 0,
+            popup:false
           });
         })
         .catch((err) => console.log(err));
@@ -77,26 +77,24 @@ function Screen1() {
           passwordValid: typeof res.data,
           phoneNumberParent: 0,
           ParentAcceptsStudent: 0,
-        });
-      });
-  };
+          popup:false});
+  });}
 
   return (
     <div className="screen1">
-      {/* <Splash/> */}
+      <Splash/>
     
         { <LogIn check={apiRequestphoneNum} message={validationObject} setPhoneNum = {setValidationObject} /> }
       
       
-        {/* <LogInValidation check={apiRequestPassword} sendPasswordAgain = {apiRequestphoneNum} dataObject = {validationObject}
-         phoneNum =  {validationObject.phoneNum} password = {validationObject.password}/> */}
-     
-       {/* <StudentSettingMenu /> */}
+         <LogInValidation check={apiRequestPassword} sendPasswordAgain = {apiRequestphoneNum} dataObject = {validationObject}
+         phoneNum =  {validationObject.phoneNum} password = {validationObject.password}/> 
+
       <StudentSettingUpdate
         check={apiRequestphoneNum}
         message={validationObject}
       />
-      {/* <HomeStation/> */}
+     
       {/* <SendPhoneNumber check={apiRequestphoneNum} message={validationObject} setPhoneNum = {setValidationObject} />  */}
     </div>
   );

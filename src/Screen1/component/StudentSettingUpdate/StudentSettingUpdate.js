@@ -31,7 +31,7 @@ const StudentSettingUpdate = () => {
       </h1>
 
       <h3 className="HomeStationText"> מה תחנת הבית שלכם? </h3>
-      <img className="homeLogo" src = './homeLogo' ></img>
+      <img className="homeLogo" src ='.\images\homeLogo.jpeg' ></img>
       
       <Form
         {...layout}

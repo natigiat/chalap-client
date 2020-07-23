@@ -50,7 +50,14 @@ import axios from "axios"
           onChange={onStationChange}
           allowClear
         >
-          {StudentStation&& StudentStation.map((station) => (<Option value={station}>{station}</Option>))}
+          {/* {StudentStation&& StudentStation.map((station) => (<Option value={station}>{station}</Option>))} */}
+
+          <Option value={3}>שילה</Option>
+          <Option value={3}>בית-אל</Option>
+          <Option value={3}>בינימין-טק</Option>
+          <Option value={3}>מטולה</Option>
+
+
         </Select>
 
 
@@ -70,7 +77,8 @@ import axios from "axios"
       </Form.Item>
      
           <h3 className="dontWorry">  
-           אל דאגה, <br></br> תוכל להגדיר עבור כל ילד גם בהמשך
+           אל דאגה, <br></br>
+           <br></br> תוכל להגדיר עבור כל ילד גם בהמשך
           </h3>
       
       

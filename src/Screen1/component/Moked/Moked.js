@@ -5,9 +5,9 @@ import { Form } from "antd";
 
 function Moked(props) {
   return (
-    <div className="mokedBody">
+    <div >
       <Form name="control-hooks">
-        <div className="contactMoked">
+        <div >
           <div className="mokedText">
             לא קיבלת קוד?
             <br />

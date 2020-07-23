@@ -18,7 +18,9 @@ const LogInValidation = (props) => {
   };
 
  
-  
+  const [valid, setValid] = useState(true);
+  const [valid1, setValid1] = useState(true);
+  const [change, setChange] = useState("");
 
 
   const onFinish = (values) => {
@@ -37,6 +39,27 @@ const LogInValidation = (props) => {
     console.log("Failed:", errorInfo);
   };
 
+  const validationInput = (changedValues) => {
+    const regular = /^[0-9]+$/;
+    const validation = regular.test(changedValues.password);
+    if (!validation  && changedValues.password.length > 0) {
+      setValid(false);
+    } else if (valid === false) {
+      setValid(true);
+      console.log(valid);
+    }
+    if (changedValues.password.length > 4) {
+      setValid1(false);
+    } else if (valid1 === false) {
+      setValid1(true);
+      console.log(valid1);
+    }
+  };
+  const onchange = () => {
+    setChange(change);
+   
+  };
+
   return (
     <div className="logInValidation">
     
@@ -47,6 +70,8 @@ const LogInValidation = (props) => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
+        onValuesChange={validationInput}
+      onFieldsChange={onchange}
       >
       
 
@@ -65,6 +90,9 @@ const LogInValidation = (props) => {
         >
           <Input.Password className="passwordInput" placeholder="קוד" />
         </Form.Item>
+        {!valid && <div>יש להזין מספרים בלבד</div>}
+      {!valid1 && valid && <div>אין להזין יותר מ-4 ספרות</div>}
+
         <div onClick = {()=>{props.sendPasswordAgain(props.dataObject.phoneNum);console.log(props.dataObject.phoneNum)}} className="auth-btn1">        לא קיבלתי קוד אנא שילחו לי שוב
 
         </div>
