@@ -5,7 +5,7 @@ import axios from "axios";
 import Insidekids from "../insidkids/insidkids";
 import Popup from "reactjs-popup";
 import { Form, Input, Button } from "antd";
-import { ArrowRightOutlined, UserAddOutlined } from "@ant-design/icons";
+import { UserAddOutlined } from "@ant-design/icons";
 import "./Parent.css";
 import InputAddUser from "../InputAddUser/InputAddUser";
 
@@ -85,10 +85,8 @@ function Parent() {
 
   return (
     <div dir="rtl">
-      <div className="parent" dir="rtl">
+      <div className="parentSc2" dir="rtl">
         <div className="childrenManagement">
-          <ArrowRightOutlined className="vectorChildren" onClick={() => {}} />
-          {/* <img src="vector.png" className="vector"/> */}
           <h2 className="myChildren">הילדים שלי </h2>
         </div>
         {/* {alrt.alrt ? (
