@@ -1,0 +1,46 @@
+.popupInputAddUeser{
+    position: relative;
+}
+
+.popup-content {
+    position: relative;
+    width: 37%!important;  
+    height: 369px;
+    left: 41px;
+    top: 122px;
+    background: #F4F4F4;
+    top: -10px;
+    right: 0;
+    text-align: center;
+}
+.addUserImage {
+    position: absolute;
+    margin: -164px -102px;
+}
+.anotherChild{
+    vertical-align: middle;
+    text-align: center;
+    margin: 100px 0 auto;
+}
+element.style {
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 38%;
+    margin: auto;
+    border: 1px solid rgb(187, 187, 187);
+    padding: 5px;
+}
+input#basic_username {
+    text-align: center;
+    width: 219px;
+    height: 41px;
+}
+
+button.ant-btn.ant-btn-primary {
+    height: 41px;
+    width: 219px;
+}
+.anotherChildText{
+    height: 82px;
+    width: 219px;
+}
