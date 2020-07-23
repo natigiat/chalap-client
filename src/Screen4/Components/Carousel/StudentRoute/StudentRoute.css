@@ -127,11 +127,11 @@
   margin: 4px;
 }
 
-.hours {
+.StudentRoute.hours {
   margin-top: -4px;
 }
 
-.hour {
+.StudentRoute.hours.hour {
   display: inline;
   margin: 0 2px;
   padding: 1px 6px;
