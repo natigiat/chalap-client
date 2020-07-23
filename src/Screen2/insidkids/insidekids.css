@@ -1,0 +1,47 @@
+.insidekids .nameimg {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  padding: 50px;
+}
+.insidekids .name {
+  /* text-align: center; */
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.insidekids .altImageAvatar {
+  width: 100px;
+  height: 100px;
+}
+.tab {
+  width: 80%;
+  margin: 0 auto;
+}
+.ant-tabs-nav-list {
+  /* width: 80%; */
+  text-align: center;
+}
+.ant-tabs-nav-list {
+  width: 100%;
+}
+.ant-tabs-ink-bar {
+  width: 50%;
+}
+.ant-tabs-tab {
+  width: 50%;
+}
+#rc-tabs-0-tab-1 {
+  font-size: 20px;
+}
+#rc-tabs-0-tab-2 {
+  font-size: 20px;
+}
+.ant-tabs-tab.ant-tabs-tab-active {
+  margin: 0px 30px;
+  text-align: end;
+}
+.ant-tabs-tab.ant-tabs-tab-active {
+  margin: 0 65px;
+}
+/* ant-tabs-ink-bar-animated */
