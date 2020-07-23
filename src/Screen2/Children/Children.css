@@ -1,17 +1,19 @@
 @import "~antd/dist/antd.css";
 
-.child {
+.childrenSc2 .child {
   margin: 5px;
   padding: 5px;
+  height: 100px;
   background: #ffffff;
   border-radius: 4px;
 }
 
-.image {
-  width: 60%;
-}
+/* .childrenSc2 .image {
+  background-position: auto;
+  width: 100px;
+} */
 
-.altImageAvatar {
+.childrenSc2 .altImageAvatar {
   width: 64px;
   height: 64px;
   line-height: 64px;
@@ -21,7 +23,7 @@
   background-color: #fde3cf;
 }
 
-.name {
+.childrenSc2 .name {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -34,13 +36,13 @@
   color: #000000;
 }
 
-.arrow {
+.childrenSc2 .arrow {
   flex: auto;
   text-align: end;
   margin-left: 5px;
 }
 
-.line {
+.childrenSc2 .line {
   opacity: 0.5;
   border: 1px solid #cfcfcf;
   transform: rotate(180deg);

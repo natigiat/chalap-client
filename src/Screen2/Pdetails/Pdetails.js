@@ -15,7 +15,6 @@ function Pdetails(props) {
         <HomeOutlined /> {props.address}
       </div>
       <div className="kid">
-        {" "}
         <EnvironmentOutlined /> {props.school}
       </div>
       <div className="permissionRow">
