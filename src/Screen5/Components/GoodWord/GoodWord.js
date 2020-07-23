@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Select, DatePicker, Row, Col } from "antd";
+import {
+  Form,
+  Input,
+  Button,
+  Select,
+  DatePicker,
+  Row,
+  Col,
+  message,
+} from "antd";
 import { TimePicker } from "antd";
 import moment from "moment";
 import { Upload } from "antd";
@@ -32,6 +41,7 @@ function GoodWord(props) {
   function handleChange(value) {
     setType(value);
   }
+  // const [finish, setFinish] = useState(false);
 
   const onFinish = (values) => {
     const dataReport = {
@@ -43,7 +53,9 @@ function GoodWord(props) {
       time: time,
     };
     props.onSubmit(dataReport);
+    // setFinish(true);
   };
+
   const files = {
     action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
     onChange({ file, fileList }) {
@@ -62,14 +74,15 @@ function GoodWord(props) {
             <DatePicker
               className="date"
               onChange={onChangedate}
-              rules={[{ require: true }]}
+              rules={[{ require: true, message: "בחר תאריך" }]}
             />
+            {!date && <div style={{ color: "red" }}>בחר תאריך</div>}
           </Form.Item>
           <Form.Item
             className="textarea1"
             name="Origin"
             label=""
-            rules={[{ required: true }]}
+            rules={[{ required: true, message: "אנא הכנס מוצא" }]}
           >
             <TextArea rows={2} placeholder="מוצא" />
           </Form.Item>
@@ -78,17 +91,18 @@ function GoodWord(props) {
           <Form.Item>
             <TimePicker
               className="hour"
-              defaultValue={moment("12:08", format)}
+              defaultValue={moment("00:00", format)}
               format={format}
               onChange={onTimeChange}
-              rules={[{ require: true }]}
+              rules={[{ required: true, message: "בחר שעה" }]}
             />
+            {!time && <div style={{ color: "red" }}>בחר שעה</div>}
           </Form.Item>
           <Form.Item
             className="textarea1"
             name="Destination"
             label=""
-            rules={[{ required: true }]}
+            rules={[{ required: true, message: "נא להכניס יעד" }]}
           >
             <TextArea rows={2} placeholder="יעד" />
           </Form.Item>
@@ -101,7 +115,7 @@ function GoodWord(props) {
           // style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר נושא פניה"
-          rules={[{ required: true }]}
+          rules={[{ required: true, message: "נא להכניס נושא פניה" }]}
         >
           {typeRequest.map((value, index) => (
             <Option key={index} value={value.type}>
@@ -109,12 +123,13 @@ function GoodWord(props) {
             </Option>
           ))}
         </Select>
+        {!type && <div style={{ color: "red" }}>בחר נושא פניה</div>}
       </Form.Item>
       <Form.Item
         className="textarea2"
-        name="messege"
+        name="message"
         label=""
-        rules={[{ required: true }]}
+        rules={[{ required: true, message: "נא להכניס את הודעתך" }]}
       >
         <TextArea rows={8} placeholder="תוכן הפניה" />
       </Form.Item>
