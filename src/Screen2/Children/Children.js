@@ -10,7 +10,7 @@ function Children(props) {
       <div onClick={props.catchChild}>
         <Row className="child" dir="rtl" align="middle" onClick={() => {}}>
           <Col flex="80px">
-            <Avatar className="altImageAvatar">{props?.firstName}</Avatar>
+            <Avatar className="altImageAvatar">{props?.firstName[0]}</Avatar>
           </Col>
           <Col className="name">{props?.firstName}</Col>
           <Col className="arrow">
