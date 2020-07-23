@@ -1,37 +1,28 @@
-.parent {
+.parentSc2 {
   width: 100%;
-  /* border: 4px;
-  border-radius: 10px;
-  border-color: blue;
-  border-style: solid; */
   padding: 15px;
   text-align: right;
   font-size: 20px;
   font-weight: 700;
 }
 
-.myChildren {
-  margin-top: 10px;
+.parentSc2 .childrenManagement {
+  height: 100px;
+  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
+}
+
+.parentSc2 .myChildren {
+  margin: 30px 15px 0px 0px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 29px;
   font-weight: bold;
   color: #000000;
 }
 
-.childrenManagement {
-  height: 100px;
-  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
-}
-
-.vectorChildren {
-  margin: 10px 10px 0px 0px;
-  font-size: 30px;
-}
-
-.addChildButton {
+.parentSc2 .addChildButton {
   margin-top: 15px;
   background: #ffffff;
   border: 1px solid rgba(254, 108, 53, 0.2);
@@ -39,7 +30,7 @@
   border-radius: 1px;
 }
 
-.addChildPopup {
+.parentSc2 .addChildPopup {
   margin-right: 20px;
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -51,13 +42,7 @@
   color: #fe6c35;
 }
 
-.addUserIcon {
+.parentSc2 .addUserIcon {
   margin-right: 5px;
   color: #fe6c35;
 }
-
-/* 
-.vector {
-  background: #000000;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-} */
