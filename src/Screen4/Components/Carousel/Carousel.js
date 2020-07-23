@@ -59,7 +59,7 @@ const Carousel = (props) => {
     <Swiper
       className="studentsSwiper"
       spaceBetween={24}
-      slidesPerView={1.5}
+      slidesPerView={1.33}
       onSlideChange={(e) => {
         console.log(e);
       }}

@@ -11,11 +11,14 @@
   box-shadow: 0px 1.6px 8px #bebebe;
   border-radius: 9.9px;
   height: 90.44px;
+  margin: 38px 0;
 }
 
 .swiper-slide-active .StudentRoute {
   padding: 18px;
-
+  position: absolute;
+  top: -15px;
+  width: 266px;
   height: 133px;
 }
 .swiper-slide-active .studentHeader {
