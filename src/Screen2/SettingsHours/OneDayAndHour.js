@@ -8,9 +8,10 @@ function OneDayAndHour(props) {
   return (
     <div className="OneDayAndHour">
       <span className="Day">{props.Day}</span>
+      <span className="Hour">{Hour}</span>
       <Popup
         modal
-        trigger={<span className="Hour">{Hour}</span>}
+        trigger={<img className="Clock" src={Clock} alt="" />}
         position="center center"
         contentStyle={{
           margin: "auto",
@@ -31,8 +32,6 @@ function OneDayAndHour(props) {
           </div>
         )}
       </Popup>
-
-      <img className="Clock" src={Clock} alt="" />
     </div>
   );
 }

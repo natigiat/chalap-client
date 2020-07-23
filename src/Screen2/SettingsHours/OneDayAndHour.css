@@ -23,5 +23,8 @@
   width: 22px;
   margin-top: 22px;
   position: absolute;
-  right: 86%;
+  right: 77%;
+  border: solid;
+  border-width: 1px;
+  border-color: #17191914;
 }

@@ -82,7 +82,7 @@ function Parent() {
   const [selectedchild, setSelected] = useState([]);
 
   return (
-    <div dir="rtl">
+    <div>
       <div className="parent" dir="rtl">
         <h2>הילדים שלי </h2>
         {/* {alrt.alrt ? (
