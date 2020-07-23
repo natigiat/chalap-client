@@ -75,7 +75,7 @@ const Carousel = (props) => {
             key={student.id}
             studentName={student.name}
             startPoint={student.startPoint}
-            endPoint={student.startPoint}
+            endPoint={student.endPoint}
             routeTimes={student.routeTimes}
           />
         </SwiperSlide>
