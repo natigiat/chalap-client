@@ -92,6 +92,22 @@ function Parent() {
       )}
 
       <div>
+<<<<<<< HEAD
+        <h6>מידע נוסף</h6>
+        <Insidekids />
+        {Api.map((child) => (
+          <Children
+            key={child.key}
+            name={child.name}
+            exit={child.exit}
+            school={child.school}
+            catchChild={() => {
+              console.log(child.key);
+            }}
+          />
+        ))}
+      </div>
+=======
         <h6>מידע נוסף</h6> */}
 
         {fakeArry.map((child) => (
@@ -120,7 +136,6 @@ function Parent() {
           )}
         </Popup>
       </div>
-
       <Insidekids child={selectedchild} />
     </div>
   );
