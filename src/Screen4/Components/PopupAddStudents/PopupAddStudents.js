@@ -12,7 +12,7 @@ const PopupAddStudents = (props) => {
     //   open
     // >
     <div className="popupAdd">
-      <img src="/images/profileImage.png"></img>
+      <img src="/images/missingStudentImg.svg"></img>
       <div className="missingText">נראה שחסר פה מישהו</div>
       <button className="btnAddStudents">+ הוספת ילדים</button>
     </div>

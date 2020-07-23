@@ -55,13 +55,13 @@ button.ant-btn.refresh {
   margin-top: 2px;
 }
 .popupAddStudents {
-  width: 80%;
+  width: 64%;
   /* display: flex; */
   position: absolute;
-  right: 10%;
+  right: 18%;
   bottom: 0px;
   z-index: 1;
-  margin: 30px auto;
+  margin: 46px auto;
   border-radius: 6.1875px;
   /* margin-top: 100px; */
 }
