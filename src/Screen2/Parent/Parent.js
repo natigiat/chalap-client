@@ -13,7 +13,7 @@ function Parent(props) {
   const [selectedchild, setSelected] = useState();
 
   return (
-    <div dir="rtl">
+    <div>
       <div className="parent" dir="rtl">
         <div className="childrenManagement">
           <ArrowRightOutlined className="vectorChildren" onClick={() => {}} />
