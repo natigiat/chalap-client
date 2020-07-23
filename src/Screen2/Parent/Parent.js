@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Alerts from "../Alert/Alert";
 import Children from "..//Children/Children";
 import "./Parent.css";
+
 function Parent() {
   const [Api, setapi] = useState([
     {
