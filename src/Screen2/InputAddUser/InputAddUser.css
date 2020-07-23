@@ -1,66 +1,25 @@
 .popupInputAddUeser{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  height:370px;
-}
-img.addUserImage {
-    /* display: flex; */
-position: absolute;
-bottom:300px;
+    font-size: 22px;
 }
 
-.anotherChild{
-    width:100%;
+.popup-content {
+    width: 75%;
 }
-
-.anotherChildText{
- width:100%;   
+.popupInputAddUeser img{
+    margin-bottom: 26px;
+    margin-top: -69px;
 }
-
-.popupInputAddUeser .popup-content {  
-    background: #F4F4F4; 
-    text-align: center;
-}
-.popupInputAddUeser .addUserImage {
-}
-.popupInputAddUeser .anotherChild{
-   
-}
- element.style {
-   
-    width:  75%  ; 
-}
-/* .popupInputAddUeser input#basic_username {
-    text-align: center;
-    width: 219px;
+.inputChildName{
+    margin-top: 32px;
     height: 41px;
 }
-
-.popupInputAddUeser button.ant-btn.ant-btn-primary {
+.buttonChildName{
+    background: #FE6C35;
     height: 41px;
-    width: 219px;
-} */
-.popupInputAddUeser .anotherChildText{
-    height: 82px;
-    /* width: 219px; */
-    text-align: center;
-}
-.ant-btn.ant-btn-primary{
     width: 100%;
-}
-.giveCallBackBtn{
-    width:100%;
-    margin-left: 12.5%;
-}
-.giveCallBackBtn Button{
-    background-color:#FE6C35;
-}
-.ant-row.ant-form-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    font-weight: 500;
 }

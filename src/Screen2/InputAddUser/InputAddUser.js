@@ -33,42 +33,36 @@ const InputAddUser = (props) => {
     <div className="popupInputAddUeser">
 
       <img src="/images/screen2_newChildImage.png" alt="" className="addUserImage" />
-      <div className="anotherChild">
-        <div className="anotherChildText">
-          יש לי ילד נוסף<br />
-      שרוצה לנסוע אתכם</div>
-        <Form
-          {...layout}
-          name="basic"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
+      <div>יש לי ילד נוסף</div>
+      <div>שרוצה לנסוע אתכם</div >
+      <Form
+        {...layout}
+        name="basic"
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+      >
+        <Form.Item
+          name="username"
+          rules={[
+            {
+              required: true,
+              message: "נא להכניס שם",
+            },
+          ]}
         >
-          <div className="inputChildName">
-            <Form.Item
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: "נא להכניס שם",
-                },
-              ]}
-            >
-              <Input placeholder="שם התלמיד" />
-            </Form.Item>
-          </div>
-          <div className="giveCallBackBtn">
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-                חזרו אלי לנייד
+          <Input className="inputChildName" placeholder="שם התלמיד" />
+        </Form.Item>
+
+        <Form.Item {...tailLayout}>
+          <Button className="buttonChildName" type="primary" htmlType="submit">
+            חזרו אלי לנייד
             </Button>
-            </Form.Item>
-          </div>
-        </Form>
-      </div>
-    </div>
+        </Form.Item>
+      </Form>
+    </div >
   );
 };
 
