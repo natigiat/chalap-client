@@ -2,7 +2,7 @@
   margin: 20px;
 }
 
-.kid {
+.kidsdetails .kid {
   width: 100%;
   height: 100px;
   opacity: 0.5;
@@ -16,13 +16,33 @@
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
-  float: right;
+
   text-align: initial;
+  padding-top: 25px;
+}
+.kidsdetails .kid1 {
+  width: 75%;
+  height: 100px;
+  opacity: 0.5;
+  /* border-top: 1px solid #cfcfcf; */
+  font-size: larger;
+  right: 51px;
+  top: calc(50% - 26px / 2 - 57.5px);
+  color: rgb(115, 115, 115);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: initial;
+  float: right;
+  margin-top: 30px;
 }
 
-.kid4 {
-  padding: 6px 20px;
-  width: 116px;
-  height: 34px;
+.kidsdetails .givePermission {
   float: left;
+  margin-top: -102px;
 }
+
+/* .permissionRow {
+  border-top: 1px solid #cfcfcf;
+} */
