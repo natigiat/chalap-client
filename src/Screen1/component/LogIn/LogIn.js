@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 import "./LogIn.css";
+import SendPhoneNumber from '../SendPhoneNumber/SendPhoneNumber';
+import Popup from "reactjs-popup";
+import '../SendPhoneNumber/SendPhoneNumber.css';
 
 const LogIn = (props) => {
   const layout = {
@@ -49,7 +52,7 @@ const LogIn = (props) => {
 
   return (
     <Form
-      className="PhoneContainer"
+      
       {...layout}
       name="basic"
       initialValues={{ remember: true }}
@@ -68,11 +71,55 @@ const LogIn = (props) => {
       </Form.Item>
       {!valid && <div>יש להזין מספרים בלבד</div>}
       {!valid1 && valid && <div>אין להזין יותר מ-10 ספרות</div>}
-      <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit" className="sendPass">
-          שלח אלי קוד אימות
+
+
+      <Popup
+        modal
+        trigger={    <Button
+          className="sendPassword"
+          type="primary"
+          htmlType="submit"
+          onClick={props.check}
+        >
+         שלח לי קוד
+        </Button>}
+        position="center center"
+        contentStyle={{
+          margin: "auto",
+          padding: "auto",
+          width: 260,
+          height: 428,
+        }}
+      >
+        {(close) => (
+         <div>
+           {/* <img className = 'popUpImage' src = '\images\Error img.png'></img>
+           <div className = 'popUpText'>
+             <h3>אופס ..</h3>
+             <h3>לא מצאנו אותך במערכת</h3>
+           </div>
+           
+
+           <Button
+          type="primary"
+          htmlType="submit"
+          className="sendPhoneNumberStudentBtn"
+          
+        >
+          אני תלמיד
         </Button>
-      </Form.Item>
+
+  
+        <Button type="primary" htmlType="submit" className="sendPhoneNumberParentBtn">
+          אני הורה
+        </Button> */}
+            <SendPhoneNumber/>
+         
+         </div>
+        )}
+      </Popup>
+
+      
       <Form.Item>
         {props.message.phoneNumValid === 2 && (
           <div className="error">המספר אינו קיים במערכת</div>
@@ -92,3 +139,4 @@ const LogIn = (props) => {
 };
 
 export default LogIn;
+

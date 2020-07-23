@@ -1,143 +1,84 @@
-import React, { useState } from "react";
-import { Input, Form, Checkbox, Button, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import App from "../../../App";
 import "./StudentSettingUpdate.css";
+import { Form, Input, Button, Select } from "antd";
+import axios from "axios";
 
-const StudentSettingUpdate = (props) => {
-  const [rander, setRander] = useState(0);
-  const [StudentName, setStudentName] = useState([]);
 
-  const layout1 = {
-    labelCol: { span: 90 },
-    wrapperCol: { span: -10 },
-  };
-  const tailLayout1 = {
-    wrapperCol: { offset: 8, span: 16 },
-  };
-  const inputValue = 0;
+const StudentSettingUpdate = () => {
+  const [StudentStation, setStudentStation] = useState([]);
+  const { Option } = Select;
+  const [form] = Form.useForm();
 
-  const onFinish1 = (values) => {
-    console.log("Success:", values.username);
-    props.check(values.username);
-  };
-  const onFinishFailed1 = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-
-  //regular input functions
   const layout = {
-    labelCol: { span: 0 },
-    wrapperCol: { span: 25 },
+    labelCol: { span: 8 },
+    wrapperCol: { span: 16 },
   };
   const tailLayout = {
-    wrapperCol: { offset: 0, span: 0 },
+    wrapperCol: { offset: 8, span: 16 },
   };
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    console.log(values);
   };
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-  // slect input functions
-
-  const { Option } = Select;
-
-  function onChange(value) {
-    console.log(`selected ${value}`);
-  }
-
-  function onBlur() {
-    console.log("blur");
-  }
-
-  function onFocus() {
-    console.log("focus");
-  }
-
-  function onSearch(val) {
-    console.log("search:", val);
-  }
+  const onStationChange = (value) => console.log(value);
 
   return (
-    <Form
-      className="PhoneContainer"
-      {...layout1}
-      name="basic"
-      initialValues={{ remember: true }}
-      onFinish={onFinish1}
-      onFinishFailed={onFinishFailed1}
-    >
-      <h2>הרשאה לתלמיד</h2>
-      <h3>?מעוניין לרשום את ילדך למערכת</h3>
-      {/* select input */}
-      <div className="btnSelect">
+    <div className="stations">
+      <h1 className="HomeStationHeader">
+        {" "}
+        עזור לנו למצוא את הנתוניים<br></br> הרלוונטים עבורך
+      </h1>
+
+      <h3 className="HomeStationText"> מה תחנת הבית שלכם? </h3>
+      <img className="homeLogo" src = './homeLogo' ></img>
+      
+      <Form
+        {...layout}
+        form={form}
+        name="control-hooks"
+        onFinish={onFinish}
+        // className="select"
+      >
+        
         <Select
-          showSearch
-          style={{ width: 173, border: " 1px solid black" }}
-          placeholder="Select a person"
-          optionFilterProp="children"
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onSearch={onSearch}
-          filterOption={(input, option) =>
-            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          placeholder="הקלד תחנת בית..."
+          onChange={onStationChange}
+          allowClear
+        >
+          {StudentStation &&
+            StudentStation.map((station) => (
+              <Option value={station}>{station}</Option>
+            ))}
+        </Select>
+        <Form.Item
+          noStyle
+          shouldUpdate={(prevValues, currentValues) =>
+            prevValues.gender !== currentValues.gender
           }
         >
-          {StudentName.map((student) => (
-            <Option value={student}>{student}</Option>
-          ))}
-        </Select>
-      </div>
-      <br></br>
-      <Form.Item
-        className="firstiput"
-        name="username"
-        rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
-      >
-        <Input className="PhoneInput" placeholder="הזן מספר טלפון" />
-      </Form.Item>
-      <Form.Item {...tailLayout1}>
-        <Button type="primary" htmlType="submit" className="sendPass">
-          שלח סיסמה
+          {({ getFieldValue }) => {
+            return getFieldValue("station") === "other" ? (
+              <Form.Item
+                name="customizeStation"
+                label="Customize Station"
+                rules={[{ required: true }]}
+              >
+                <Input />
+              </Form.Item>
+            ) : null;
+          }}
+        </Form.Item>
+        <h3 className="dontWorry">
+          אל דאגה, <br></br>
+          <br></br> תוכל להגדיר עבור כל ילד גם בהמשך
+        </h3>
+        <Button type="primary" htmlType="submit" className="HomeStationBtn">
+          הבא
         </Button>
-      </Form.Item>
-      <Form.Item>
-        {/* {props.message === "incorrect" && (
-          <div className="error">המספר אינו קיים במערכת</div>
-        )}
-        {props.message === "correct" && (
-          <div className="messegeSend">נשלחה סיסמה לטלפון שלך</div>
-        )} */}
-      </Form.Item>
-    </Form>
+      </Form>
+    </div>
   );
 };
 
 export default StudentSettingUpdate;
-
-// return (
-
-//     <Form.Item {...tailLayout} className = 'signStudentContainer'>
-
-// <br></br>
-// <Form.Item className ="StudentPhoneInput"
-//         name="username"
-//         rules={[{ required: true, message: "הכנס בבקשה מספר טלפון" }]}
-//       >
-//         <Input placeholder="הזן מספר טלפון" />
-//       </Form.Item>
-//       <Form.Item {...tailLayout}>
-//         <Button type="primary" htmlType="submit" className = 'sendPass'>
-//           שלח סיסמה
-//         </Button>
-//       </Form.Item>
-//       <Form.Item>
-// {/* <Input className = 'StudentPhoneInput' placeholder="הזן מספר טלפון" /> */}
-//       <Button type="primary" name="jhg" className="btnlater"> הגדר</Button>
-//       <Button type="primary" name="jhg" className="btnFence">אחר כך</Button>
-
-//     </Form.Item>
-//     // <span className="text3">לאחר הזנת הטלפון ישלח אל הילד sms עם הקוד</span>
-//     </Form.Item>
-// );

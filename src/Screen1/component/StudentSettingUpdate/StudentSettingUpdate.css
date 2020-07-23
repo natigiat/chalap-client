@@ -1,4 +1,8 @@
-.signStudentContainer {
+#components-form-demo-control-ref .ant-btn {
+  margin-right: 8px;
+}
+
+.stations {
   display: flex;
   justify-content: space-evenly;
   border: black 1px solid;
@@ -8,19 +12,40 @@
   box-shadow: 1px 1px 4px black !important;
   padding: 2rem !important;
   width: 50%;
+  direction: rtl;
 }
-.btnlater {
-  color: gray !important;
-  background-color: transparent !important;
-  border: 1px solid gray !important;
-}
-.StudentPhoneInput {
-  margin: 0.7rem;
-}
-.StudentPhoneInput::placeholder {
-  text-align: center;
-}
-/* .btnSelect {
-  width: 50%;
-  border: 1px solid black;
+
+/* .ant-select-selection-search {
+  background: #ffffff;
 } */
+.dontWorry {
+  font-size: 13px;
+  line-height: 91.8%;
+
+  /* or 12px */
+
+  text-align: center;
+
+  color: #c4c4c4;
+  margin-top: 0.65rem;
+}
+.HomeStationHeader {
+  font-size: 22px;
+  line-height: 139.3%;
+}
+.HomeStationText {
+  font-size: 18px;
+  line-height: 26px;
+}
+.HomeStationBtn {
+  color: white !important;
+  background-color: #fe6c35 !important;
+  border: 1px solid gray !important;
+  padding: 0 2rem !important;
+  margin-top: 1rem;
+}
+.homeLogo {
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

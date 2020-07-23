@@ -1,32 +1,48 @@
 
 .sendPassword {
-    color: gray!important;
-    background-color: transparent !important;
+    
+    color: white!important;
+    background-color: #FE6C35 !important;
     border: 1px solid gray !important;
     padding: 0 2rem!important;
-    right: 40px;
-    position: relative;
+    margin-top: 1rem;
+    width: 13%;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    
+    /* position: relative; */
     
 }
 .auth-btn1{
     color: gray!important;
     background-color:white !important;
     border:none !important;
+    cursor: pointer;
+}
+.auth-btn1:focus{
+    border: transparent;
 }
 .passwordContainer{
     display: flex;
     justify-content: space-evenly;
-    border: black 1px solid;
-    border-radius: 12px;
+   
     align-items: center;
     flex-direction: column;
-    box-shadow: 1px 1px 4px black!important;
+    
     padding: 2rem!important;
-    width: 50%;
+    text-align: center;
+    
     
 }
 .logInValidationHeader{
     font-size: 14px;
+}
+.passwordInput{
+    width: 100%!important;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    
 }
 .passwordInput::placeholder{
             text-align: center!important;
@@ -34,17 +50,49 @@
 }
 
  
- /*antd default error message desgin*/
- /* .ant-form-item-explain, .ant-form-item-extra {
-    margin-left: 188%;
-    clear: both;
-    min-height: 24px;
-    padding-top: 20px;
-    padding-bottom: 31px;
-    color: rgba(0, 0, 0, 0.45);
-    font-size: 14px;
-    line-height: 1.5715;
-    -webkit-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-    width: 100%;
-} */
+.popUpImage{
+    margin-top: -4rem;
+    font-size: 22px;
+}
+.popUpText{
+    font-size: 22px;
+line-height: 139.3%;
+}
+.popUpBtn{
+    display: inline-block;
+    color: white!important;
+    background-color: #FE6C35 !important;
+    border: 1px solid gray !important;
+    padding: 0 5rem!important;
+    margin-top: 1rem;
+    width: 13%;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    /* margin: 3rem 3rem; */
+   
+}
+.sendPhoneNumberStudentBtn{
+  
+    background: #FE6C35 !important;
+    border-radius: 6px!important;
+    /* padding: 0.5rem 2rem!important; */
+    font-size: 14px!important;
+    display: inline-block!important;
+    text-align: center!important;
+    margin: 0.4rem!important;
+    line-height: 25.8%!important;
+    }
+    .sendPhoneNumberParentBtn{
+        
+      background:   #FE6C35 !important;
+      border-radius: 6px !important;
+      /* padding: 0.5rem 2rem !important; */
+      font-size: 14px !important;
+      display: inline-block !important;
+      text-align: center!important;
+      display: inline-block!important;
+      line-height: 25.8%!important;
+      margin: 0.4rem!important;
+      }
+    

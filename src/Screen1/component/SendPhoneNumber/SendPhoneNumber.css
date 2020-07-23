@@ -1,31 +1,4 @@
-@import "~antd/dist/antd.css";
-
-.PhoneContainer {
-  display: flex;
-  text-align: center;
-  justify-content: space-evenly;
-  border: black 1px solid;
-  border-radius: 12px;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 1px 1px 4px black !important;
-  padding: 2rem !important;
-  width: 50%;
-}
-/* .sendPhoneNumber {
-  color: white !important;
-  font-size: 24px;
-  padding: 2rem 1.75rem;
-  text-align: center;
-  border-radius: 10px;
-  top: 15px !important;
-  background-color: black !important;
-  border: 1px solid gray !important;
-  margin: 0.3rem;
-  border: transparent;
-  text-align: center !important;
-  line-height: 25.8%;
-} */
+/* 
 .LogInDescriptionText {
   font-size: 12px;
   color: #9d9999;
@@ -35,18 +8,76 @@
 .passwordInput,
 .btnSelect {
   border-color: black;
+  width: 30%;
+  margin-top: 2rem;
 }
 .PhoneInput:placeholder {
   text-align: center;
 }
 
 .sendPhoneNumber {
-  padding: 9px 26px;
+  color: white!important;
+  background-color: #FE6C35 !important;
+  border: 1px solid gray !important;
+  padding: 0.3rem 2rem!important;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+.SendPhoneNumberHeader{
+  background-color:  #ECECEC;
+  font-size: 18px;
+  line-height: 26px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  height: 266px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
 
-  position: absolute;
-  width: 144px;
-  height: 39px;
-  top: 0px;
+}
+.Button{
+  display: inline-block;
+}
+.sendPhoneNumberStudentBtn{
+  
+background: #585757;
+border-radius: 6px;
+padding: 1.2rem 4rem;
+font-size: 14px;
+display: inline-block;
+text-align: center;
+margin: 0.4rem;
+line-height: 25.8%;
+}
+.sendPhoneNumberParentBtn{
+    
+  background:  #C9C9C9;
+  border-radius: 6px;
+  padding: 1.2rem 4rem;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  display: inline-block;
+  line-height: 25.8%;
+  margin: 0.4rem;
+  }
 
-  /* background: #585757; */
+  .SendPhoneNumberBottomText{
+    margin-top: 2rem;
+  }
+  */
+.PhoneContainer{
+  width: 50%;
+}
+.sendPhoneNumber{
+  color: white!important;
+  background-color: #FE6C35 !important;
+  border: 1px solid gray !important;
+  padding: 0.3rem 2rem!important;
+  margin-top: 1rem;
+  border-radius: 6px;
 }
