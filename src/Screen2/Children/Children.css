@@ -15,16 +15,16 @@
   width: 64px;
   height: 64px;
   line-height: 64px;
-  font-family: Heebo;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 35px;
   color: #f56a00;
   background-color: #fde3cf;
 }
 
 .name {
-  font-family: Heebo;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   display: flex;
