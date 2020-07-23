@@ -66,12 +66,14 @@ function GoodWord(props) {
   };
 
   return (
-    <Form className="report" name="control-hooks" onFinish={onFinish}>
+    <Form className="reports" name="control-hooks" onFinish={onFinish}>
       <div className="title">טופס פניה</div>
       <Row className="row">
         <Col className="col">
           <Form.Item>
             <DatePicker
+              size="90px"
+              placeholder="תאריך DD/MM"
               className="date"
               onChange={onChangedate}
               rules={[{ require: true, message: "בחר תאריך" }]}
@@ -79,12 +81,12 @@ function GoodWord(props) {
             {!date && <div style={{ color: "red" }}>בחר תאריך</div>}
           </Form.Item>
           <Form.Item
-            className="textarea1"
+            className="input"
             name="Origin"
             label=""
             rules={[{ required: true, message: "אנא הכנס מוצא" }]}
           >
-            <TextArea rows={2} placeholder="מוצא" />
+            <Input placeholder="מוצא" />
           </Form.Item>
         </Col>
         <Col className="col">
@@ -99,12 +101,12 @@ function GoodWord(props) {
             {!time && <div style={{ color: "red" }}>בחר שעה</div>}
           </Form.Item>
           <Form.Item
-            className="textarea1"
+            className="input"
             name="Destination"
             label=""
             rules={[{ required: true, message: "נא להכניס יעד" }]}
           >
-            <TextArea rows={2} placeholder="יעד" />
+            <Input placeholder="יעד" />
           </Form.Item>
         </Col>
       </Row>
@@ -112,7 +114,6 @@ function GoodWord(props) {
         <Select
           className="select"
           defaultValue="בחר נושא פניה"
-          // style={{ width: 250 }}
           onChange={handleChange}
           placeholder="בחר נושא פניה"
           rules={[{ required: true, message: "נא להכניס נושא פניה" }]}
@@ -131,19 +132,26 @@ function GoodWord(props) {
         label=""
         rules={[{ required: true, message: "נא להכניס את הודעתך" }]}
       >
-        <TextArea rows={8} placeholder="תוכן הפניה" />
+        <TextArea rows={10} placeholder="תוכן הפניה" />
       </Form.Item>
-      <Upload {...files}>
-        <Button>
-          <UploadOutlined /> צרף קובץ
-        </Button>
-      </Upload>
-      ,
-      <Form.Item>
-        <Button className="button" type="primary" htmlType="submit">
-          שלח
-        </Button>
-      </Form.Item>
+      <Row className="rowbtn">
+        <Col className="colbtn">
+          <Upload {...files}>
+            <Button className="files">
+              <UploadOutlined placeholder="" />
+              צרף קובץ
+            </Button>
+          </Upload>
+          ,
+        </Col>
+        <Col className="colbtn">
+          <Form.Item>
+            <Button className="button" type="primary" htmlType="submit">
+              שלח
+            </Button>
+          </Form.Item>
+        </Col>
+      </Row>
     </Form>
   );
 }

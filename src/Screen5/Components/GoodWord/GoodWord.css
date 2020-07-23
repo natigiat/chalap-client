@@ -1,64 +1,103 @@
 @import "~antd/dist/antd.css";
 
-.report .all {
+.reports .all {
   width: 100%;
 }
-.report .title {
+.reports .title {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 110px;
 }
-.textarea1 {
+.reports .row {
   width: 80%;
+  margin: 50px auto 0px;
 }
-/* .select.ant-select-selector {
-  height: 80px;
-} */
-.select {
-  width: 70% !important;
-  height: 80px;
-  border: rgb(206, 206, 206);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 6px;
-  text-align: center;
-  margin: 0 auto 30px;
-}
-.row {
-  width: 80%;
-  margin: 30px auto;
-}
-.col {
+.reports .col {
   width: 50%;
   flex: auto;
 }
-/* .textarea2.ant-row.ant-form-item {
-  width: 70%;
-  margin: 0 auto 30px;
-} */
-.hour {
-  width: 80%;
-  height: 60px !important;
-}
-.date {
-  height: 60px !important;
+.reports .date {
+  border: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  height: 80px !important;
   width: 80% !important;
+  font-size: 25px !important;
 }
-.textarea2 {
+.reports .date .ant-picker-input > input {
+  font-size: 20px;
+}
+.reports .hour .ant-picker-input > input {
+  font-size: 20px;
+}
+.reports .hour {
+  border: 2px;
+  border-style: solid;
+  border-radius: 10px;
   width: 80%;
-  margin: 0 auto 30px;
+  height: 80px !important;
+  font-size: 25px !important;
+}
+.reports .input {
+  height: 80px;
+  width: 80%;
+  border: 3px;
+  border-style: solid;
+  border-radius: 10px;
+}
+.reports .input .ant-form-item-control-input-content > input {
+  height: 70px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.reports .ant-row.ant-form-item.input {
+  margin: 40px auto;
+}
+.reports .select {
+  border: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 72%;
+  height: 80px !important;
+  font-size: 20px !important;
+}
+.reports .select .ant-select-selector {
+  width: 98%;
+  height: 70px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 2px auto;
+}
+.reports #control-hooks_messege {
+  border: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 72%;
+  font-size: 20px !important;
+  margin: 25px auto 30px;
+  font-size: 20px;
+}
+.reports .files {
+  width: 150px;
+  height: 70px;
 }
 
-.btn label.ant-radio-button-wrapper {
-  margin-right: 20px;
-  background-color: rgb(192, 192, 192);
+.reports .button.ant-btn-primary {
+  width: 80%;
+  height: 70px;
+  border-radius: 15px;
+  font-size: 25px;
+  background-color: rgb(88, 88, 88);
 }
-.anonimus.ant-checkbox-input {
-  margin: 0 30px;
+.reports .rowbtn {
+  width: 80%;
+  margin: 50px auto 70px;
 }
-.button.ant-btn-primary {
-  width: 60%;
-  margin: 30px auto;
+.reports .colbtn {
+  width: 50%;
+  flex: auto;
 }
