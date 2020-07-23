@@ -5,8 +5,10 @@ import axios from "axios";
 import Insidekids from "../insidkids/insidkids";
 import Popup from "reactjs-popup";
 import { Form, Input, Button } from "antd";
+import { ArrowRightOutlined, UserAddOutlined } from "@ant-design/icons";
 import "./Parent.css";
 import InputAddUser from "../InputAddUser/InputAddUser";
+
 function Parent() {
   const [children, setChildren] = useState([]);
   useEffect(() => {
@@ -84,7 +86,11 @@ function Parent() {
   return (
     <div dir="rtl">
       <div className="parent" dir="rtl">
-        <h2>הילדים שלי </h2>
+        <div className="childrenManagement">
+          <ArrowRightOutlined className="vectorChildren" onClick={() => {}} />
+          {/* <img src="vector.png" className="vector"/> */}
+          <h2 className="myChildren">הילדים שלי </h2>
+        </div>
         {/* {alrt.alrt ? (
         <Alerts message={alrt.message} description={alrt.description} />
       ) : (
@@ -122,7 +128,13 @@ function Parent() {
           />
         ))}
 
-        <Popup trigger={<span>להוספת ילד לרשימה</span>} modal>
+        <Popup
+          trigger={<button className="addChildButton">
+              <UserAddOutlined className="addUserIcon"/>
+              <span className="addChildPopup">להוספת ילד</span>
+              </button>}
+          modal
+        >
           {(close) => (
             <div className="modal">
               <div className="content">

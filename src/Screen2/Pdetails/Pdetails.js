@@ -1,15 +1,32 @@
 import React, { useState } from "react";
-import { Button } from "antd";
+
+import "./Pdetails.css";
+import { Radio } from "antd";
+import {
+  EnvironmentOutlined,
+  HomeOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons";
 
 function Pdetails(props) {
   return (
-    <div>
-      <div className="kidsdetails">
-        <h2>{props.address}</h2>
-        <div></div>
-        <div className="kidsdetails"> {props.school}</div>
-        <div>{props.phone}</div>{" "}
-        <span onClick={console.log("callmy")}>הרשמה</span>
+    <div className="kidsdetails">
+      <div className="kid">
+        <HomeOutlined /> {props.address}
+      </div>
+      <div className="kid">
+        {" "}
+        <EnvironmentOutlined /> {props.school}
+      </div>
+      <div>
+        <div className="kid">
+          <PhoneOutlined /> {props.phone}{" "}
+        </div>{" "}
+        <div>
+          <Radio.Button className="kid4" onClick={console.log("callmy")}>
+            תן הרשאה
+          </Radio.Button>
+        </div>
       </div>
     </div>
   );
