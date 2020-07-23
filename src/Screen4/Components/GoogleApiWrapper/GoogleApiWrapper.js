@@ -104,5 +104,5 @@ const MapContainer = (props) => {
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyBRcSVADr0_EbDMWNQP94bV-M2AJQSXUmU",
-  language: "Japan",
+  language: "He",
 })(MapContainer);
