@@ -151,6 +151,9 @@ button.routeTime {
 .routeTime:focus {
   outline-color: #4ad3a5;
 }
+.routeTime:active {
+  background-color: #4ad3a5;
+}
 
 StudentRoute .active-slider {
   height: 500px;

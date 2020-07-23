@@ -29,39 +29,55 @@ const Screen4 = (props) => {
     setStudentSelected(studentId);
   };
 
-  const students = [
+  const studentsArray = [
     {
       id: 1,
-      name: "shimon",
+      name: "שירה",
+      startPoint: "בית אל",
+      endPoint: "חן עפרה",
+      routeTimes: ["08:30", "09:00", "10:00"],
     },
     {
       id: 2,
-      name: "yaakov",
+      name: "יעקב",
+      startPoint: "אש קודש",
+      endPoint: "שילה",
+      routeTimes: ["08:30", "09:30", "10:30"],
     },
     {
       id: 3,
-      name: "yosef",
-    },
-  ];
-  const studentRouteInfo = [
-    {
-      startPoint: "בני אדם",
-      endPoint: "מעלה מכמש",
-    },
-    {
+      name: "יוסף",
       startPoint: "מעלה מכמש",
       endPoint: "כוכב יעקב",
+      routeTimes: ["08:10", "08:40"],
     },
     {
-      startPoint: "אש קודש",
-      endPoint: "שילה",
+      id: 4,
+      name: "טל שלום",
+      startPoint: "עטרת",
+      endPoint: "נווה צוף",
+      routeTimes: ["08:00", "08:30"],
     },
   ];
-  const studentRouteTimes = [
-    ["08:30", "09:00", "10:00"],
-    ["08:30", "09:30", "10:30"],
-    ["08:10", "08:40"],
-  ];
+  // const studentRouteInfo = [
+  //   {
+  //     startPoint: "בני אדם",
+  //     endPoint: "מעלה מכמש",
+  //   },
+  //   {
+  //     startPoint: "מעלה מכמש",
+  //     endPoint: "כוכב יעקב",
+  //   },
+  //   {
+  //     startPoint: "אש קודש",
+  //     endPoint: "שילה",
+  //   },
+  // ];
+  // const studentRouteTimes = [
+  //   ["08:30", "09:00", "10:00"],
+  //   ["08:30", "09:30", "10:30"],
+  //   ["08:10", "08:40"],
+  // ];
   const coordinates = [
     { lat: 31.864347, lng: 35.260679, desc: "home" },
     { lat: 31.932534, lng: 35.022965, desc: "school" },
@@ -93,11 +109,11 @@ const Screen4 = (props) => {
       ) : (
         <div className="swiperWrapper">
           <Carousel
-            students={students}
-            studentRouteInfo={studentRouteInfo}
-            studentRouteTimes={studentRouteTimes}
-            selectedHour={handleHourSelected}
-            studentSelected={handleStudentSelected}
+            studentsArray={studentsArray}
+            // studentRouteInfo={studentRouteInfo}
+            // studentRouteTimes={studentRouteTimes}
+            // selectedHour={handleHourSelected}
+            // studentSelected={handleStudentSelected}
           />
         </div>
       )}
