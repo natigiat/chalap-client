@@ -40,9 +40,9 @@
 
 .kidsdetails9 .givePermission9 {
   float: left;
-  margin-top: -100px;
+  margin-top: 32px;
 }
 
-.permissionRow9 {
+.permissionRow {
   border-top: 1px solid #cfcfcf;
 }

@@ -1,66 +1,60 @@
-.popupInputAddUeser{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  height:370px;
+.popupInputAddUeser {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 370px;
 }
 img.addUserImage {
-    /* display: flex; */
-position: absolute;
-bottom:300px;
+  /* display: flex; */
+  position: absolute;
+  bottom: 300px;
 }
 
-.anotherChild{
-    width:100%;
+.anotherChild {
+  width: 100%;
 }
 
-.anotherChildText{
- width:100%;   
+.anotherChildText {
+  width: 100%;
 }
 
-.popupInputAddUeser .popup-content {  
-    background: #F4F4F4; 
-    text-align: center;
+.popupInputAddUeser .popup-content {
+  background: #f4f4f4;
+  text-align: center;
 }
-.popupInputAddUeser .addUserImage {
+element.style {
+  width: 75%;
 }
-.popupInputAddUeser .anotherChild{
-   
-}
- element.style {
-   
-    width:  75%  ; 
-}
-/* .popupInputAddUeser input#basic_username {
-    text-align: center;
-    width: 219px;
-    height: 41px;
+.popupInputAddUeser .anotherChildText {
+  height: 82px;
+  width: 219px;
+  text-align: center;
 }
 
 .popupInputAddUeser button.ant-btn.ant-btn-primary {
-    height: 41px;
-    width: 219px;
-} */
-.popupInputAddUeser .anotherChildText{
-    height: 82px;
-    /* width: 219px; */
-    text-align: center;
+  height: 41px;
+  width: 219px;
 }
-.ant-btn.ant-btn-primary{
-    width: 100%;
+*/ .popupInputAddUeser .anotherChildText {
+  height: 82px;
+  /* width: 219px; */
+  text-align: center;
 }
-.giveCallBackBtn{
-    width:100%;
-    margin-left: 12.5%;
+.ant-btn.ant-btn-primary {
+  width: 100%;
 }
-.giveCallBackBtn Button{
-    background-color:#FE6C35;
+.giveCallBackBtn {
+  width: 100%;
+  margin-left: 12.5%;
+}
+.giveCallBackBtn Button {
+  background-color: #fe6c35;
 }
 .ant-row.ant-form-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
