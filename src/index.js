@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Parent from "./Screen2/Parent/Parent";
+
 import * as serviceWorker from "./serviceWorker";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Parent />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

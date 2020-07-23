@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Parent from "./Screen2/Parent/Parent";
+import Screen2 from "./Screen2//Screen2new/screen2new";
 
 function App() {
   return (
     <div>
-      <Parent />
+      <Screen2 />
     </div>
   );
 }
