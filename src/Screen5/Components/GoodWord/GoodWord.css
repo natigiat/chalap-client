@@ -3,6 +3,7 @@
 .reports .all {
   width: 100%;
 }
+
 .reports .title {
   text-align: center;
   font-size: 30px;
@@ -10,14 +11,17 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 110px;
 }
+
 .reports .row {
   width: 80%;
   margin: 50px auto 0px;
 }
+
 .reports .col {
   width: 50%;
   flex: auto;
 }
+
 .reports .date {
   border: 2px;
   border-style: solid;
@@ -26,12 +30,15 @@
   width: 80% !important;
   font-size: 25px !important;
 }
-.reports .date .ant-picker-input > input {
+
+.reports .date .ant-picker-input>input {
   font-size: 20px;
 }
-.reports .hour .ant-picker-input > input {
+
+.reports .hour .ant-picker-input>input {
   font-size: 20px;
 }
+
 .reports .hour {
   border: 2px;
   border-style: solid;
@@ -40,6 +47,7 @@
   height: 80px !important;
   font-size: 25px !important;
 }
+
 .reports .input {
   height: 80px;
   width: 80%;
@@ -47,15 +55,18 @@
   border-style: solid;
   border-radius: 10px;
 }
-.reports .input .ant-form-item-control-input-content > input {
+
+.reports .input .ant-form-item-control-input-content>input {
   height: 70px;
   border: none;
   font-size: 20px;
   border-radius: 10px;
 }
+
 .reports .ant-row.ant-form-item.input {
   margin: 40px auto;
 }
+
 .reports .select {
   border: 2px;
   border-style: solid;
@@ -64,6 +75,7 @@
   height: 80px !important;
   font-size: 20px !important;
 }
+
 .reports .select .ant-select-selector {
   width: 98%;
   height: 70px;
@@ -72,6 +84,7 @@
   border-radius: 10px;
   margin: 2px auto;
 }
+
 .reports #control-hooks_messege {
   border: 2px;
   border-style: solid;
@@ -81,6 +94,7 @@
   margin: 25px auto 30px;
   font-size: 20px;
 }
+
 .reports .files {
   width: 150px;
   height: 70px;
@@ -93,11 +107,21 @@
   font-size: 25px;
   background-color: rgb(88, 88, 88);
 }
+
 .reports .rowbtn {
   width: 80%;
   margin: 50px auto 70px;
 }
+
 .reports .colbtn {
   width: 50%;
   flex: auto;
+}
+
+.reports.selectReport {
+  margin: 20px
+}
+
+.ant-select-selection-search-input {
+  margin: 40px;
 }

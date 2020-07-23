@@ -1,0 +1,80 @@
+@import "~antd/dist/antd.css";
+
+.reports .all {
+    width: 80%;
+    margin: 50px;
+
+}
+
+.reports {
+    padding: 50px;
+}
+
+.reports .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+
+}
+
+.reports .row {
+    width: 80%;
+    margin: 25px;
+    margin-right: 60px;
+}
+
+.reports .col {
+    width: 50%;
+    flex: auto;
+}
+
+.reports #control-hooks_messege {
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-size: 20px !important;
+    font-size: 20px;
+    width: 80%;
+}
+
+.reports .files {
+    width: 150px;
+    height: 70px;
+}
+
+.reports .button.ant-btn-primary {
+    width: 80%;
+    height: 70px;
+    font-size: 25px;
+    background-color: rgb(250, 107, 11);
+    color: aliceblue;
+}
+
+
+/* .reports input {
+    border: none !important;
+
+} */
+
+.reports #control-hooks_Origin {
+    height: 50px;
+    width: 120px;
+    border-color: 1px, solid, rgb(180, 176, 176) !important;
+    margin: 10px;
+}
+
+.reports #control-hooks_Destination {
+    height: 50px;
+    width: 120px;
+    border-color: 1px, solid, rgb(180, 176, 176) !important;
+    margin: 10px;
+
+}
+
+.reports .row_input {
+    display: flex;
+    justify-content: center;
+}

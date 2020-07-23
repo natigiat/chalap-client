@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import GoodWord from "./Components/GoodWord/GoodWord";
+import GoodWord2 from "./Components/GoodWord/Good_word2/Good_word2";
 import "./Screen5.css";
 
 function Screen5() {
@@ -57,7 +57,7 @@ function Screen5() {
 
   return (
     <div className="form" dir="rtl">
-      <GoodWord onSubmit={onSubmit} />
+      <GoodWord2 onSubmit={onSubmit} />
     </div>
   );
 }
