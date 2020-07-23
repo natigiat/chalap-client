@@ -34,7 +34,8 @@ const InputAddUser = (props) => {
 
       <img src="/images/screen2_newChildImage.png" alt="" className="addUserImage" />
       <div className="anotherChild">
-        <div className="anotherChildText">יש לי ילד נוסף<br />
+        <div className="anotherChildText">
+          יש לי ילד נוסף<br />
       שרוצה לנסוע אתכם</div>
         <Form
           {...layout}
@@ -45,23 +46,26 @@ const InputAddUser = (props) => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item
-            name="username"
-            rules={[
-              {
-                required: true,
-                message: "נא להכניס שם",
-              },
-            ]}
-          >
-            <Input placeholder="שם התלמיד" />
-          </Form.Item>
-
-          <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
-              חזרו אלי לנייד
-          </Button>
-          </Form.Item>
+          <div className="inputChildName">
+            <Form.Item
+              name="username"
+              rules={[
+                {
+                  required: true,
+                  message: "נא להכניס שם",
+                },
+              ]}
+            >
+              <Input placeholder="שם התלמיד" />
+            </Form.Item>
+          </div>
+          <div className="giveCallBackBtn">
+            <Form.Item {...tailLayout}>
+              <Button type="primary" htmlType="submit">
+                חזרו אלי לנייד
+            </Button>
+            </Form.Item>
+          </div>
         </Form>
       </div>
     </div>

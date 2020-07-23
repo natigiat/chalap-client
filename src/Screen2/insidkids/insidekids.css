@@ -14,7 +14,7 @@
   width: 100px;
   height: 100px;
 }
-.tab {
+.insidekids .tab {
   width: 80%;
   margin: 0 auto;
 }
@@ -30,6 +30,7 @@
 }
 .ant-tabs-tab {
   width: 50%;
+  color: red;
 }
 #rc-tabs-0-tab-1 {
   font-size: 20px;
@@ -37,11 +38,12 @@
 #rc-tabs-0-tab-2 {
   font-size: 20px;
 }
-.ant-tabs-tab.ant-tabs-tab-active {
-  margin: 0px 30px;
-  text-align: end;
+.ant-tabs-tab-active {
+  color: rgb(92, 225, 65);
+  /* margin: 0px 30px;
+  text-align: end; */
 }
-.ant-tabs-tab.ant-tabs-tab-active {
+/* .ant-tabs-tab.ant-tabs-tab-active {
   margin: 0 65px;
-}
+} */
 /* ant-tabs-ink-bar-animated */

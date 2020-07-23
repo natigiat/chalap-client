@@ -14,7 +14,7 @@ function Children(props) {
               <img className="image" src="/images/image37.png"></img>
             </Avatar> */}
           </Col>
-          <Col className="name">{props.firstName}</Col>
+          <Col className="name">{props?.firstName}</Col>
           <Col className="arrow">
             <LeftOutlined />
           </Col>
