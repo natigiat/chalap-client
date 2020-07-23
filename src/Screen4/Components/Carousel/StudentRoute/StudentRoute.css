@@ -8,8 +8,13 @@
   padding: 15px;
   background-color: white;
   opacity: 0.9;
-  border-radius: 7px;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 1.6px 8px #bebebe;
+  border-radius: 9.9px;
+  height: 90.44px;
+}
+
+.swiper-slide-active .StudentRoute {
+  height: 132px;
 }
 
 .studentHeader {
@@ -31,7 +36,7 @@
 }
 
 .studentName {
-  font-size: 19px;
+  font-size: 19.04px;
   font-weight: bold;
 }
 .notice {
@@ -47,56 +52,47 @@
   text-align: right;
   margin-bottom: 5px;
   font-size: 11.1375px;
+  font-weight: 500;
+  font-family: Heebo;
+  color: #000000;
 }
 .startPoint {
   display: inline;
   margin: 4px;
-
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-
-  color: #000000;
+  padding-left: 15px;
 }
-
 .LeftIcon {
   margin: 0 5px;
+  border: 0.992578px solid #4ad3a5;
 }
 
-.endPoint {
-  display: inline;
-  margin: 4px;
-
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-
-  color: #000000;
-}
 .arrow {
   display: inline;
   left: 126px;
   top: 15px;
 }
+.endPoint {
+  display: inline;
+  margin: 4px;
+}
+
 .hours {
   /* display: inline-block; */
 }
 
 .hour {
   display: inline;
-  margin: 5px 3px;
-  padding: 2px 10px;
-  background: rgb(209, 209, 209);
+  margin: 0 2px;
+  padding: 2px 12px;
   border-radius: 2px;
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   text-align: center;
-  color: #000000;
+  color: #929292;
   border-style: none;
+  text-align: center;
 }
 
 .sellectedHour {
@@ -108,9 +104,13 @@
   outline-width: 10px;
 } */
 .hour:focus {
-  outline-color: lightskyblue;
+  outline-color: #4ad3a5;
 }
 .hour:active {
   outline: none;
-  background: rgb(153, 153, 153);
+  background: #4ad3a5;
+}
+
+StudentRoute .active-slider {
+  height: 500px;
 }

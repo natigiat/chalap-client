@@ -20,6 +20,8 @@ import "swiper/components/scrollbar/scrollbar.scss";
 SwiperCore.use([Navigation, Pagination, Scrollbar, Virtual, A11y]);
 
 const Carousel = (props) => {
+  const [addClassToActiveSlider, setAddClassToActiveSlider] = useState(null);
+  const [sliderHeight, setSliderHeight] = useState(null);
   const students = props.students;
   const studentRouteInfo = props.studentRouteInfo;
   const studentRouteTimes = props.studentRouteTimes;
@@ -56,18 +58,20 @@ const Carousel = (props) => {
   return (
     <Swiper
       className="studentsSwiper"
-      spaceBetween={20}
+      spaceBetween={24}
       slidesPerView={1.5}
-      onSlideChange={(e) => console.log("slide change: " + e)}
-      onSwiper={(swiper) => console.log("swiper: " + swiper)}
+      onSlideChange={(e) => {}}
+      onSwiper={(swiper) => console.log(swiper)}
       centeredSlides={true}
       grabCursor={true}
-      updateOnWindowResize={true}
       loop={true}
     >
-      {studentsArray.map((student) => (
-        <SwiperSlide>
+      {studentsArray.map((student, index) => (
+        <SwiperSlide key={index}>
           <StudentRoute
+            // activeSlider={
+            //   index === addClassToActiveSlider ? "activeSlider" : ""
+            // }
             key={student.id}
             studentName={student.name}
             startPoint={student.startPoint}

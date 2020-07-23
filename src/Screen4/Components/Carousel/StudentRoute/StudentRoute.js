@@ -14,7 +14,7 @@ const StudentRoute = (props) => {
   const routeTimesArray = props.routeTimes;
   const [addClassName, setAddClassName] = useState("");
   return (
-    <div className="StudentRoute">
+    <div className={"StudentRoute"}>
       <div className="studentHeader">
         <div className="studentImage">
           <img src="/images/profileImage.png"></img>
