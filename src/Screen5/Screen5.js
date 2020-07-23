@@ -20,7 +20,7 @@ function Screen5() {
   }, []);
   //"thisType" הקוד לוקח את החלק האחרון של הכתובת ומכניס למשתנה
   let parts = thisURL.split("/");
-  // let thisType = "vioelence";
+
   let thisType = parts[parts.length - 1];
 
   const [messege, setMessege] = useState();

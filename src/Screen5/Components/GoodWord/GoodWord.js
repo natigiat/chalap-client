@@ -41,7 +41,7 @@ function GoodWord(props) {
   function handleChange(value) {
     setType(value);
   }
-  // const [finish, setFinish] = useState(false);
+  const [finish, setFinish] = useState(1);
 
   const onFinish = (values) => {
     const dataReport = {
@@ -53,7 +53,6 @@ function GoodWord(props) {
       time: time,
     };
     props.onSubmit(dataReport);
-    // setFinish(true);
   };
 
   const files = {
