@@ -4,8 +4,6 @@ import "./RefreshButton.css";
 import { Button } from "antd";
 
 const RefreshButton = (props) => {
-  //const [products, setProducts] = useState([]);
-
   return (
     <Button className="refresh" onClick={props.updateBusLocations}>
       <img className="refreshImg" src="/images/refresh.svg" alt="refresh" />
