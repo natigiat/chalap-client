@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { Button, Row, Col, Avatar } from "antd";
-import { LeftOutlined, UserOutlined } from "@ant-design/icons";
+import { Row, Col, Avatar } from "antd";
+import { LeftOutlined } from "@ant-design/icons";
 import "./Children.css";
 
 function Children(props) {
