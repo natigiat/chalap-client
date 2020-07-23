@@ -27,12 +27,10 @@ const StudentRoute = (props) => {
       </div>
 
       <div className="path">
-        <HomeOutlined className="icon" />
+        <img src="/images/homeIcon.svg" />
         <span className="startPoint">{props.startPoint}</span>
-        <span className="arrow">
-          <LeftOutlined className="LefIcon" />
-        </span>
-        <EnvironmentOutlined className="icon" />
+        <img className="arrow" src="/images/chevron-left.svg" />
+        <img src="/images/map-pin.svg" />
         <span className="endPoint">{props.endPoint}</span>
       </div>
 
