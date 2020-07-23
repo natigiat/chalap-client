@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import "./GoogleApiWrapper.css";
 import mapStyle from "./StyleMap";
 
 const MapContainer = (props) => {
-  console.log(props);
-  console.log(props.coordinates[0].lat);
-  console.log(props.coordinates[2].lat);
-
   const [marker, setMarker] = useState();
 
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const element = document.querySelector('[title="BusPosition"]');
+      if (element) element.click();
+    }, 1000);
+  }, []);
 
   return (
     <Map
@@ -66,7 +69,8 @@ const MapContainer = (props) => {
       />
 
       <Marker
-        name={"Your position"}
+        title={"BusPosition"}
+        name={"Bus position"}
         position={{
           lat: props.coordinates[2].lat,
           lng: props.coordinates[2].lng,
