@@ -12,7 +12,7 @@ const MapContainer = (props) => {
     setTimeout(() => {
       const element = document.querySelector('[title="BusPosition"]');
       if (element) element.click();
-    }, 500);
+    }, 1000);
   }, []);
 
   return (
