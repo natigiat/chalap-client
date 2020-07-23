@@ -22,8 +22,8 @@ const StudentRoute = (props) => {
 
         <div className="studentDetails">
           <div className="studentName">{props.studentName}</div>
-          <div className="notice">
-            <img className="noticeDot" src="/images/Ellipse.svg" />
+          <div className="routesNotice">
+            <img className="routesNoticeDot" src="/images/Ellipse.svg" />
             אין עיכובים צפויים
           </div>
         </div>
@@ -31,16 +31,16 @@ const StudentRoute = (props) => {
 
       <div className="path">
         <img src="/images/homeIcon.svg" />
-        <span className="startPoint">{props.startPoint}</span>
-        <img className="arrow" src="/images/chevron-left.svg" />
+        <span className="routesStartPoint">{props.startPoint}</span>
+        <img className="pathArrow" src="/images/chevron-left.svg" />
         <img src="/images/map-pin.svg" />
-        <span className="endPoint">{props.endPoint}</span>
+        <span className="routesEndPoint">{props.endPoint}</span>
       </div>
 
-      <div className="hours">
+      <div className="routeTimes">
         {props.routeTimes.map((routeTime) => (
           <button
-            className="hour"
+            className="routeTime"
             // onClick={() => setAddClassName("sellectedHour")}
           >
             {routeTime}
