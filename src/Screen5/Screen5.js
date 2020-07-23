@@ -4,24 +4,24 @@ import GoodWord from "./Components/GoodWord/GoodWord";
 import "./Screen5.css";
 
 function Screen5() {
-  const [StudentName, setStudentName] = useState([]);
-  const [thisURL, setthisURL] = useState(
-    "https://ant.design/components/good_word"
-  );
-  useEffect(() => {
-    axios
-      .get(
-        "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
-      )
-      .then(function (response) {
-        setStudentName(response.data);
-        // setthisURL(window.location.href);
-      });
-  }, []);
+  // const [StudentName, setStudentName] = useState([]);
+  // const [thisURL, setthisURL] = useState(
+  //   "https://ant.design/components/good_word"
+  // );
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       "http://ec2-18-220-138-139.us-east-2.compute.amazonaws.com/students/family/2"
+  //     )
+  //     .then(function (response) {
+  //       setStudentName(response.data);
+  //       // setthisURL(window.location.href);
+  //     });
+  // }, []);
   //"thisType" הקוד לוקח את החלק האחרון של הכתובת ומכניס למשתנה
-  let parts = thisURL.split("/");
+  // let parts = thisURL.split("/");
 
-  let thisType = parts[parts.length - 1];
+  // let thisType = parts[parts.length - 1];
 
   const [messege, setMessege] = useState();
   const [date, setDate] = useState();
@@ -57,7 +57,7 @@ function Screen5() {
 
   return (
     <div className="form" dir="rtl">
-      <GoodWord children={[StudentName]} type="good_word" onSubmit={onSubmit} />
+      <GoodWord onSubmit={onSubmit} />
     </div>
   );
 }

@@ -37,11 +37,21 @@ function GoodWord(props) {
   }
 
   const [type, setType] = useState();
-
   function handleChange(value) {
     setType(value);
   }
-  const [finish, setFinish] = useState(1);
+  const [openTime, setOpenTime] = useState(false);
+  const OpenTime = () => {
+    setOpenTime(true);
+  };
+  const [openDate, setOpenDate] = useState(false);
+  const OpenDate = () => {
+    setOpenDate(true);
+  };
+  function disabledDate(current) {
+    // Can not select days before today and today
+    return current && current >= moment().endOf("day");
+  }
 
   const onFinish = (values) => {
     const dataReport = {
@@ -75,9 +85,12 @@ function GoodWord(props) {
               placeholder="תאריך DD/MM"
               className="date"
               onChange={onChangedate}
-              rules={[{ require: true, message: "בחר תאריך" }]}
+              onOpenChange={OpenDate}
+              disabledDate={disabledDate}
             />
-            {!date && <div style={{ color: "red" }}>בחר תאריך</div>}
+            {!date && openDate === true && (
+              <div style={{ color: "red" }}>בחר תאריך</div>
+            )}
           </Form.Item>
           <Form.Item
             className="input"
@@ -95,9 +108,11 @@ function GoodWord(props) {
               defaultValue={moment("00:00", format)}
               format={format}
               onChange={onTimeChange}
-              rules={[{ required: true, message: "בחר שעה" }]}
+              onOpenChange={OpenTime}
             />
-            {!time && <div style={{ color: "red" }}>בחר שעה</div>}
+            {!time && openTime === true && (
+              <div style={{ color: "red" }}>בחר שעה</div>
+            )}
           </Form.Item>
           <Form.Item
             className="input"
@@ -112,10 +127,8 @@ function GoodWord(props) {
       <Form.Item>
         <Select
           className="select"
-          defaultValue="בחר נושא פניה"
           onChange={handleChange}
           placeholder="בחר נושא פניה"
-          rules={[{ required: true, message: "נא להכניס נושא פניה" }]}
         >
           {typeRequest.map((value, index) => (
             <Option key={index} value={value.type}>
