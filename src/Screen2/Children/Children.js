@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { Button, Row, Col, Avatar } from "antd";
-import { LeftOutlined, UserOutlined } from "@ant-design/icons";
+import { Row, Col, Avatar } from "antd";
+import { LeftOutlined } from "@ant-design/icons";
 import "./Children.css";
 
 function Children(props) {
@@ -10,9 +10,9 @@ function Children(props) {
       <div onClick={props.catchChild}>
         <Row className="child" dir="rtl" align="middle" onClick={() => {}}>
           <Col flex="80px">
-            <Avatar className="altImageAvatar">{props.firstName[0]}</Avatar>
+            <Avatar className="altImageAvatar">{props?.firstName[0]}</Avatar>
           </Col>
-          <Col className="name">{props.firstName}</Col>
+          <Col className="name">{props?.firstName}</Col>
           <Col className="arrow">
             <LeftOutlined />
           </Col>
