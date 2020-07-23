@@ -1,0 +1,62 @@
+@import "~antd/dist/antd.css";
+
+.PhoneContainer {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  border: black 1px solid;
+  border-radius: 12px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 4px black !important;
+  padding: 2rem !important;
+  width: 50%;
+}
+.sendPhoneNumber {
+  display: inline-block !important;
+  color: gray !important;
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  padding: 0 2rem !important;
+  right: 48px;
+  position: relative;
+}
+.LogInDescriptionText {
+  font-size: 12px;
+  color: #9d9999;
+}
+
+.PhoneInput,
+.passwordInput,
+.btnSelect {
+  border-color: black;
+}
+.PhoneInput:placeholder {
+  text-align: center;
+}
+
+.unvisability {
+  visibility: hidden;
+}
+
+.visability {
+  visibility: visible;
+}
+.ParentInvalidHeader {
+  font-size: 14px;
+  line-height: 21px;
+}
+.call {
+  color: white !important;
+  font-size: 24px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  border-radius: 10px;
+  top: 15px !important;
+  background-color: black !important;
+  border: 1px solid gray !important;
+  margin: 0.3rem;
+  border: transparent;
+  text-align: center !important;
+  line-height: 25.8%;
+}

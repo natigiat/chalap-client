@@ -1,0 +1,28 @@
+@import '~antd/dist/antd.css';
+
+
+#components-form-demo-control-ref .ant-btn {
+    margin-right: 8px;
+  }
+ 
+  .stations{
+    
+  position: absolute;
+width: 227px;
+height: 36px;
+left: calc(50% - 227px/2);
+top: 279px;
+background: #FFFFFF;
+
+text-align: center;
+ }
+ .ant-select-selection-search{
+    background: #FFFFFF;
+   
+ }
+ .dontWorry{
+
+    font-size: 13px;
+    text-align: center;
+    color: #C4C4C4;
+ }

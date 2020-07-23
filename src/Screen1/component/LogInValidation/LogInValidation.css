@@ -6,11 +6,12 @@
     padding: 0 2rem!important;
     right: 40px;
     position: relative;
+    
 }
-.auth-btn{
+.auth-btn1{
     color: gray!important;
-    background-color: transparent !important;
-    border: 1px solid gray !important;
+    background-color:white !important;
+    border:none !important;
 }
 .passwordContainer{
     display: flex;
@@ -26,6 +27,10 @@
 }
 .logInValidationHeader{
     font-size: 14px;
+}
+.passwordInput::placeholder{
+            text-align: center!important;
+            color: green;
 }
 
  

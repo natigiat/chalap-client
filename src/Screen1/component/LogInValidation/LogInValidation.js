@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Input, Form, Checkbox, Button } from "antd";
 import { OmitProps } from "antd/lib/transfer/ListBody";
 import "../LogInValidation/LogInValidation.css";
 
 const LogInValidation = (props) => {
+  const [PasswordCheck, setPasswordCheck] = useState(false);
   const layout = {
     labelCol: { span: 4 },
     wrapperCol: { span: 25 },
@@ -13,15 +14,23 @@ const LogInValidation = (props) => {
   };
 
   const onFinish = (values) => {
-    console.log("Success:", values);
-    console.log(values["password"]);
-    props.check(values["password"]);
-    props.checkFn(values["password"]);
-    console.log(props.passwordCheck);
+    
+    const check = /^[0-9]+$/;
+    console.log("Success:", values.password);
+    if(values.password.length === 4 && check.test(values.password)){
+      setPasswordCheck(false)
+      console.log(PasswordCheck);
+    }else{
+      setPasswordCheck(true);
+    }
+    console.log(PasswordCheck);
+    // props.setPhoneNum(props.message.Password =values);
+    props.check(values.password);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+  
 
   return (
     <div className="logInValidation">
@@ -31,27 +40,31 @@ const LogInValidation = (props) => {
         name="basic"
         initialValues={{ remember: true }}
         onFinish={onFinish}
+        
         onFinishFailed={onFinishFailed}
       >
         <h3 className="logInValidationHeader">הזן את הקוד שנשלח לנייד</h3>
-        {props.passwordCheck === false ? "" : <h5>סיסמה שגוייה</h5>}
+
+     
+        { PasswordCheck&& <h5>סיסמה שגוייה</h5>}
 
         <Form.Item
           label=""
           name="password"
           rules={[{ required: true, message: "הכנס סיסמה" }]}
         >
-          <Input.Password className="passwordInput" />
+          <Input.Password className="passwordInput" placeholder = '...' />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
-          <Button className="sendPassword" type="primary" htmlType="submit">
+          
+          <Button className='sendPassword' type="primary" htmlType="submit" onClick = {props.check} >
             שלח
           </Button>
         </Form.Item>
-        <Button type="primary" className="auth-btn">
-          לא קיבלתי{" "}
-        </Button>
+     <div className="auth-btn1">        לא קיבלתי קוד אנא שילחו לי שוב
+
+        </div>
       </Form>
     </div>
   );
