@@ -1,7 +1,7 @@
 .refreshMap {
   position: absolute;
-  width: 86px;
-  height: 25px;
+  width: 80px;
+  height: 23px;
   left: 13px;
   top: 84px;
 
@@ -11,11 +11,15 @@
 }
 
 .refreshImg {
-  width: 25px;
-  height: 25px;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
 }
 .refresh {
-  width: 150px;
-  height: 40px;
+  font-size: 11px;
+  width: 100px;
+  height: 30px;
   border-radius: 100px;
+  color: #4ad3a5;
+  border: 0px white solid;
 }

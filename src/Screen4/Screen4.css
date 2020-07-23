@@ -13,16 +13,24 @@
 } */
 .routeDirButtons {
   display: block;
-  height: 33px;
+  height: 50px;
 }
 .routeBtn {
   width: 50%;
   float: right;
-  color: black !important;
+  height: 100%;
 }
 
 .routeBtn.selected {
-  border-bottom: 2px #959595 solid;
+  border-bottom: 2px #fe6c35 solid;
+}
+
+.routeBtn span {
+  color: #868686;
+}
+
+.routeBtn.selected span {
+  color: #fe6c35;
 }
 
 .refreshBtn {
@@ -63,6 +71,7 @@ button.ant-btn.refresh {
   top: 634px; */
 
   bottom: 0px;
+  margin-bottom: 40px;
   width: 100%;
   /* top: 16px; */
   z-index: 1;

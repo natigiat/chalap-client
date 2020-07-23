@@ -11,9 +11,17 @@ import RouteButton from "./Components/RouteButton/RouteButton";
 import PopupAddStudents from "./Components/PopupAddStudents/PopupAddStudents";
 
 const Screen4 = (props) => {
+  const routeDirections = [
+    { id: 0, desc: "הלוך" },
+    { id: 1, desc: "חזור" },
+  ];
+
   const [showPopup, setShowPopup] = useState(0);
   const [hourSelected, setHourSelected] = useState(0);
   const [studentSelected, setStudentSelected] = useState();
+  const [routeDirSelected, setRouteDiRouteDirSelected] = useState(
+    routeDirections[0].id
+  );
 
   // useEffect(() => {
   //   // Update the document title using the browser API
@@ -70,6 +78,7 @@ const Screen4 = (props) => {
       desc: "bus location",
     },
   ];
+
   return (
     <div className="Screen4">
       <div className="routeDirButtons">
@@ -80,6 +89,13 @@ const Screen4 = (props) => {
           <RouteButton text={"חזור"} />
         </div>
       </div>
+      {/* <div className="routeBtn selected">
+          <RouteButton text={"הלוך"} />
+        </div>
+        <div className="routeBtn">
+          <RouteButton text={"חזור"} />
+        </div>
+      </div> */}
       <div className="mapWrapper">
         <RefreshButton className="refreshBtn" />
         <GoogleApiWrapper coordinates={coordinates} hourToMark={hourSelected} />
