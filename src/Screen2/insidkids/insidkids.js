@@ -1,36 +1,22 @@
 import React, { useState, useEffect } from "react";
-import SettingHours from "../Settinghours/Settinghours";
+import OneDayAndHour from "../SettingsHours/OneDayAndHour";
 import { Tabs, Avatar } from "antd";
 import Pdetails from "../Pdetails/Pdetails";
 import "./insidekids.css";
 
 function Insidekids({ child }) {
-  const [Days, setDays] = useState([
-    {
-      key: 1,
-      day: "יום ראשון",
-    },
-    {
-      key: 2,
-      day: "יום שני",
-    },
-    {
-      key: 3,
-      day: "יום שלישי",
-    },
-    {
-      key: 4,
-      day: "יום רביעי",
-    },
-    {
-      key: 5,
-      day: "יום חמישי",
-    },
-    {
-      key: 6,
-      day: "יום שישי",
-    },
-  ]);
+  const DaysAndHours = [
+    { Day: "ראשון", Hour: "13:45" },
+    { Day: "שני", Hour: "13:00" },
+    { Day: "שלישי", Hour: "13:10" },
+    { Day: "רביעי", Hour: "13:15" },
+    { Day: "חמישי", Hour: "13:20" },
+    { Day: "שישי", Hour: "12:00" },
+  ];
+  const func = (indexNewTime, newTime) => {
+    DaysAndHours[indexNewTime].Hour = newTime;
+    console.log(DaysAndHours);
+  };
 
   const { TabPane } = Tabs;
 
@@ -58,8 +44,14 @@ function Insidekids({ child }) {
             />
           </TabPane>
           <TabPane tab="שעת סיום" key="2">
-            {Days.map((days) => (
-              <SettingHours key={days.key} day={days.day} />
+            {DaysAndHours.map((OneObject, index) => (
+              <OneDayAndHour
+                key={index}
+                index={index}
+                Day={OneObject.Day}
+                Hour={OneObject.Hour}
+                func={func}
+              />
             ))}
           </TabPane>
         </Tabs>
