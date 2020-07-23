@@ -47,3 +47,9 @@
   margin: 0 65px;
 } */
 /* ant-tabs-ink-bar-animated */
+.insidekids .ant-avatar-string {
+  font-size: 80px;
+  top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
