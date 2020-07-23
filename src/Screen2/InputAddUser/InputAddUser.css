@@ -13,10 +13,10 @@ bottom:300px;
 }
 
 .anotherChild{
-    width:219px;
+    width:100%;
 }
 
-.anotherChildText.inputChildName{
+.anotherChildText{
  width:100%;   
 }
 
@@ -45,14 +45,22 @@ bottom:300px;
 } */
 .popupInputAddUeser .anotherChildText{
     height: 82px;
-    width: 219px;
+    /* width: 219px; */
     text-align: center;
 }
-
+.ant-btn.ant-btn-primary{
+    width: 100%;
+}
 .giveCallBackBtn{
-    width:75%;
+    width:100%;
     margin-left: 12.5%;
 }
 .giveCallBackBtn Button{
     background-color:#FE6C35;
+}
+.ant-row.ant-form-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
