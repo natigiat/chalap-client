@@ -96,7 +96,7 @@ const MapContainer = (props) => {
           <div className="BusHour">9:30</div>
         </div>
 
-        <div>{/* <p>שעת יציאה</p> */}</div>
+        <div className="Text"> יציאה</div>
       </InfoWindow>
     </Map>
   );
