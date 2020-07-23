@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import logo from "./logo.svg";
 import "./Screen4.css";
 import GoogleApiWrapper from "./Components/GoogleApiWrapper/GoogleApiWrapper";
-//import StudentList from "./Studentlist";
 import { Button } from "antd";
 import Carousel from "./Components/Carousel/Carousel";
 import ridesMock from "./rides.mock";
@@ -22,11 +20,6 @@ const Screen4 = (props) => {
   const [routeDirSelected, setRouteDiRouteDirSelected] = useState(
     routeDirections[0].id
   );
-
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   console.log(`You clicked ${hourSelected}`);
-  // });
 
   const handleHourSelected = (hour) => {
     setHourSelected(hour);
@@ -89,13 +82,6 @@ const Screen4 = (props) => {
           <RouteButton text={"חזור"} />
         </div>
       </div>
-      {/* <div className="routeBtn selected">
-          <RouteButton text={"הלוך"} />
-        </div>
-        <div className="routeBtn">
-          <RouteButton text={"חזור"} />
-        </div>
-      </div> */}
       <div className="mapWrapper">
         <RefreshButton className="refreshBtn" />
         <GoogleApiWrapper coordinates={coordinates} hourToMark={hourSelected} />
